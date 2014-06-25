@@ -1,0 +1,58 @@
+----item----
+version: 1
+id: {11EAFCD0-4E64-48E8-A4B1-1AEC2FBD1175}
+database: master
+path: /sitecore/templates/User Defined/Generic/Meta Data/__Standard Values
+parent: {77586D39-6101-42C0-9C2C-3115AC7E5C8A}
+name: __Standard Values
+master: {00000000-0000-0000-0000-000000000000}
+template: {77586D39-6101-42C0-9C2C-3115AC7E5C8A}
+templatekey: Meta Data
+
+----field----
+field: {BA3F86A2-4A1C-4D78-B63D-91C2779C1B5E}
+name: __Sortorder
+key: __sortorder
+content-length: 3
+
+230
+----version----
+language: en
+version: 1
+revision: c871dfaf-8ca2-4924-a9f6-cb709a05db71
+
+----field----
+field: {77B1ACDD-3425-414F-A5EA-AE8AAC88B2BF}
+name: Page Title
+key: page title
+content-length: 0
+
+
+----field----
+field: {25BED78C-4957-4165-998A-CA1B52F67497}
+name: __Created
+key: __created
+content-length: 15
+
+20131212T165227
+----field----
+field: {8CDC337E-A112-42FB-BBB4-4143751E123F}
+name: __Revision
+key: __revision
+content-length: 36
+
+c871dfaf-8ca2-4924-a9f6-cb709a05db71
+----field----
+field: {D9CF14B1-FA16-4BA6-9288-E8A174D4D522}
+name: __Updated
+key: __updated
+content-length: 34
+
+20140105T121559:635245209592195223
+----field----
+field: {BADD9CF9-53E0-4D0C-BCC0-2D784C282F6A}
+name: __Updated by
+key: __updated by
+content-length: 14
+
+sitecore\admin
