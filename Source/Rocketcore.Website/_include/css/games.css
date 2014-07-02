@@ -1,0 +1,105 @@
+.available_list.gp span{visibility:hidden;}
+.available_list.gp li{display:inline-block;vertical-align:middle;margin:0 3px;padding:10px 0;}
+.available_list.gp li:first-child{margin:0 3px;}
+.available_list.gp span{font-weight:normal;font-family: 'Swiss Thin', Arial, Helvetica, sans-serif;font-size:2em;}
+.game_content .intro{background:url(../../images/build/layout/short_divide.png) no-repeat center bottom;padding:10px 0 40px 0;margin-bottom:15px;}
+.game_content .slider .viewport { width: 494px;height:226px;}
+.game_content .screenslider li .ply_btn{position:absolute;top:50%;left:50%;margin:-30px 0 0 -30px;}
+.game_content .screens_vids{margin-bottom:20px;}
+.game_content .features{margin-bottom:20px;}
+.game_content .reviews{position:relative;}
+.game_content .review_hdr h2{float:left;background:url(../../images/build/layout/stars.png) no-repeat right top;padding:10px 220px 10px 0}
+.hero_img.gp{min-height:422px;}
+
+.game_content .rating{display:inline-block;height:12px;width:64px;margin-right:10px;background:url(../../images/build/layout/rating.png) no-repeat 0 0;}
+.game_content .rating.star1{background-position:0 0;}
+.game_content .rating.star2{background-position:0 -12px;}
+.game_content .rating.star3{background-position:0 -24px;}
+.game_content .rating.star4{background-position:0 -36px;}
+.game_content .rating.star5{background-position:0 -48px;}
+
+
+
+.games_social{padding:10px 44px 0 20px;}
+.social_pnl{margin-bottom:20px;}
+.social_pnl.fb{margin-bottom:50px;}
+.social_pnl iframe{display:block;}
+.gry_pnl_t{background:url(../../images/build/layout/gry_pnl_t.png) no-repeat center top;width:340px;height:6px;}
+.gry_pnl{background:url(../../images/build/layout/gry_pnl_rpt.png) repeat-y center top;width:328px;padding:0 6px;}
+.gry_pnl_b{background:url(../../images/build/layout/gry_pnl_b.png) no-repeat center bottom;width:340px;height:6px;}
+.white_bg{background:#fff;}
+
+.game_promo{background:#0b4353; width:300px;border:1px solid #000;-webkit-border-radius: 8px;-moz-border-radius: 8px;border-radius: 8px;padding:8px;margin-left:22px;padding:10px;}
+.game_promo .img{position:relative;width:95px;float:left;min-height:100px;}
+.game_promo .img img{position:absolute;top:-48px;left:-62px;}
+.game_promo .text{width:205px;float:left;}
+.game_promo .text p{margin-bottom:0;}
+.game_promo .hdr{position:relative;padding-right:40px;}
+.game_promo .hdr .cnr_img{position:absolute;top:-18px;right:-24px;}
+.game_promo h4{font-weight:bold;font-family:Arial, Helvetica, sans-serif;font-size:1.2em;}
+
+.available_icons{list-style-type:none;margin:0;padding:0;}
+.available_icons li{display:inline-block;vertical-align:middle;margin:0 2px;}
+.available_icons li:first-child{padding-top:0px;}
+.available_icons li span{vertical-align:top;}
+
+/****** BOOTY QUEST *******/
+#booty_quest{background:#08647e url(../../images/build/games/booty_quest/bq_bg.jpg) no-repeat center top;}
+#booty_quest #outline{background:url(../../images/build/games/booty_quest/bq_ftr.jpg) no-repeat center bottom;padding-bottom:40px;}
+#booty_quest .game_logo{float:right;}
+#booty_quest .available_list{clear:both;text-align:right;}
+#booty_quest .game_content{min-height:950px;}
+#booty_quest .pnl_bg{background:url(../../images/build/games/booty_quest/bq_pnl_bg.png) no-repeat center top;}
+#booty_quest .intro{position:relative;}
+#booty_quest .red_stone{position:absolute;width:77px;height:84px;bottom:-40px;right:-5px;background:url(../../images/build/games/booty_quest/red_stone_01.png) no-repeat center top;}
+#booty_quest .blue_stone{position:absolute;width:80px;height:87px;top:-79px;left:-64px;background:url(../../images/build/games/booty_quest/blue_gem.png) no-repeat center top;}
+
+/****** BUBBLE BLAZE *******/
+#bubble_blaze{background:#929c21 url(../../images/build/games/bubble_blaze/bb_bg.jpg) no-repeat center top;}
+#bubble_blaze #outline{background:url(../../images/build/games/bubble_blaze/bb_ftr.jpg) no-repeat center bottom;padding-bottom:40px;}
+#bubble_blaze .game_logo{float:right;}
+#bubble_blaze .game_content{min-height:950px;}
+#bubble_blaze .available_list{clear:both;text-align:right;position:relative;z-index:999}
+#bubble_blaze .pnl_bg{background:url(../../images/build/games/bubble_blaze/bb_pnl_bg.png) no-repeat center top;}
+#bubble_blaze .dragon{width:475px;height:462px;background:url(../../images/build/games/bubble_blaze/dragon_hdr.png) no-repeat center top;position:absolute;top:-5px;left:71px;}
+#bubble_blaze .hero_img .container{position:relative;}
+#bubble_blaze .dragon_eggs{padding-top:40px;}
+
+/****** IDOL WORDS *******/
+#idol_words{background:#1c2d13 url(../../images/build/games/idol_words/iw_bg.jpg) no-repeat center top;}
+#idol_words #outline{background:url(../../images/build/games/idol_words/iw_ftr.jpg) no-repeat center bottom;padding-bottom:40px;}
+#idol_words .game_logo{float:right;}
+#idol_words .game_content{min-height:950px;}
+#idol_words .available_list{clear:both;text-align:right;position:relative;z-index:999}
+#idol_words .pnl_bg{background:url(../../images/build/games/idol_words/iw_pnl_bg.png) no-repeat center top;}
+
+/****** MONSTAR TRUCK *******/
+#monstar_truck{background:#001139 url(../../images/build/games/monstar_truck/mt_bg.jpg) no-repeat center top;}
+#monstar_truck #outline{background:url(../../images/build/games/monstar_truck/mt_ftr.jpg) no-repeat center bottom;padding-bottom:40px;}
+#monstar_truck .available_list {padding-top:304px;}
+#monstar_truck .game_content{min-height:950px;}
+#monstar_truck .available_list{clear:both;text-align:right;position:relative;z-index:999}
+#monstar_truck .pnl_bg{background:url(../../images/build/games/monstar_truck/mt_pnl_bg.png) no-repeat center top;}
+#monstar_truck .hero_img .container{position:relative;}
+#monstar_truck .coin {width:160px;height:170px;background:url(../../images/build/games/monstar_truck/coin.png) no-repeat center top;position:absolute;bottom:-38px;left:282px;}
+
+/****** WORD TRICK *******/
+#word_trick{background:#1d82b1 url(../../images/build/games/word_trick/wt_bg.jpg) no-repeat center top;}
+#word_trick #outline{background:url(../../images/build/games/word_trick/wt_ftr.png) no-repeat center bottom;padding-bottom:40px;}
+#word_trick .available_list{clear:both;text-align:right;position:relative;z-index:999}
+#word_trick .game_logo{float:right;margin:30px 100px 43px 0;}
+#word_trick .game_content{min-height:1100px;}
+#word_trick .pnl_bg{background:url(../../images/build/games/word_trick/wt_pnl_bg.png) no-repeat center top;}
+#word_trick .intro{position:relative;}
+#word_trick .letter{position:absolute;width:90px;height:90px;top:-50px;right:50px;background:url(../../images/build/games/word_trick/letter.png) no-repeat center top;}
+
+/****** MONSTER LEGENDS  *******/
+#monster_legacy{background:#11504a url(../../images/build/games/monster_legacy/monster_legacy_bg.jpg) no-repeat center top;}
+#monster_legacy #outline{background:url(../../images/build/games/monster_legacy/monster_legacy_ftr.png) no-repeat center bottom;padding-bottom:40px;}
+#monster_legacy .available_list{clear:both;text-align:right;position:relative;z-index:999;padding-top:304px;}
+#monster_legacy .game_logo{float:right;margin:30px 100px 43px 0;}
+#monster_legacy .game_content{min-height:1100px;}
+#monster_legacy .pnl_bg{background:url(../../images/build/games/monster_legacy/monster_legacy_pnl.png) no-repeat center top;}
+#monster_legacy .intro{position:relative;}
+
+

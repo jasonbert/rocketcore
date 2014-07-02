@@ -1,5 +1,5 @@
 ﻿using System.Web.UI.HtmlControls;
-using Rocketcore.Tagging.Controls;
+using Rocketcore.Content.Tagging.Controls;
 using Sitecore;
 using Sitecore.Buckets.Util;
 using Sitecore.ContentSearch.Utilities;
@@ -26,7 +26,7 @@ using Sitecore.ContentSearch.Security;
 using Sitecore.ContentSearch.SearchTypes;
 using Sitecore.ContentSearch.Linq;
 
-namespace Rocketcore.Tagging.FieldTypes
+namespace Rocketcore.Content.Tagging.FieldTypes
 {
 	public class Tagging : Control, IContentField
 	{
@@ -251,7 +251,7 @@ namespace Rocketcore.Tagging.FieldTypes
 		private TaggingControl GetControl()
 		{
 			var control = new System.Web.UI.UserControl();
-			return control.LoadControl("~/Lightcore/FieldTypes/Tagging.ascx") as TaggingControl; // TODO-TaggingSystem: Refactor file path into config file
+			return control.LoadControl("~/Rocketcore/FieldTypes/Tagging.ascx") as TaggingControl; // TODO-TaggingSystem: Refactor file path into config file
 		}
 
 		private string MakeFilterQueryable(string locationFilter)

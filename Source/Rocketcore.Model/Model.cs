@@ -1,5 +1,133 @@
 
 
+#region Call To Action Slider Options (UserDefined)
+namespace Rocketcore.Model.Templates.UserDefined
+{
+    using System;
+	using System.Collections.Generic;
+    using Sitecore.Data.Items;
+	using Sitecore.ContentSearch;
+	using Sitecore.ContentSearch.Linq.Common;
+    using Fortis.Model;
+	using Fortis.Model.Fields;
+	using Fortis.Providers;
+
+    using Fortis.Model.RenderingParameters;
+
+	/// <summary>
+	/// <para>Template interface</para>
+	/// <para>Template: Call To Action Slider Options</para>
+	/// <para>ID: {02E4436F-437E-4297-B819-6334F1F560AF}</para>
+	/// <para>/sitecore/templates/User Defined/Call To Action/Rendering Options/Call To Action Slider Options</para>
+	/// </summary>
+	[TemplateMapping("{02E4436F-437E-4297-B819-6334F1F560AF}", "InterfaceRenderingParameter")]
+	public partial interface ICallToActionSliderOptions : IRenderingParameterWrapper , Rocketcore.Model.Templates.UserDefined.ICallToActionLinksOptions
+	{		
+	}
+
+	/// <summary>
+	/// <para>Template class</para><para>/sitecore/templates/User Defined/Call To Action/Rendering Options/Call To Action Slider Options</para>
+	/// </summary>
+	[PredefinedQuery("TemplateId", ComparisonType.Equal, "{02E4436F-437E-4297-B819-6334F1F560AF}", typeof(Guid))]
+	[TemplateMapping("{02E4436F-437E-4297-B819-6334F1F560AF}", "RenderingParameter")]
+	public partial class CallToActionSliderOptions : RenderingParameterWrapper, ICallToActionSliderOptions
+	{
+		public CallToActionSliderOptions(Dictionary<string, string> parameters, ISpawnProvider spawnProvider) : base(parameters, spawnProvider)
+		{
+		}
+
+		/// <summary><para>Template: Call To Action Slider Options</para><para>Field: CallToActionGroup</para><para>Data type: Droptree</para></summary>
+		public virtual ILinkFieldWrapper CallToActionGroup
+		{
+			get { return (Fortis.Model.RenderingParameters.Fields.LinkFieldWrapper)GetField("Call To Action Group", "droptree"); }
+		}
+
+		/// <summary><para>Template: Call To Action Slider Options</para><para>Field: CallToActionGroup</para><para>Data type: Droptree</para></summary>
+ 		public string CallToActionGroupValue
+		{
+			get { return CallToActionGroup.Value; }
+		}
+		/// <summary><para>Template: Call To Action Slider Options</para><para>Field: SelectionMethod</para><para>Data type: Droplink</para></summary>
+		public virtual ILinkFieldWrapper SelectionMethod
+		{
+			get { return (Fortis.Model.RenderingParameters.Fields.LinkFieldWrapper)GetField("Selection Method", "droplink"); }
+		}
+
+		/// <summary><para>Template: Call To Action Slider Options</para><para>Field: SelectionMethod</para><para>Data type: Droplink</para></summary>
+ 		public string SelectionMethodValue
+		{
+			get { return SelectionMethod.Value; }
+		}
+		/// <summary><para>Template: Call To Action Slider Options</para><para>Field: AggregateBy</para><para>Data type: Droplink</para></summary>
+		public virtual ILinkFieldWrapper AggregateBy
+		{
+			get { return (Fortis.Model.RenderingParameters.Fields.LinkFieldWrapper)GetField("Aggregate By", "droplink"); }
+		}
+
+		/// <summary><para>Template: Call To Action Slider Options</para><para>Field: AggregateBy</para><para>Data type: Droplink</para></summary>
+ 		public string AggregateByValue
+		{
+			get { return AggregateBy.Value; }
+		}
+		/// <summary><para>Template: Call To Action Slider Options</para><para>Field: GroupTagsBy</para><para>Data type: Droplink</para></summary>
+		public virtual ILinkFieldWrapper GroupTagsBy
+		{
+			get { return (Fortis.Model.RenderingParameters.Fields.LinkFieldWrapper)GetField("Group Tags By", "droplink"); }
+		}
+
+		/// <summary><para>Template: Call To Action Slider Options</para><para>Field: GroupTagsBy</para><para>Data type: Droplink</para></summary>
+ 		public string GroupTagsByValue
+		{
+			get { return GroupTagsBy.Value; }
+		}
+		/// <summary><para>Template: Call To Action Slider Options</para><para>Field: Tags</para><para>Data type: Tags</para></summary>
+		public virtual IListFieldWrapper Tags
+		{
+			get { return (Fortis.Model.RenderingParameters.Fields.ListFieldWrapper)GetField("Tags", "tags"); }
+		}
+
+		/// <summary><para>Template: Call To Action Slider Options</para><para>Field: Tags</para><para>Data type: Tags</para></summary>
+ 		public IEnumerable<Guid> TagsValue
+		{
+			get { return Tags.Value; }
+		}
+		/// <summary><para>Template: Call To Action Slider Options</para><para>Field: OrderBy</para><para>Data type: Droplink</para></summary>
+		public virtual ILinkFieldWrapper OrderBy
+		{
+			get { return (Fortis.Model.RenderingParameters.Fields.LinkFieldWrapper)GetField("Order By", "droplink"); }
+		}
+
+		/// <summary><para>Template: Call To Action Slider Options</para><para>Field: OrderBy</para><para>Data type: Droplink</para></summary>
+ 		public string OrderByValue
+		{
+			get { return OrderBy.Value; }
+		}
+		/// <summary><para>Template: Call To Action Slider Options</para><para>Field: OrderDirection</para><para>Data type: Droplink</para></summary>
+		public virtual ILinkFieldWrapper OrderDirection
+		{
+			get { return (Fortis.Model.RenderingParameters.Fields.LinkFieldWrapper)GetField("Order Direction", "droplink"); }
+		}
+
+		/// <summary><para>Template: Call To Action Slider Options</para><para>Field: OrderDirection</para><para>Data type: Droplink</para></summary>
+ 		public string OrderDirectionValue
+		{
+			get { return OrderDirection.Value; }
+		}
+		/// <summary><para>Template: Call To Action Slider Options</para><para>Field: ItemsPerPage</para><para>Data type: Integer</para></summary>
+		public virtual IIntegerFieldWrapper ItemsPerPage
+		{
+			get { return (Fortis.Model.RenderingParameters.Fields.IntegerFieldWrapper)GetField("Items Per Page", "integer"); }
+		}
+
+		/// <summary><para>Template: Call To Action Slider Options</para><para>Field: ItemsPerPage</para><para>Data type: Integer</para></summary>
+ 		public long ItemsPerPageValue
+		{
+			get { return ItemsPerPage.Value; }
+		}
+	
+	}
+}
+#endregion
 
 
 
@@ -7,6 +135,158 @@
 
 
 
+
+
+
+
+#region Call To Action Override (UserDefined)
+namespace Rocketcore.Model.Templates.UserDefined
+{
+    using System;
+	using System.Collections.Generic;
+    using Sitecore.Data.Items;
+	using Sitecore.ContentSearch;
+	using Sitecore.ContentSearch.Linq.Common;
+    using Fortis.Model;
+	using Fortis.Model.Fields;
+	using Fortis.Providers;
+
+
+	/// <summary>
+	/// <para>Template interface</para>
+	/// <para>Template: Call To Action Override</para>
+	/// <para>ID: {12BBD87B-1EE2-4E02-86F5-5AB1DA50307C}</para>
+	/// <para>/sitecore/templates/User Defined/Call To Action/Call To Action Override</para>
+	/// </summary>
+	[TemplateMapping("{12BBD87B-1EE2-4E02-86F5-5AB1DA50307C}", "InterfaceMap")]
+	public partial interface ICallToActionOverride : ICustomItemWrapper , Rocketcore.Model.Templates.UserDefined.IRocketcoreStandardTemplate, Rocketcore.Model.Templates.UserDefined.ICallToAction
+	{		
+    	/// <summary>
+		/// <para>Template: Call To Action Override</para><para>Field: CallToActionCustom</para><para>Data type: Droptree</para>
+        /// </summary>
+		[IndexField("call_to_action_custom_s")]
+		ILinkFieldWrapper CallToActionCustom { get; }
+
+    	/// <summary>
+		/// <para>Template: Call To Action Override</para><para>Field: CallToActionCustom</para><para>Data type: Droptree</para>
+        /// </summary>
+		[IndexField("call_to_action_custom")]
+ 		string CallToActionCustomValue { get; }
+	}
+
+	/// <summary>
+	/// <para>Template class</para><para>/sitecore/templates/User Defined/Call To Action/Call To Action Override</para>
+	/// </summary>
+	[PredefinedQuery("TemplateId", ComparisonType.Equal, "{12BBD87B-1EE2-4E02-86F5-5AB1DA50307C}", typeof(Guid))]
+	[TemplateMapping("{12BBD87B-1EE2-4E02-86F5-5AB1DA50307C}", "")]
+	public partial class CallToActionOverride : CustomItemWrapper, ICallToActionOverride
+	{
+		private Item _item = null;
+
+		public CallToActionOverride(ISpawnProvider spawnProvider) : base(null, spawnProvider) { }
+
+		public CallToActionOverride(Guid id, ISpawnProvider spawnProvider) : base(id, spawnProvider) { }
+
+		public CallToActionOverride(Guid id, Dictionary<string, object> lazyFields, ISpawnProvider spawnProvider) : base(id, lazyFields, spawnProvider) { }
+
+		public CallToActionOverride(Item item, ISpawnProvider spawnProvider) : base(item, spawnProvider)
+		{
+			_item = item;
+		}
+
+		/// <summary><para>Template: Call To Action Override</para><para>Field: Tags</para><para>Data type: Tags</para></summary>
+		[IndexField("tags_sm")]
+		public virtual IListFieldWrapper Tags
+		{
+			get { return GetField<ListFieldWrapper>("Tags", "tags_sm"); }
+		}
+
+		/// <summary><para>Template: Call To Action Override</para><para>Field: Tags</para><para>Data type: Tags</para></summary>
+		[IndexField("tags")]
+ 		public IEnumerable<Guid> TagsValue
+		{
+			get { return Tags.Value; }
+		}
+		/// <summary><para>Template: Call To Action Override</para><para>Field: SubTitle</para><para>Data type: Single-Line Text</para></summary>
+		[IndexField("sub_title_t")]
+		public virtual ITextFieldWrapper SubTitle
+		{
+			get { return GetField<TextFieldWrapper>("Sub Title", "sub_title_t"); }
+		}
+
+		/// <summary><para>Template: Call To Action Override</para><para>Field: SubTitle</para><para>Data type: Single-Line Text</para></summary>
+		[IndexField("sub_title")]
+ 		public string SubTitleValue
+		{
+			get { return SubTitle.Value; }
+		}
+		/// <summary><para>Template: Call To Action Override</para><para>Field: Title</para><para>Data type: Single-Line Text</para></summary>
+		[IndexField("title_t")]
+		public virtual ITextFieldWrapper Title
+		{
+			get { return GetField<TextFieldWrapper>("Title", "title_t"); }
+		}
+
+		/// <summary><para>Template: Call To Action Override</para><para>Field: Title</para><para>Data type: Single-Line Text</para></summary>
+		[IndexField("title")]
+ 		public string TitleValue
+		{
+			get { return Title.Value; }
+		}
+		/// <summary><para>Template: Call To Action Override</para><para>Field: Body</para><para>Data type: Rich Text</para></summary>
+		[IndexField("body_t")]
+		public virtual IRichTextFieldWrapper Body
+		{
+			get { return GetField<RichTextFieldWrapper>("Body", "body_t"); }
+		}
+
+		/// <summary><para>Template: Call To Action Override</para><para>Field: Body</para><para>Data type: Rich Text</para></summary>
+		[IndexField("body")]
+ 		public string BodyValue
+		{
+			get { return Body.Value; }
+		}
+		/// <summary><para>Template: Call To Action Override</para><para>Field: Image</para><para>Data type: Image</para></summary>
+		public virtual IImageFieldWrapper Image
+		{
+			get { return GetField<ImageFieldWrapper>("Image"); }
+		}
+
+		/// <summary><para>Template: Call To Action Override</para><para>Field: Image</para><para>Data type: Image</para></summary>
+ 		public string ImageValue
+		{
+			get { return Image.Value; }
+		}
+		/// <summary><para>Template: Call To Action Override</para><para>Field: DateAndTime</para><para>Data type: Datetime</para></summary>
+		[IndexField("date_and_time_tdt")]
+		public virtual IDateTimeFieldWrapper DateAndTime
+		{
+			get { return GetField<DateTimeFieldWrapper>("Date And Time", "date_and_time_tdt"); }
+		}
+
+		/// <summary><para>Template: Call To Action Override</para><para>Field: DateAndTime</para><para>Data type: Datetime</para></summary>
+		[IndexField("date_and_time")]
+ 		public DateTime DateAndTimeValue
+		{
+			get { return DateAndTime.Value; }
+		}
+		/// <summary><para>Template: Call To Action Override</para><para>Field: CallToActionCustom</para><para>Data type: Droptree</para></summary>
+		[IndexField("call_to_action_custom_s")]
+		public virtual ILinkFieldWrapper CallToActionCustom
+		{
+			get { return GetField<LinkFieldWrapper>("Call To Action Custom", "call_to_action_custom_s"); }
+		}
+
+		/// <summary><para>Template: Call To Action Override</para><para>Field: CallToActionCustom</para><para>Data type: Droptree</para></summary>
+		[IndexField("call_to_action_custom")]
+ 		public string CallToActionCustomValue
+		{
+			get { return CallToActionCustom.Value; }
+		}
+	
+	}
+}
+#endregion
 
 
 #region Size Options (UserDefined)
@@ -19,6 +299,8 @@ namespace Rocketcore.Model.Templates.UserDefined
 	using Sitecore.ContentSearch.Linq.Common;
     using Fortis.Model;
 	using Fortis.Model.Fields;
+	using Fortis.Providers;
+
     using Fortis.Model.RenderingParameters;
 
 	/// <summary>
@@ -34,14 +316,12 @@ namespace Rocketcore.Model.Templates.UserDefined
 		/// <para>Template: Size Options</para><para>Field: Height</para><para>Data type: Integer</para>
         /// </summary>
 		IIntegerFieldWrapper Height { get; }
-		long HeightValue { get; }
-		
+ 		long HeightValue { get; }
     	/// <summary>
 		/// <para>Template: Size Options</para><para>Field: Width</para><para>Data type: Integer</para>
         /// </summary>
 		IIntegerFieldWrapper Width { get; }
-		long WidthValue { get; }
-		
+ 		long WidthValue { get; }
 	}
 
 	/// <summary>
@@ -51,80 +331,8 @@ namespace Rocketcore.Model.Templates.UserDefined
 	[TemplateMapping("{165CD2BE-7EE4-4D06-ABBA-4BBAC6EFEE7D}", "RenderingParameter")]
 	public partial class SizeOptions : RenderingParameterWrapper, ISizeOptions
 	{
-		public SizeOptions(Dictionary<string, string> parameters) : base(parameters)
+		public SizeOptions(Dictionary<string, string> parameters, ISpawnProvider spawnProvider) : base(parameters, spawnProvider)
 		{
-		}
-
-		/// <summary><para>Template: Size Options</para><para>Field: Caching</para><para>Data type: Custom</para></summary>
-		public virtual ITextFieldWrapper Caching
-		{
-			get { return (Fortis.Model.RenderingParameters.Fields.TextFieldWrapper)GetField("Caching", "custom"); }
-		}
-
-		/// <summary><para>Template: Size Options</para><para>Field: Caching</para><para>Data type: Custom</para></summary>
-		public string CachingValue
-		{
-			get { return Caching.Value; }
-		}
-
-		/// <summary><para>Template: Size Options</para><para>Field: DataSource</para><para>Data type: Query Datasource</para></summary>
-		public virtual ITextFieldWrapper DataSource
-		{
-			get { return (Fortis.Model.RenderingParameters.Fields.TextFieldWrapper)GetField("Data Source", "query datasource"); }
-		}
-
-		/// <summary><para>Template: Size Options</para><para>Field: DataSource</para><para>Data type: Query Datasource</para></summary>
-		public string DataSourceValue
-		{
-			get { return DataSource.Value; }
-		}
-
-		/// <summary><para>Template: Size Options</para><para>Field: Placeholder</para><para>Data type: Single-Line Text</para></summary>
-		public virtual ITextFieldWrapper Placeholder
-		{
-			get { return (Fortis.Model.RenderingParameters.Fields.TextFieldWrapper)GetField("Placeholder", "single-line text"); }
-		}
-
-		/// <summary><para>Template: Size Options</para><para>Field: Placeholder</para><para>Data type: Single-Line Text</para></summary>
-		public string PlaceholderValue
-		{
-			get { return Placeholder.Value; }
-		}
-
-		/// <summary><para>Template: Size Options</para><para>Field: AdditionalParameters</para><para>Data type: Name Value List</para></summary>
-		public virtual ITextFieldWrapper AdditionalParameters
-		{
-			get { return (Fortis.Model.RenderingParameters.Fields.TextFieldWrapper)GetField("Additional Parameters", "name value list"); }
-		}
-
-		/// <summary><para>Template: Size Options</para><para>Field: AdditionalParameters</para><para>Data type: Name Value List</para></summary>
-		public string AdditionalParametersValue
-		{
-			get { return AdditionalParameters.Value; }
-		}
-
-		/// <summary><para>Template: Size Options</para><para>Field: Personalization</para><para>Data type: Custom</para></summary>
-		public virtual ITextFieldWrapper Personalization
-		{
-			get { return (Fortis.Model.RenderingParameters.Fields.TextFieldWrapper)GetField("Personalization", "custom"); }
-		}
-
-		/// <summary><para>Template: Size Options</para><para>Field: Personalization</para><para>Data type: Custom</para></summary>
-		public string PersonalizationValue
-		{
-			get { return Personalization.Value; }
-		}
-
-		/// <summary><para>Template: Size Options</para><para>Field: Tests</para><para>Data type: Internal Link</para></summary>
-		public virtual ITextFieldWrapper Tests
-		{
-			get { return (Fortis.Model.RenderingParameters.Fields.TextFieldWrapper)GetField("Tests", "internal link"); }
-		}
-
-		/// <summary><para>Template: Size Options</para><para>Field: Tests</para><para>Data type: Internal Link</para></summary>
-		public string TestsValue
-		{
-			get { return Tests.Value; }
 		}
 
 		/// <summary><para>Template: Size Options</para><para>Field: Height</para><para>Data type: Integer</para></summary>
@@ -134,11 +342,10 @@ namespace Rocketcore.Model.Templates.UserDefined
 		}
 
 		/// <summary><para>Template: Size Options</para><para>Field: Height</para><para>Data type: Integer</para></summary>
-		public long HeightValue
+ 		public long HeightValue
 		{
 			get { return Height.Value; }
 		}
-
 		/// <summary><para>Template: Size Options</para><para>Field: Width</para><para>Data type: Integer</para></summary>
 		public virtual IIntegerFieldWrapper Width
 		{
@@ -146,18 +353,20 @@ namespace Rocketcore.Model.Templates.UserDefined
 		}
 
 		/// <summary><para>Template: Size Options</para><para>Field: Width</para><para>Data type: Integer</para></summary>
-		public long WidthValue
+ 		public long WidthValue
 		{
 			get { return Width.Value; }
 		}
-
 	
 	}
 }
 #endregion
 
-#region Standard template (ScSystem)
-namespace Rocketcore.Model.Templates.ScSystem
+
+
+
+#region Call To Action Folder (UserDefined)
+namespace Rocketcore.Model.Templates.UserDefined
 {
     using System;
 	using System.Collections.Generic;
@@ -166,34 +375,36 @@ namespace Rocketcore.Model.Templates.ScSystem
 	using Sitecore.ContentSearch.Linq.Common;
     using Fortis.Model;
 	using Fortis.Model.Fields;
+	using Fortis.Providers;
+
 
 	/// <summary>
 	/// <para>Template interface</para>
-	/// <para>Template: Standard template</para>
-	/// <para>ID: {1930BBEB-7805-471A-A3BE-4858AC7CF696}</para>
-	/// <para>/sitecore/templates/System/Templates/Standard template</para>
+	/// <para>Template: Call To Action Folder</para>
+	/// <para>ID: {1ADCF820-3A3E-45BA-A66B-9470B1FD9E6F}</para>
+	/// <para>/sitecore/templates/User Defined/Call To Action/Call To Action Folder</para>
 	/// </summary>
-	[TemplateMapping("{1930BBEB-7805-471A-A3BE-4858AC7CF696}", "InterfaceMap")]
-	public partial interface IStandardTemplate : ICustomItemWrapper 
+	[TemplateMapping("{1ADCF820-3A3E-45BA-A66B-9470B1FD9E6F}", "InterfaceMap")]
+	public partial interface ICallToActionFolder : ICustomItemWrapper , Rocketcore.Model.Templates.UserDefined.IRocketcoreFolder
 	{		
 	}
 
 	/// <summary>
-	/// <para>Template class</para><para>/sitecore/templates/System/Templates/Standard template</para>
+	/// <para>Template class</para><para>/sitecore/templates/User Defined/Call To Action/Call To Action Folder</para>
 	/// </summary>
-	[PredefinedQuery("TemplateId", ComparisonType.Equal, "{1930BBEB-7805-471A-A3BE-4858AC7CF696}", typeof(Guid))]
-	[TemplateMapping("{1930BBEB-7805-471A-A3BE-4858AC7CF696}", "")]
-	public partial class StandardTemplate : CustomItemWrapper, IStandardTemplate
+	[PredefinedQuery("TemplateId", ComparisonType.Equal, "{1ADCF820-3A3E-45BA-A66B-9470B1FD9E6F}", typeof(Guid))]
+	[TemplateMapping("{1ADCF820-3A3E-45BA-A66B-9470B1FD9E6F}", "")]
+	public partial class CallToActionFolder : CustomItemWrapper, ICallToActionFolder
 	{
 		private Item _item = null;
 
-		public StandardTemplate() : base(null) { }
+		public CallToActionFolder(ISpawnProvider spawnProvider) : base(null, spawnProvider) { }
 
-		public StandardTemplate(Guid id) : base(id) { }
+		public CallToActionFolder(Guid id, ISpawnProvider spawnProvider) : base(id, spawnProvider) { }
 
-		public StandardTemplate(Guid id, Dictionary<string, object> lazyFields) : base(id, lazyFields) { }
+		public CallToActionFolder(Guid id, Dictionary<string, object> lazyFields, ISpawnProvider spawnProvider) : base(id, lazyFields, spawnProvider) { }
 
-		public StandardTemplate(Item item) : base(item)
+		public CallToActionFolder(Item item, ISpawnProvider spawnProvider) : base(item, spawnProvider)
 		{
 			_item = item;
 		}
@@ -202,8 +413,6 @@ namespace Rocketcore.Model.Templates.ScSystem
 	}
 }
 #endregion
-
-
 
 
 
@@ -218,6 +427,8 @@ namespace Rocketcore.Model.Templates.UserDefined
 	using Sitecore.ContentSearch.Linq.Common;
     using Fortis.Model;
 	using Fortis.Model.Fields;
+	using Fortis.Providers;
+
 
 	/// <summary>
 	/// <para>Template interface</para>
@@ -239,13 +450,13 @@ namespace Rocketcore.Model.Templates.UserDefined
 	{
 		private Item _item = null;
 
-		public ContentPage() : base(null) { }
+		public ContentPage(ISpawnProvider spawnProvider) : base(null, spawnProvider) { }
 
-		public ContentPage(Guid id) : base(id) { }
+		public ContentPage(Guid id, ISpawnProvider spawnProvider) : base(id, spawnProvider) { }
 
-		public ContentPage(Guid id, Dictionary<string, object> lazyFields) : base(id, lazyFields) { }
+		public ContentPage(Guid id, Dictionary<string, object> lazyFields, ISpawnProvider spawnProvider) : base(id, lazyFields, spawnProvider) { }
 
-		public ContentPage(Item item) : base(item)
+		public ContentPage(Item item, ISpawnProvider spawnProvider) : base(item, spawnProvider)
 		{
 			_item = item;
 		}
@@ -259,11 +470,10 @@ namespace Rocketcore.Model.Templates.UserDefined
 
 		/// <summary><para>Template: Content Page</para><para>Field: Description</para><para>Data type: Multi-Line Text</para></summary>
 		[IndexField("description")]
-		public string DescriptionValue
+ 		public string DescriptionValue
 		{
 			get { return Description.Value; }
 		}
-
 		/// <summary><para>Template: Content Page</para><para>Field: Keywords</para><para>Data type: Multi-Line Text</para></summary>
 		[IndexField("keywords_t")]
 		public virtual ITextFieldWrapper Keywords
@@ -273,11 +483,10 @@ namespace Rocketcore.Model.Templates.UserDefined
 
 		/// <summary><para>Template: Content Page</para><para>Field: Keywords</para><para>Data type: Multi-Line Text</para></summary>
 		[IndexField("keywords")]
-		public string KeywordsValue
+ 		public string KeywordsValue
 		{
 			get { return Keywords.Value; }
 		}
-
 		/// <summary><para>Template: Content Page</para><para>Field: PageTitle</para><para>Data type: Single-Line Text</para></summary>
 		[IndexField("page_title_t")]
 		public virtual ITextFieldWrapper PageTitle
@@ -287,11 +496,10 @@ namespace Rocketcore.Model.Templates.UserDefined
 
 		/// <summary><para>Template: Content Page</para><para>Field: PageTitle</para><para>Data type: Single-Line Text</para></summary>
 		[IndexField("page_title")]
-		public string PageTitleValue
+ 		public string PageTitleValue
 		{
 			get { return PageTitle.Value; }
 		}
-
 		/// <summary><para>Template: Content Page</para><para>Field: BreadcrumbTitle</para><para>Data type: Single-Line Text</para></summary>
 		[IndexField("breadcrumb_title_t")]
 		public virtual ITextFieldWrapper BreadcrumbTitle
@@ -301,11 +509,10 @@ namespace Rocketcore.Model.Templates.UserDefined
 
 		/// <summary><para>Template: Content Page</para><para>Field: BreadcrumbTitle</para><para>Data type: Single-Line Text</para></summary>
 		[IndexField("breadcrumb_title")]
-		public string BreadcrumbTitleValue
+ 		public string BreadcrumbTitleValue
 		{
 			get { return BreadcrumbTitle.Value; }
 		}
-
 		/// <summary><para>Template: Content Page</para><para>Field: HideFromBreadcrumb</para><para>Data type: Checkbox</para></summary>
 		[IndexField("hide_from_breadcrumb_b")]
 		public virtual IBooleanFieldWrapper HideFromBreadcrumb
@@ -315,11 +522,10 @@ namespace Rocketcore.Model.Templates.UserDefined
 
 		/// <summary><para>Template: Content Page</para><para>Field: HideFromBreadcrumb</para><para>Data type: Checkbox</para></summary>
 		[IndexField("hide_from_breadcrumb")]
-		public bool HideFromBreadcrumbValue
+ 		public bool HideFromBreadcrumbValue
 		{
 			get { return HideFromBreadcrumb.Value; }
 		}
-
 		/// <summary><para>Template: Content Page</para><para>Field: HideFromNavigation</para><para>Data type: Checkbox</para></summary>
 		[IndexField("hide_from_navigation_b")]
 		public virtual IBooleanFieldWrapper HideFromNavigation
@@ -329,11 +535,10 @@ namespace Rocketcore.Model.Templates.UserDefined
 
 		/// <summary><para>Template: Content Page</para><para>Field: HideFromNavigation</para><para>Data type: Checkbox</para></summary>
 		[IndexField("hide_from_navigation")]
-		public bool HideFromNavigationValue
+ 		public bool HideFromNavigationValue
 		{
 			get { return HideFromNavigation.Value; }
 		}
-
 		/// <summary><para>Template: Content Page</para><para>Field: NavigationTitle</para><para>Data type: Single-Line Text</para></summary>
 		[IndexField("navigation_title_t")]
 		public virtual ITextFieldWrapper NavigationTitle
@@ -343,11 +548,10 @@ namespace Rocketcore.Model.Templates.UserDefined
 
 		/// <summary><para>Template: Content Page</para><para>Field: NavigationTitle</para><para>Data type: Single-Line Text</para></summary>
 		[IndexField("navigation_title")]
-		public string NavigationTitleValue
+ 		public string NavigationTitleValue
 		{
 			get { return NavigationTitle.Value; }
 		}
-
 		/// <summary><para>Template: Content Page</para><para>Field: Tags</para><para>Data type: Tags</para></summary>
 		[IndexField("tags_sm")]
 		public virtual IListFieldWrapper Tags
@@ -357,11 +561,10 @@ namespace Rocketcore.Model.Templates.UserDefined
 
 		/// <summary><para>Template: Content Page</para><para>Field: Tags</para><para>Data type: Tags</para></summary>
 		[IndexField("tags")]
-		public IEnumerable<Guid> TagsValue
+ 		public IEnumerable<Guid> TagsValue
 		{
 			get { return Tags.Value; }
 		}
-
 		/// <summary><para>Template: Content Page</para><para>Field: SubTitle</para><para>Data type: Single-Line Text</para></summary>
 		[IndexField("sub_title_t")]
 		public virtual ITextFieldWrapper SubTitle
@@ -371,11 +574,10 @@ namespace Rocketcore.Model.Templates.UserDefined
 
 		/// <summary><para>Template: Content Page</para><para>Field: SubTitle</para><para>Data type: Single-Line Text</para></summary>
 		[IndexField("sub_title")]
-		public string SubTitleValue
+ 		public string SubTitleValue
 		{
 			get { return SubTitle.Value; }
 		}
-
 		/// <summary><para>Template: Content Page</para><para>Field: Title</para><para>Data type: Single-Line Text</para></summary>
 		[IndexField("title_t")]
 		public virtual ITextFieldWrapper Title
@@ -385,11 +587,10 @@ namespace Rocketcore.Model.Templates.UserDefined
 
 		/// <summary><para>Template: Content Page</para><para>Field: Title</para><para>Data type: Single-Line Text</para></summary>
 		[IndexField("title")]
-		public string TitleValue
+ 		public string TitleValue
 		{
 			get { return Title.Value; }
 		}
-
 		/// <summary><para>Template: Content Page</para><para>Field: DateAndTime</para><para>Data type: Datetime</para></summary>
 		[IndexField("date_and_time_tdt")]
 		public virtual IDateTimeFieldWrapper DateAndTime
@@ -399,11 +600,10 @@ namespace Rocketcore.Model.Templates.UserDefined
 
 		/// <summary><para>Template: Content Page</para><para>Field: DateAndTime</para><para>Data type: Datetime</para></summary>
 		[IndexField("date_and_time")]
-		public DateTime DateAndTimeValue
+ 		public DateTime DateAndTimeValue
 		{
 			get { return DateAndTime.Value; }
 		}
-
 		/// <summary><para>Template: Content Page</para><para>Field: Body</para><para>Data type: Rich Text</para></summary>
 		[IndexField("body_t")]
 		public virtual IRichTextFieldWrapper Body
@@ -413,11 +613,10 @@ namespace Rocketcore.Model.Templates.UserDefined
 
 		/// <summary><para>Template: Content Page</para><para>Field: Body</para><para>Data type: Rich Text</para></summary>
 		[IndexField("body")]
-		public string BodyValue
+ 		public string BodyValue
 		{
 			get { return Body.Value; }
 		}
-
 		/// <summary><para>Template: Content Page</para><para>Field: Image</para><para>Data type: Image</para></summary>
 		public virtual IImageFieldWrapper Image
 		{
@@ -425,16 +624,14 @@ namespace Rocketcore.Model.Templates.UserDefined
 		}
 
 		/// <summary><para>Template: Content Page</para><para>Field: Image</para><para>Data type: Image</para></summary>
-		public string ImageValue
+ 		public string ImageValue
 		{
 			get { return Image.Value; }
 		}
-
 	
 	}
 }
 #endregion
-
 #region Ordering Options (UserDefined)
 namespace Rocketcore.Model.Templates.UserDefined
 {
@@ -445,6 +642,8 @@ namespace Rocketcore.Model.Templates.UserDefined
 	using Sitecore.ContentSearch.Linq.Common;
     using Fortis.Model;
 	using Fortis.Model.Fields;
+	using Fortis.Providers;
+
     using Fortis.Model.RenderingParameters;
 
 	/// <summary>
@@ -454,20 +653,18 @@ namespace Rocketcore.Model.Templates.UserDefined
 	/// <para>/sitecore/templates/User Defined/Global/Presentation/Rendering Options/Ordering Options</para>
 	/// </summary>
 	[TemplateMapping("{265AA3E1-31EF-4CAC-AC52-FF7061EBD714}", "InterfaceRenderingParameter")]
-	public partial interface IOrderingOptions : IRenderingParameterWrapper , Rocketcore.Model.Templates.ScSystem.IStandardTemplate, Rocketcore.Model.Templates.UserDefined.IRocketcoreRenderingParameters
+	public partial interface IOrderingOptions : IRenderingParameterWrapper , Rocketcore.Model.Templates.UserDefined.IRocketcoreRenderingParameters
 	{		
     	/// <summary>
 		/// <para>Template: Ordering Options</para><para>Field: OrderBy</para><para>Data type: Droplink</para>
         /// </summary>
 		ILinkFieldWrapper OrderBy { get; }
-		string OrderByValue { get; }
-		
+ 		string OrderByValue { get; }
     	/// <summary>
 		/// <para>Template: Ordering Options</para><para>Field: OrderDirection</para><para>Data type: Droplink</para>
         /// </summary>
 		ILinkFieldWrapper OrderDirection { get; }
-		string OrderDirectionValue { get; }
-		
+ 		string OrderDirectionValue { get; }
 	}
 
 	/// <summary>
@@ -477,80 +674,8 @@ namespace Rocketcore.Model.Templates.UserDefined
 	[TemplateMapping("{265AA3E1-31EF-4CAC-AC52-FF7061EBD714}", "RenderingParameter")]
 	public partial class OrderingOptions : RenderingParameterWrapper, IOrderingOptions
 	{
-		public OrderingOptions(Dictionary<string, string> parameters) : base(parameters)
+		public OrderingOptions(Dictionary<string, string> parameters, ISpawnProvider spawnProvider) : base(parameters, spawnProvider)
 		{
-		}
-
-		/// <summary><para>Template: Ordering Options</para><para>Field: Caching</para><para>Data type: Custom</para></summary>
-		public virtual ITextFieldWrapper Caching
-		{
-			get { return (Fortis.Model.RenderingParameters.Fields.TextFieldWrapper)GetField("Caching", "custom"); }
-		}
-
-		/// <summary><para>Template: Ordering Options</para><para>Field: Caching</para><para>Data type: Custom</para></summary>
-		public string CachingValue
-		{
-			get { return Caching.Value; }
-		}
-
-		/// <summary><para>Template: Ordering Options</para><para>Field: DataSource</para><para>Data type: Query Datasource</para></summary>
-		public virtual ITextFieldWrapper DataSource
-		{
-			get { return (Fortis.Model.RenderingParameters.Fields.TextFieldWrapper)GetField("Data Source", "query datasource"); }
-		}
-
-		/// <summary><para>Template: Ordering Options</para><para>Field: DataSource</para><para>Data type: Query Datasource</para></summary>
-		public string DataSourceValue
-		{
-			get { return DataSource.Value; }
-		}
-
-		/// <summary><para>Template: Ordering Options</para><para>Field: Placeholder</para><para>Data type: Single-Line Text</para></summary>
-		public virtual ITextFieldWrapper Placeholder
-		{
-			get { return (Fortis.Model.RenderingParameters.Fields.TextFieldWrapper)GetField("Placeholder", "single-line text"); }
-		}
-
-		/// <summary><para>Template: Ordering Options</para><para>Field: Placeholder</para><para>Data type: Single-Line Text</para></summary>
-		public string PlaceholderValue
-		{
-			get { return Placeholder.Value; }
-		}
-
-		/// <summary><para>Template: Ordering Options</para><para>Field: AdditionalParameters</para><para>Data type: Name Value List</para></summary>
-		public virtual ITextFieldWrapper AdditionalParameters
-		{
-			get { return (Fortis.Model.RenderingParameters.Fields.TextFieldWrapper)GetField("Additional Parameters", "name value list"); }
-		}
-
-		/// <summary><para>Template: Ordering Options</para><para>Field: AdditionalParameters</para><para>Data type: Name Value List</para></summary>
-		public string AdditionalParametersValue
-		{
-			get { return AdditionalParameters.Value; }
-		}
-
-		/// <summary><para>Template: Ordering Options</para><para>Field: Personalization</para><para>Data type: Custom</para></summary>
-		public virtual ITextFieldWrapper Personalization
-		{
-			get { return (Fortis.Model.RenderingParameters.Fields.TextFieldWrapper)GetField("Personalization", "custom"); }
-		}
-
-		/// <summary><para>Template: Ordering Options</para><para>Field: Personalization</para><para>Data type: Custom</para></summary>
-		public string PersonalizationValue
-		{
-			get { return Personalization.Value; }
-		}
-
-		/// <summary><para>Template: Ordering Options</para><para>Field: Tests</para><para>Data type: Internal Link</para></summary>
-		public virtual ITextFieldWrapper Tests
-		{
-			get { return (Fortis.Model.RenderingParameters.Fields.TextFieldWrapper)GetField("Tests", "internal link"); }
-		}
-
-		/// <summary><para>Template: Ordering Options</para><para>Field: Tests</para><para>Data type: Internal Link</para></summary>
-		public string TestsValue
-		{
-			get { return Tests.Value; }
 		}
 
 		/// <summary><para>Template: Ordering Options</para><para>Field: OrderBy</para><para>Data type: Droplink</para></summary>
@@ -560,11 +685,10 @@ namespace Rocketcore.Model.Templates.UserDefined
 		}
 
 		/// <summary><para>Template: Ordering Options</para><para>Field: OrderBy</para><para>Data type: Droplink</para></summary>
-		public string OrderByValue
+ 		public string OrderByValue
 		{
 			get { return OrderBy.Value; }
 		}
-
 		/// <summary><para>Template: Ordering Options</para><para>Field: OrderDirection</para><para>Data type: Droplink</para></summary>
 		public virtual ILinkFieldWrapper OrderDirection
 		{
@@ -572,16 +696,113 @@ namespace Rocketcore.Model.Templates.UserDefined
 		}
 
 		/// <summary><para>Template: Ordering Options</para><para>Field: OrderDirection</para><para>Data type: Droplink</para></summary>
-		public string OrderDirectionValue
+ 		public string OrderDirectionValue
 		{
 			get { return OrderDirection.Value; }
 		}
-
 	
 	}
 }
 #endregion
 
+#region Navigation Link (UserDefined)
+namespace Rocketcore.Model.Templates.UserDefined
+{
+    using System;
+	using System.Collections.Generic;
+    using Sitecore.Data.Items;
+	using Sitecore.ContentSearch;
+	using Sitecore.ContentSearch.Linq.Common;
+    using Fortis.Model;
+	using Fortis.Model.Fields;
+	using Fortis.Providers;
+
+
+	/// <summary>
+	/// <para>Template interface</para>
+	/// <para>Template: Navigation Link</para>
+	/// <para>ID: {2FCB8A5D-40D4-4E11-B904-8D4A1A08612D}</para>
+	/// <para>/sitecore/templates/User Defined/Navigation/Navigation Link</para>
+	/// </summary>
+	[TemplateMapping("{2FCB8A5D-40D4-4E11-B904-8D4A1A08612D}", "InterfaceMap")]
+	public partial interface INavigationLink : ICustomItemWrapper , Rocketcore.Model.Templates.UserDefined.INavigation
+	{		
+    	/// <summary>
+		/// <para>Template: Navigation Link</para><para>Field: Link</para><para>Data type: General Link</para>
+        /// </summary>
+		[IndexField("link_t")]
+		IGeneralLinkFieldWrapper Link { get; }
+
+    	/// <summary>
+		/// <para>Template: Navigation Link</para><para>Field: Link</para><para>Data type: General Link</para>
+        /// </summary>
+		[IndexField("link")]
+ 		string LinkValue { get; }
+	}
+
+	/// <summary>
+	/// <para>Template class</para><para>/sitecore/templates/User Defined/Navigation/Navigation Link</para>
+	/// </summary>
+	[PredefinedQuery("TemplateId", ComparisonType.Equal, "{2FCB8A5D-40D4-4E11-B904-8D4A1A08612D}", typeof(Guid))]
+	[TemplateMapping("{2FCB8A5D-40D4-4E11-B904-8D4A1A08612D}", "")]
+	public partial class NavigationLink : CustomItemWrapper, INavigationLink
+	{
+		private Item _item = null;
+
+		public NavigationLink(ISpawnProvider spawnProvider) : base(null, spawnProvider) { }
+
+		public NavigationLink(Guid id, ISpawnProvider spawnProvider) : base(id, spawnProvider) { }
+
+		public NavigationLink(Guid id, Dictionary<string, object> lazyFields, ISpawnProvider spawnProvider) : base(id, lazyFields, spawnProvider) { }
+
+		public NavigationLink(Item item, ISpawnProvider spawnProvider) : base(item, spawnProvider)
+		{
+			_item = item;
+		}
+
+		/// <summary><para>Template: Navigation Link</para><para>Field: HideFromNavigation</para><para>Data type: Checkbox</para></summary>
+		[IndexField("hide_from_navigation_b")]
+		public virtual IBooleanFieldWrapper HideFromNavigation
+		{
+			get { return GetField<BooleanFieldWrapper>("Hide From Navigation", "hide_from_navigation_b"); }
+		}
+
+		/// <summary><para>Template: Navigation Link</para><para>Field: HideFromNavigation</para><para>Data type: Checkbox</para></summary>
+		[IndexField("hide_from_navigation")]
+ 		public bool HideFromNavigationValue
+		{
+			get { return HideFromNavigation.Value; }
+		}
+		/// <summary><para>Template: Navigation Link</para><para>Field: NavigationTitle</para><para>Data type: Single-Line Text</para></summary>
+		[IndexField("navigation_title_t")]
+		public virtual ITextFieldWrapper NavigationTitle
+		{
+			get { return GetField<TextFieldWrapper>("Navigation Title", "navigation_title_t"); }
+		}
+
+		/// <summary><para>Template: Navigation Link</para><para>Field: NavigationTitle</para><para>Data type: Single-Line Text</para></summary>
+		[IndexField("navigation_title")]
+ 		public string NavigationTitleValue
+		{
+			get { return NavigationTitle.Value; }
+		}
+		/// <summary><para>Template: Navigation Link</para><para>Field: Link</para><para>Data type: General Link</para></summary>
+		[IndexField("link_t")]
+		public virtual IGeneralLinkFieldWrapper Link
+		{
+			get { return GetField<GeneralLinkFieldWrapper>("Link", "link_t"); }
+		}
+
+		/// <summary><para>Template: Navigation Link</para><para>Field: Link</para><para>Data type: General Link</para></summary>
+		[IndexField("link")]
+ 		public string LinkValue
+		{
+			get { return Link.Value; }
+		}
+	
+	}
+}
+#endregion
 #region Rocketcore Folder (UserDefined)
 namespace Rocketcore.Model.Templates.UserDefined
 {
@@ -592,6 +813,8 @@ namespace Rocketcore.Model.Templates.UserDefined
 	using Sitecore.ContentSearch.Linq.Common;
     using Fortis.Model;
 	using Fortis.Model.Fields;
+	using Fortis.Providers;
+
 
 	/// <summary>
 	/// <para>Template interface</para>
@@ -600,7 +823,7 @@ namespace Rocketcore.Model.Templates.UserDefined
 	/// <para>/sitecore/templates/User Defined/Rocketcore/Rocketcore Folder</para>
 	/// </summary>
 	[TemplateMapping("{306135B9-51D1-476B-8429-A717EC6DA037}", "InterfaceMap")]
-	public partial interface IRocketcoreFolder : ICustomItemWrapper , Rocketcore.Model.Templates.ScSystem.IStandardTemplate, Rocketcore.Model.Templates.UserDefined.IRocketcorePermissions
+	public partial interface IRocketcoreFolder : ICustomItemWrapper , Rocketcore.Model.Templates.UserDefined.IRocketcorePermissions
 	{		
 	}
 
@@ -613,17 +836,180 @@ namespace Rocketcore.Model.Templates.UserDefined
 	{
 		private Item _item = null;
 
-		public RocketcoreFolder() : base(null) { }
+		public RocketcoreFolder(ISpawnProvider spawnProvider) : base(null, spawnProvider) { }
 
-		public RocketcoreFolder(Guid id) : base(id) { }
+		public RocketcoreFolder(Guid id, ISpawnProvider spawnProvider) : base(id, spawnProvider) { }
 
-		public RocketcoreFolder(Guid id, Dictionary<string, object> lazyFields) : base(id, lazyFields) { }
+		public RocketcoreFolder(Guid id, Dictionary<string, object> lazyFields, ISpawnProvider spawnProvider) : base(id, lazyFields, spawnProvider) { }
 
-		public RocketcoreFolder(Item item) : base(item)
+		public RocketcoreFolder(Item item, ISpawnProvider spawnProvider) : base(item, spawnProvider)
 		{
 			_item = item;
 		}
 
+	
+	}
+}
+#endregion
+#region Call To Action Target (UserDefined)
+namespace Rocketcore.Model.Templates.UserDefined
+{
+    using System;
+	using System.Collections.Generic;
+    using Sitecore.Data.Items;
+	using Sitecore.ContentSearch;
+	using Sitecore.ContentSearch.Linq.Common;
+    using Fortis.Model;
+	using Fortis.Model.Fields;
+	using Fortis.Providers;
+
+
+	/// <summary>
+	/// <para>Template interface</para>
+	/// <para>Template: Call To Action Target</para>
+	/// <para>ID: {30683BF7-4B2E-443F-9C4C-1DAABB2962C2}</para>
+	/// <para>/sitecore/templates/User Defined/Call To Action/Call To Action Target</para>
+	/// </summary>
+	[TemplateMapping("{30683BF7-4B2E-443F-9C4C-1DAABB2962C2}", "InterfaceMap")]
+	public partial interface ICallToActionTarget : ICustomItemWrapper , Rocketcore.Model.Templates.UserDefined.IRocketcoreStandardTemplate, Rocketcore.Model.Templates.UserDefined.ICallToAction, Rocketcore.Model.Templates.UserDefined.INavigationLink
+	{		
+	}
+
+	/// <summary>
+	/// <para>Template class</para><para>/sitecore/templates/User Defined/Call To Action/Call To Action Target</para>
+	/// </summary>
+	[PredefinedQuery("TemplateId", ComparisonType.Equal, "{30683BF7-4B2E-443F-9C4C-1DAABB2962C2}", typeof(Guid))]
+	[TemplateMapping("{30683BF7-4B2E-443F-9C4C-1DAABB2962C2}", "")]
+	public partial class CallToActionTarget : CustomItemWrapper, ICallToActionTarget
+	{
+		private Item _item = null;
+
+		public CallToActionTarget(ISpawnProvider spawnProvider) : base(null, spawnProvider) { }
+
+		public CallToActionTarget(Guid id, ISpawnProvider spawnProvider) : base(id, spawnProvider) { }
+
+		public CallToActionTarget(Guid id, Dictionary<string, object> lazyFields, ISpawnProvider spawnProvider) : base(id, lazyFields, spawnProvider) { }
+
+		public CallToActionTarget(Item item, ISpawnProvider spawnProvider) : base(item, spawnProvider)
+		{
+			_item = item;
+		}
+
+		/// <summary><para>Template: Call To Action Target</para><para>Field: Tags</para><para>Data type: Tags</para></summary>
+		[IndexField("tags_sm")]
+		public virtual IListFieldWrapper Tags
+		{
+			get { return GetField<ListFieldWrapper>("Tags", "tags_sm"); }
+		}
+
+		/// <summary><para>Template: Call To Action Target</para><para>Field: Tags</para><para>Data type: Tags</para></summary>
+		[IndexField("tags")]
+ 		public IEnumerable<Guid> TagsValue
+		{
+			get { return Tags.Value; }
+		}
+		/// <summary><para>Template: Call To Action Target</para><para>Field: SubTitle</para><para>Data type: Single-Line Text</para></summary>
+		[IndexField("sub_title_t")]
+		public virtual ITextFieldWrapper SubTitle
+		{
+			get { return GetField<TextFieldWrapper>("Sub Title", "sub_title_t"); }
+		}
+
+		/// <summary><para>Template: Call To Action Target</para><para>Field: SubTitle</para><para>Data type: Single-Line Text</para></summary>
+		[IndexField("sub_title")]
+ 		public string SubTitleValue
+		{
+			get { return SubTitle.Value; }
+		}
+		/// <summary><para>Template: Call To Action Target</para><para>Field: Title</para><para>Data type: Single-Line Text</para></summary>
+		[IndexField("title_t")]
+		public virtual ITextFieldWrapper Title
+		{
+			get { return GetField<TextFieldWrapper>("Title", "title_t"); }
+		}
+
+		/// <summary><para>Template: Call To Action Target</para><para>Field: Title</para><para>Data type: Single-Line Text</para></summary>
+		[IndexField("title")]
+ 		public string TitleValue
+		{
+			get { return Title.Value; }
+		}
+		/// <summary><para>Template: Call To Action Target</para><para>Field: Body</para><para>Data type: Rich Text</para></summary>
+		[IndexField("body_t")]
+		public virtual IRichTextFieldWrapper Body
+		{
+			get { return GetField<RichTextFieldWrapper>("Body", "body_t"); }
+		}
+
+		/// <summary><para>Template: Call To Action Target</para><para>Field: Body</para><para>Data type: Rich Text</para></summary>
+		[IndexField("body")]
+ 		public string BodyValue
+		{
+			get { return Body.Value; }
+		}
+		/// <summary><para>Template: Call To Action Target</para><para>Field: Image</para><para>Data type: Image</para></summary>
+		public virtual IImageFieldWrapper Image
+		{
+			get { return GetField<ImageFieldWrapper>("Image"); }
+		}
+
+		/// <summary><para>Template: Call To Action Target</para><para>Field: Image</para><para>Data type: Image</para></summary>
+ 		public string ImageValue
+		{
+			get { return Image.Value; }
+		}
+		/// <summary><para>Template: Call To Action Target</para><para>Field: DateAndTime</para><para>Data type: Datetime</para></summary>
+		[IndexField("date_and_time_tdt")]
+		public virtual IDateTimeFieldWrapper DateAndTime
+		{
+			get { return GetField<DateTimeFieldWrapper>("Date And Time", "date_and_time_tdt"); }
+		}
+
+		/// <summary><para>Template: Call To Action Target</para><para>Field: DateAndTime</para><para>Data type: Datetime</para></summary>
+		[IndexField("date_and_time")]
+ 		public DateTime DateAndTimeValue
+		{
+			get { return DateAndTime.Value; }
+		}
+		/// <summary><para>Template: Call To Action Target</para><para>Field: Link</para><para>Data type: General Link</para></summary>
+		[IndexField("link_t")]
+		public virtual IGeneralLinkFieldWrapper Link
+		{
+			get { return GetField<GeneralLinkFieldWrapper>("Link", "link_t"); }
+		}
+
+		/// <summary><para>Template: Call To Action Target</para><para>Field: Link</para><para>Data type: General Link</para></summary>
+		[IndexField("link")]
+ 		public string LinkValue
+		{
+			get { return Link.Value; }
+		}
+		/// <summary><para>Template: Call To Action Target</para><para>Field: HideFromNavigation</para><para>Data type: Checkbox</para></summary>
+		[IndexField("hide_from_navigation_b")]
+		public virtual IBooleanFieldWrapper HideFromNavigation
+		{
+			get { return GetField<BooleanFieldWrapper>("Hide From Navigation", "hide_from_navigation_b"); }
+		}
+
+		/// <summary><para>Template: Call To Action Target</para><para>Field: HideFromNavigation</para><para>Data type: Checkbox</para></summary>
+		[IndexField("hide_from_navigation")]
+ 		public bool HideFromNavigationValue
+		{
+			get { return HideFromNavigation.Value; }
+		}
+		/// <summary><para>Template: Call To Action Target</para><para>Field: NavigationTitle</para><para>Data type: Single-Line Text</para></summary>
+		[IndexField("navigation_title_t")]
+		public virtual ITextFieldWrapper NavigationTitle
+		{
+			get { return GetField<TextFieldWrapper>("Navigation Title", "navigation_title_t"); }
+		}
+
+		/// <summary><para>Template: Call To Action Target</para><para>Field: NavigationTitle</para><para>Data type: Single-Line Text</para></summary>
+		[IndexField("navigation_title")]
+ 		public string NavigationTitleValue
+		{
+			get { return NavigationTitle.Value; }
+		}
 	
 	}
 }
@@ -636,8 +1022,374 @@ namespace Rocketcore.Model.Templates.UserDefined
 
 
 
+#region Call To Action Options (UserDefined)
+namespace Rocketcore.Model.Templates.UserDefined
+{
+    using System;
+	using System.Collections.Generic;
+    using Sitecore.Data.Items;
+	using Sitecore.ContentSearch;
+	using Sitecore.ContentSearch.Linq.Common;
+    using Fortis.Model;
+	using Fortis.Model.Fields;
+	using Fortis.Providers;
+
+    using Fortis.Model.RenderingParameters;
+
+	/// <summary>
+	/// <para>Template interface</para>
+	/// <para>Template: Call To Action Options</para>
+	/// <para>ID: {3ACEEB4D-7AF0-4907-B33D-ED7762C53A8E}</para>
+	/// <para>/sitecore/templates/User Defined/Call To Action/Rendering Options/Call To Action Options</para>
+	/// </summary>
+	[TemplateMapping("{3ACEEB4D-7AF0-4907-B33D-ED7762C53A8E}", "InterfaceRenderingParameter")]
+	public partial interface ICallToActionOptions : IRenderingParameterWrapper , Rocketcore.Model.Templates.UserDefined.IRocketcoreRenderingParameters, Rocketcore.Model.Templates.UserDefined.ISizeOptions, Rocketcore.Model.Templates.UserDefined.ICallToActionLinksOptions
+	{		
+	}
+
+	/// <summary>
+	/// <para>Template class</para><para>/sitecore/templates/User Defined/Call To Action/Rendering Options/Call To Action Options</para>
+	/// </summary>
+	[PredefinedQuery("TemplateId", ComparisonType.Equal, "{3ACEEB4D-7AF0-4907-B33D-ED7762C53A8E}", typeof(Guid))]
+	[TemplateMapping("{3ACEEB4D-7AF0-4907-B33D-ED7762C53A8E}", "RenderingParameter")]
+	public partial class CallToActionOptions : RenderingParameterWrapper, ICallToActionOptions
+	{
+		public CallToActionOptions(Dictionary<string, string> parameters, ISpawnProvider spawnProvider) : base(parameters, spawnProvider)
+		{
+		}
+
+		/// <summary><para>Template: Call To Action Options</para><para>Field: Height</para><para>Data type: Integer</para></summary>
+		public virtual IIntegerFieldWrapper Height
+		{
+			get { return (Fortis.Model.RenderingParameters.Fields.IntegerFieldWrapper)GetField("Height", "integer"); }
+		}
+
+		/// <summary><para>Template: Call To Action Options</para><para>Field: Height</para><para>Data type: Integer</para></summary>
+ 		public long HeightValue
+		{
+			get { return Height.Value; }
+		}
+		/// <summary><para>Template: Call To Action Options</para><para>Field: Width</para><para>Data type: Integer</para></summary>
+		public virtual IIntegerFieldWrapper Width
+		{
+			get { return (Fortis.Model.RenderingParameters.Fields.IntegerFieldWrapper)GetField("Width", "integer"); }
+		}
+
+		/// <summary><para>Template: Call To Action Options</para><para>Field: Width</para><para>Data type: Integer</para></summary>
+ 		public long WidthValue
+		{
+			get { return Width.Value; }
+		}
+		/// <summary><para>Template: Call To Action Options</para><para>Field: CallToActionGroup</para><para>Data type: Droptree</para></summary>
+		public virtual ILinkFieldWrapper CallToActionGroup
+		{
+			get { return (Fortis.Model.RenderingParameters.Fields.LinkFieldWrapper)GetField("Call To Action Group", "droptree"); }
+		}
+
+		/// <summary><para>Template: Call To Action Options</para><para>Field: CallToActionGroup</para><para>Data type: Droptree</para></summary>
+ 		public string CallToActionGroupValue
+		{
+			get { return CallToActionGroup.Value; }
+		}
+		/// <summary><para>Template: Call To Action Options</para><para>Field: SelectionMethod</para><para>Data type: Droplink</para></summary>
+		public virtual ILinkFieldWrapper SelectionMethod
+		{
+			get { return (Fortis.Model.RenderingParameters.Fields.LinkFieldWrapper)GetField("Selection Method", "droplink"); }
+		}
+
+		/// <summary><para>Template: Call To Action Options</para><para>Field: SelectionMethod</para><para>Data type: Droplink</para></summary>
+ 		public string SelectionMethodValue
+		{
+			get { return SelectionMethod.Value; }
+		}
+		/// <summary><para>Template: Call To Action Options</para><para>Field: AggregateBy</para><para>Data type: Droplink</para></summary>
+		public virtual ILinkFieldWrapper AggregateBy
+		{
+			get { return (Fortis.Model.RenderingParameters.Fields.LinkFieldWrapper)GetField("Aggregate By", "droplink"); }
+		}
+
+		/// <summary><para>Template: Call To Action Options</para><para>Field: AggregateBy</para><para>Data type: Droplink</para></summary>
+ 		public string AggregateByValue
+		{
+			get { return AggregateBy.Value; }
+		}
+		/// <summary><para>Template: Call To Action Options</para><para>Field: GroupTagsBy</para><para>Data type: Droplink</para></summary>
+		public virtual ILinkFieldWrapper GroupTagsBy
+		{
+			get { return (Fortis.Model.RenderingParameters.Fields.LinkFieldWrapper)GetField("Group Tags By", "droplink"); }
+		}
+
+		/// <summary><para>Template: Call To Action Options</para><para>Field: GroupTagsBy</para><para>Data type: Droplink</para></summary>
+ 		public string GroupTagsByValue
+		{
+			get { return GroupTagsBy.Value; }
+		}
+		/// <summary><para>Template: Call To Action Options</para><para>Field: Tags</para><para>Data type: Tags</para></summary>
+		public virtual IListFieldWrapper Tags
+		{
+			get { return (Fortis.Model.RenderingParameters.Fields.ListFieldWrapper)GetField("Tags", "tags"); }
+		}
+
+		/// <summary><para>Template: Call To Action Options</para><para>Field: Tags</para><para>Data type: Tags</para></summary>
+ 		public IEnumerable<Guid> TagsValue
+		{
+			get { return Tags.Value; }
+		}
+		/// <summary><para>Template: Call To Action Options</para><para>Field: OrderBy</para><para>Data type: Droplink</para></summary>
+		public virtual ILinkFieldWrapper OrderBy
+		{
+			get { return (Fortis.Model.RenderingParameters.Fields.LinkFieldWrapper)GetField("Order By", "droplink"); }
+		}
+
+		/// <summary><para>Template: Call To Action Options</para><para>Field: OrderBy</para><para>Data type: Droplink</para></summary>
+ 		public string OrderByValue
+		{
+			get { return OrderBy.Value; }
+		}
+		/// <summary><para>Template: Call To Action Options</para><para>Field: OrderDirection</para><para>Data type: Droplink</para></summary>
+		public virtual ILinkFieldWrapper OrderDirection
+		{
+			get { return (Fortis.Model.RenderingParameters.Fields.LinkFieldWrapper)GetField("Order Direction", "droplink"); }
+		}
+
+		/// <summary><para>Template: Call To Action Options</para><para>Field: OrderDirection</para><para>Data type: Droplink</para></summary>
+ 		public string OrderDirectionValue
+		{
+			get { return OrderDirection.Value; }
+		}
+		/// <summary><para>Template: Call To Action Options</para><para>Field: ItemsPerPage</para><para>Data type: Integer</para></summary>
+		public virtual IIntegerFieldWrapper ItemsPerPage
+		{
+			get { return (Fortis.Model.RenderingParameters.Fields.IntegerFieldWrapper)GetField("Items Per Page", "integer"); }
+		}
+
+		/// <summary><para>Template: Call To Action Options</para><para>Field: ItemsPerPage</para><para>Data type: Integer</para></summary>
+ 		public long ItemsPerPageValue
+		{
+			get { return ItemsPerPage.Value; }
+		}
+	
+	}
+}
+#endregion
 
 
+
+#region HomePage (UserDefined)
+namespace Rocketcore.Model.Templates.UserDefined
+{
+    using System;
+	using System.Collections.Generic;
+    using Sitecore.Data.Items;
+	using Sitecore.ContentSearch;
+	using Sitecore.ContentSearch.Linq.Common;
+    using Fortis.Model;
+	using Fortis.Model.Fields;
+	using Fortis.Providers;
+
+
+	/// <summary>
+	/// <para>Template interface</para>
+	/// <para>Template: HomePage</para>
+	/// <para>ID: {44D657D3-6758-4C9C-B4C5-9200B424F186}</para>
+	/// <para>/sitecore/templates/User Defined/Home/HomePage</para>
+	/// </summary>
+	[TemplateMapping("{44D657D3-6758-4C9C-B4C5-9200B424F186}", "InterfaceMap")]
+	public partial interface IHomePage : ICustomItemWrapper , Rocketcore.Model.Templates.UserDefined.IRocketcoreStandardTemplate, Rocketcore.Model.Templates.UserDefined.IContentPage
+	{		
+	}
+
+	/// <summary>
+	/// <para>Template class</para><para>/sitecore/templates/User Defined/Home/HomePage</para>
+	/// </summary>
+	[PredefinedQuery("TemplateId", ComparisonType.Equal, "{44D657D3-6758-4C9C-B4C5-9200B424F186}", typeof(Guid))]
+	[TemplateMapping("{44D657D3-6758-4C9C-B4C5-9200B424F186}", "")]
+	public partial class HomePage : CustomItemWrapper, IHomePage
+	{
+		private Item _item = null;
+
+		public HomePage(ISpawnProvider spawnProvider) : base(null, spawnProvider) { }
+
+		public HomePage(Guid id, ISpawnProvider spawnProvider) : base(id, spawnProvider) { }
+
+		public HomePage(Guid id, Dictionary<string, object> lazyFields, ISpawnProvider spawnProvider) : base(id, lazyFields, spawnProvider) { }
+
+		public HomePage(Item item, ISpawnProvider spawnProvider) : base(item, spawnProvider)
+		{
+			_item = item;
+		}
+
+		/// <summary><para>Template: HomePage</para><para>Field: Description</para><para>Data type: Multi-Line Text</para></summary>
+		[IndexField("description_t")]
+		public virtual ITextFieldWrapper Description
+		{
+			get { return GetField<TextFieldWrapper>("Description", "description_t"); }
+		}
+
+		/// <summary><para>Template: HomePage</para><para>Field: Description</para><para>Data type: Multi-Line Text</para></summary>
+		[IndexField("description")]
+ 		public string DescriptionValue
+		{
+			get { return Description.Value; }
+		}
+		/// <summary><para>Template: HomePage</para><para>Field: Keywords</para><para>Data type: Multi-Line Text</para></summary>
+		[IndexField("keywords_t")]
+		public virtual ITextFieldWrapper Keywords
+		{
+			get { return GetField<TextFieldWrapper>("Keywords", "keywords_t"); }
+		}
+
+		/// <summary><para>Template: HomePage</para><para>Field: Keywords</para><para>Data type: Multi-Line Text</para></summary>
+		[IndexField("keywords")]
+ 		public string KeywordsValue
+		{
+			get { return Keywords.Value; }
+		}
+		/// <summary><para>Template: HomePage</para><para>Field: PageTitle</para><para>Data type: Single-Line Text</para></summary>
+		[IndexField("page_title_t")]
+		public virtual ITextFieldWrapper PageTitle
+		{
+			get { return GetField<TextFieldWrapper>("Page Title", "page_title_t"); }
+		}
+
+		/// <summary><para>Template: HomePage</para><para>Field: PageTitle</para><para>Data type: Single-Line Text</para></summary>
+		[IndexField("page_title")]
+ 		public string PageTitleValue
+		{
+			get { return PageTitle.Value; }
+		}
+		/// <summary><para>Template: HomePage</para><para>Field: BreadcrumbTitle</para><para>Data type: Single-Line Text</para></summary>
+		[IndexField("breadcrumb_title_t")]
+		public virtual ITextFieldWrapper BreadcrumbTitle
+		{
+			get { return GetField<TextFieldWrapper>("Breadcrumb Title", "breadcrumb_title_t"); }
+		}
+
+		/// <summary><para>Template: HomePage</para><para>Field: BreadcrumbTitle</para><para>Data type: Single-Line Text</para></summary>
+		[IndexField("breadcrumb_title")]
+ 		public string BreadcrumbTitleValue
+		{
+			get { return BreadcrumbTitle.Value; }
+		}
+		/// <summary><para>Template: HomePage</para><para>Field: HideFromBreadcrumb</para><para>Data type: Checkbox</para></summary>
+		[IndexField("hide_from_breadcrumb_b")]
+		public virtual IBooleanFieldWrapper HideFromBreadcrumb
+		{
+			get { return GetField<BooleanFieldWrapper>("Hide From Breadcrumb", "hide_from_breadcrumb_b"); }
+		}
+
+		/// <summary><para>Template: HomePage</para><para>Field: HideFromBreadcrumb</para><para>Data type: Checkbox</para></summary>
+		[IndexField("hide_from_breadcrumb")]
+ 		public bool HideFromBreadcrumbValue
+		{
+			get { return HideFromBreadcrumb.Value; }
+		}
+		/// <summary><para>Template: HomePage</para><para>Field: HideFromNavigation</para><para>Data type: Checkbox</para></summary>
+		[IndexField("hide_from_navigation_b")]
+		public virtual IBooleanFieldWrapper HideFromNavigation
+		{
+			get { return GetField<BooleanFieldWrapper>("Hide From Navigation", "hide_from_navigation_b"); }
+		}
+
+		/// <summary><para>Template: HomePage</para><para>Field: HideFromNavigation</para><para>Data type: Checkbox</para></summary>
+		[IndexField("hide_from_navigation")]
+ 		public bool HideFromNavigationValue
+		{
+			get { return HideFromNavigation.Value; }
+		}
+		/// <summary><para>Template: HomePage</para><para>Field: NavigationTitle</para><para>Data type: Single-Line Text</para></summary>
+		[IndexField("navigation_title_t")]
+		public virtual ITextFieldWrapper NavigationTitle
+		{
+			get { return GetField<TextFieldWrapper>("Navigation Title", "navigation_title_t"); }
+		}
+
+		/// <summary><para>Template: HomePage</para><para>Field: NavigationTitle</para><para>Data type: Single-Line Text</para></summary>
+		[IndexField("navigation_title")]
+ 		public string NavigationTitleValue
+		{
+			get { return NavigationTitle.Value; }
+		}
+		/// <summary><para>Template: HomePage</para><para>Field: Tags</para><para>Data type: Tags</para></summary>
+		[IndexField("tags_sm")]
+		public virtual IListFieldWrapper Tags
+		{
+			get { return GetField<ListFieldWrapper>("Tags", "tags_sm"); }
+		}
+
+		/// <summary><para>Template: HomePage</para><para>Field: Tags</para><para>Data type: Tags</para></summary>
+		[IndexField("tags")]
+ 		public IEnumerable<Guid> TagsValue
+		{
+			get { return Tags.Value; }
+		}
+		/// <summary><para>Template: HomePage</para><para>Field: SubTitle</para><para>Data type: Single-Line Text</para></summary>
+		[IndexField("sub_title_t")]
+		public virtual ITextFieldWrapper SubTitle
+		{
+			get { return GetField<TextFieldWrapper>("Sub Title", "sub_title_t"); }
+		}
+
+		/// <summary><para>Template: HomePage</para><para>Field: SubTitle</para><para>Data type: Single-Line Text</para></summary>
+		[IndexField("sub_title")]
+ 		public string SubTitleValue
+		{
+			get { return SubTitle.Value; }
+		}
+		/// <summary><para>Template: HomePage</para><para>Field: Title</para><para>Data type: Single-Line Text</para></summary>
+		[IndexField("title_t")]
+		public virtual ITextFieldWrapper Title
+		{
+			get { return GetField<TextFieldWrapper>("Title", "title_t"); }
+		}
+
+		/// <summary><para>Template: HomePage</para><para>Field: Title</para><para>Data type: Single-Line Text</para></summary>
+		[IndexField("title")]
+ 		public string TitleValue
+		{
+			get { return Title.Value; }
+		}
+		/// <summary><para>Template: HomePage</para><para>Field: DateAndTime</para><para>Data type: Datetime</para></summary>
+		[IndexField("date_and_time_tdt")]
+		public virtual IDateTimeFieldWrapper DateAndTime
+		{
+			get { return GetField<DateTimeFieldWrapper>("Date And Time", "date_and_time_tdt"); }
+		}
+
+		/// <summary><para>Template: HomePage</para><para>Field: DateAndTime</para><para>Data type: Datetime</para></summary>
+		[IndexField("date_and_time")]
+ 		public DateTime DateAndTimeValue
+		{
+			get { return DateAndTime.Value; }
+		}
+		/// <summary><para>Template: HomePage</para><para>Field: Body</para><para>Data type: Rich Text</para></summary>
+		[IndexField("body_t")]
+		public virtual IRichTextFieldWrapper Body
+		{
+			get { return GetField<RichTextFieldWrapper>("Body", "body_t"); }
+		}
+
+		/// <summary><para>Template: HomePage</para><para>Field: Body</para><para>Data type: Rich Text</para></summary>
+		[IndexField("body")]
+ 		public string BodyValue
+		{
+			get { return Body.Value; }
+		}
+		/// <summary><para>Template: HomePage</para><para>Field: Image</para><para>Data type: Image</para></summary>
+		public virtual IImageFieldWrapper Image
+		{
+			get { return GetField<ImageFieldWrapper>("Image"); }
+		}
+
+		/// <summary><para>Template: HomePage</para><para>Field: Image</para><para>Data type: Image</para></summary>
+ 		public string ImageValue
+		{
+			get { return Image.Value; }
+		}
+	
+	}
+}
+#endregion
 
 
 
@@ -657,6 +1409,8 @@ namespace Rocketcore.Model.Templates.UserDefined
 	using Sitecore.ContentSearch.Linq.Common;
     using Fortis.Model;
 	using Fortis.Model.Fields;
+	using Fortis.Providers;
+
 
 	/// <summary>
 	/// <para>Template interface</para>
@@ -665,7 +1419,7 @@ namespace Rocketcore.Model.Templates.UserDefined
 	/// <para>/sitecore/templates/User Defined/Phrases/Phrase Folder</para>
 	/// </summary>
 	[TemplateMapping("{567B998F-F8DF-4DB6-88E1-1797035C4B6C}", "InterfaceMap")]
-	public partial interface IPhraseFolder : ICustomItemWrapper , Rocketcore.Model.Templates.ScSystem.IStandardTemplate, Rocketcore.Model.Templates.UserDefined.IRocketcoreFolder
+	public partial interface IPhraseFolder : ICustomItemWrapper , Rocketcore.Model.Templates.UserDefined.IRocketcoreFolder
 	{		
 	}
 
@@ -678,13 +1432,13 @@ namespace Rocketcore.Model.Templates.UserDefined
 	{
 		private Item _item = null;
 
-		public PhraseFolder() : base(null) { }
+		public PhraseFolder(ISpawnProvider spawnProvider) : base(null, spawnProvider) { }
 
-		public PhraseFolder(Guid id) : base(id) { }
+		public PhraseFolder(Guid id, ISpawnProvider spawnProvider) : base(id, spawnProvider) { }
 
-		public PhraseFolder(Guid id, Dictionary<string, object> lazyFields) : base(id, lazyFields) { }
+		public PhraseFolder(Guid id, Dictionary<string, object> lazyFields, ISpawnProvider spawnProvider) : base(id, lazyFields, spawnProvider) { }
 
-		public PhraseFolder(Item item) : base(item)
+		public PhraseFolder(Item item, ISpawnProvider spawnProvider) : base(item, spawnProvider)
 		{
 			_item = item;
 		}
@@ -706,6 +1460,8 @@ namespace Rocketcore.Model.Templates.UserDefined
 	using Sitecore.ContentSearch.Linq.Common;
     using Fortis.Model;
 	using Fortis.Model.Fields;
+	using Fortis.Providers;
+
 
 	/// <summary>
 	/// <para>Template interface</para>
@@ -726,8 +1482,7 @@ namespace Rocketcore.Model.Templates.UserDefined
 		/// <para>Template: Tagging</para><para>Field: Tags</para><para>Data type: Tags</para>
         /// </summary>
 		[IndexField("tags")]
-		IEnumerable<Guid> TagsValue { get; }
-		
+ 		IEnumerable<Guid> TagsValue { get; }
 	}
 
 	/// <summary>
@@ -739,13 +1494,13 @@ namespace Rocketcore.Model.Templates.UserDefined
 	{
 		private Item _item = null;
 
-		public Tagging() : base(null) { }
+		public Tagging(ISpawnProvider spawnProvider) : base(null, spawnProvider) { }
 
-		public Tagging(Guid id) : base(id) { }
+		public Tagging(Guid id, ISpawnProvider spawnProvider) : base(id, spawnProvider) { }
 
-		public Tagging(Guid id, Dictionary<string, object> lazyFields) : base(id, lazyFields) { }
+		public Tagging(Guid id, Dictionary<string, object> lazyFields, ISpawnProvider spawnProvider) : base(id, lazyFields, spawnProvider) { }
 
-		public Tagging(Item item) : base(item)
+		public Tagging(Item item, ISpawnProvider spawnProvider) : base(item, spawnProvider)
 		{
 			_item = item;
 		}
@@ -759,11 +1514,10 @@ namespace Rocketcore.Model.Templates.UserDefined
 
 		/// <summary><para>Template: Tagging</para><para>Field: Tags</para><para>Data type: Tags</para></summary>
 		[IndexField("tags")]
-		public IEnumerable<Guid> TagsValue
+ 		public IEnumerable<Guid> TagsValue
 		{
 			get { return Tags.Value; }
 		}
-
 	
 	}
 }
@@ -778,6 +1532,8 @@ namespace Rocketcore.Model.Templates.UserDefined
 	using Sitecore.ContentSearch.Linq.Common;
     using Fortis.Model;
 	using Fortis.Model.Fields;
+	using Fortis.Providers;
+
     using Fortis.Model.RenderingParameters;
 
 	/// <summary>
@@ -793,8 +1549,7 @@ namespace Rocketcore.Model.Templates.UserDefined
 		/// <para>Template: Pagination Options</para><para>Field: ItemsPerPage</para><para>Data type: Integer</para>
         /// </summary>
 		IIntegerFieldWrapper ItemsPerPage { get; }
-		long ItemsPerPageValue { get; }
-		
+ 		long ItemsPerPageValue { get; }
 	}
 
 	/// <summary>
@@ -804,80 +1559,8 @@ namespace Rocketcore.Model.Templates.UserDefined
 	[TemplateMapping("{6237330F-ECFC-4391-A2AA-E7C1757C89EF}", "RenderingParameter")]
 	public partial class PaginationOptions : RenderingParameterWrapper, IPaginationOptions
 	{
-		public PaginationOptions(Dictionary<string, string> parameters) : base(parameters)
+		public PaginationOptions(Dictionary<string, string> parameters, ISpawnProvider spawnProvider) : base(parameters, spawnProvider)
 		{
-		}
-
-		/// <summary><para>Template: Pagination Options</para><para>Field: Caching</para><para>Data type: Custom</para></summary>
-		public virtual ITextFieldWrapper Caching
-		{
-			get { return (Fortis.Model.RenderingParameters.Fields.TextFieldWrapper)GetField("Caching", "custom"); }
-		}
-
-		/// <summary><para>Template: Pagination Options</para><para>Field: Caching</para><para>Data type: Custom</para></summary>
-		public string CachingValue
-		{
-			get { return Caching.Value; }
-		}
-
-		/// <summary><para>Template: Pagination Options</para><para>Field: DataSource</para><para>Data type: Query Datasource</para></summary>
-		public virtual ITextFieldWrapper DataSource
-		{
-			get { return (Fortis.Model.RenderingParameters.Fields.TextFieldWrapper)GetField("Data Source", "query datasource"); }
-		}
-
-		/// <summary><para>Template: Pagination Options</para><para>Field: DataSource</para><para>Data type: Query Datasource</para></summary>
-		public string DataSourceValue
-		{
-			get { return DataSource.Value; }
-		}
-
-		/// <summary><para>Template: Pagination Options</para><para>Field: Placeholder</para><para>Data type: Single-Line Text</para></summary>
-		public virtual ITextFieldWrapper Placeholder
-		{
-			get { return (Fortis.Model.RenderingParameters.Fields.TextFieldWrapper)GetField("Placeholder", "single-line text"); }
-		}
-
-		/// <summary><para>Template: Pagination Options</para><para>Field: Placeholder</para><para>Data type: Single-Line Text</para></summary>
-		public string PlaceholderValue
-		{
-			get { return Placeholder.Value; }
-		}
-
-		/// <summary><para>Template: Pagination Options</para><para>Field: AdditionalParameters</para><para>Data type: Name Value List</para></summary>
-		public virtual ITextFieldWrapper AdditionalParameters
-		{
-			get { return (Fortis.Model.RenderingParameters.Fields.TextFieldWrapper)GetField("Additional Parameters", "name value list"); }
-		}
-
-		/// <summary><para>Template: Pagination Options</para><para>Field: AdditionalParameters</para><para>Data type: Name Value List</para></summary>
-		public string AdditionalParametersValue
-		{
-			get { return AdditionalParameters.Value; }
-		}
-
-		/// <summary><para>Template: Pagination Options</para><para>Field: Personalization</para><para>Data type: Custom</para></summary>
-		public virtual ITextFieldWrapper Personalization
-		{
-			get { return (Fortis.Model.RenderingParameters.Fields.TextFieldWrapper)GetField("Personalization", "custom"); }
-		}
-
-		/// <summary><para>Template: Pagination Options</para><para>Field: Personalization</para><para>Data type: Custom</para></summary>
-		public string PersonalizationValue
-		{
-			get { return Personalization.Value; }
-		}
-
-		/// <summary><para>Template: Pagination Options</para><para>Field: Tests</para><para>Data type: Internal Link</para></summary>
-		public virtual ITextFieldWrapper Tests
-		{
-			get { return (Fortis.Model.RenderingParameters.Fields.TextFieldWrapper)GetField("Tests", "internal link"); }
-		}
-
-		/// <summary><para>Template: Pagination Options</para><para>Field: Tests</para><para>Data type: Internal Link</para></summary>
-		public string TestsValue
-		{
-			get { return Tests.Value; }
 		}
 
 		/// <summary><para>Template: Pagination Options</para><para>Field: ItemsPerPage</para><para>Data type: Integer</para></summary>
@@ -887,16 +1570,14 @@ namespace Rocketcore.Model.Templates.UserDefined
 		}
 
 		/// <summary><para>Template: Pagination Options</para><para>Field: ItemsPerPage</para><para>Data type: Integer</para></summary>
-		public long ItemsPerPageValue
+ 		public long ItemsPerPageValue
 		{
 			get { return ItemsPerPage.Value; }
 		}
-
 	
 	}
 }
 #endregion
-
 
 
 #region Tag Folder (UserDefined)
@@ -909,6 +1590,8 @@ namespace Rocketcore.Model.Templates.UserDefined
 	using Sitecore.ContentSearch.Linq.Common;
     using Fortis.Model;
 	using Fortis.Model.Fields;
+	using Fortis.Providers;
+
 
 	/// <summary>
 	/// <para>Template interface</para>
@@ -930,13 +1613,13 @@ namespace Rocketcore.Model.Templates.UserDefined
 	{
 		private Item _item = null;
 
-		public TagFolder() : base(null) { }
+		public TagFolder(ISpawnProvider spawnProvider) : base(null, spawnProvider) { }
 
-		public TagFolder(Guid id) : base(id) { }
+		public TagFolder(Guid id, ISpawnProvider spawnProvider) : base(id, spawnProvider) { }
 
-		public TagFolder(Guid id, Dictionary<string, object> lazyFields) : base(id, lazyFields) { }
+		public TagFolder(Guid id, Dictionary<string, object> lazyFields, ISpawnProvider spawnProvider) : base(id, lazyFields, spawnProvider) { }
 
-		public TagFolder(Item item) : base(item)
+		public TagFolder(Item item, ISpawnProvider spawnProvider) : base(item, spawnProvider)
 		{
 			_item = item;
 		}
@@ -946,6 +1629,140 @@ namespace Rocketcore.Model.Templates.UserDefined
 }
 #endregion
 
+
+#region Call To Action Links Options (UserDefined)
+namespace Rocketcore.Model.Templates.UserDefined
+{
+    using System;
+	using System.Collections.Generic;
+    using Sitecore.Data.Items;
+	using Sitecore.ContentSearch;
+	using Sitecore.ContentSearch.Linq.Common;
+    using Fortis.Model;
+	using Fortis.Model.Fields;
+	using Fortis.Providers;
+
+    using Fortis.Model.RenderingParameters;
+
+	/// <summary>
+	/// <para>Template interface</para>
+	/// <para>Template: Call To Action Links Options</para>
+	/// <para>ID: {6D70D019-3250-4D7F-9E56-96A5B8934467}</para>
+	/// <para>/sitecore/templates/User Defined/Call To Action/Rendering Options/Call To Action Links Options</para>
+	/// </summary>
+	[TemplateMapping("{6D70D019-3250-4D7F-9E56-96A5B8934467}", "InterfaceRenderingParameter")]
+	public partial interface ICallToActionLinksOptions : IRenderingParameterWrapper , Rocketcore.Model.Templates.UserDefined.ICallToActionListOptions
+	{		
+    	/// <summary>
+		/// <para>Template: Call To Action Links Options</para><para>Field: CallToActionGroup</para><para>Data type: Droptree</para>
+        /// </summary>
+		ILinkFieldWrapper CallToActionGroup { get; }
+ 		string CallToActionGroupValue { get; }
+	}
+
+	/// <summary>
+	/// <para>Template class</para><para>/sitecore/templates/User Defined/Call To Action/Rendering Options/Call To Action Links Options</para>
+	/// </summary>
+	[PredefinedQuery("TemplateId", ComparisonType.Equal, "{6D70D019-3250-4D7F-9E56-96A5B8934467}", typeof(Guid))]
+	[TemplateMapping("{6D70D019-3250-4D7F-9E56-96A5B8934467}", "RenderingParameter")]
+	public partial class CallToActionLinksOptions : RenderingParameterWrapper, ICallToActionLinksOptions
+	{
+		public CallToActionLinksOptions(Dictionary<string, string> parameters, ISpawnProvider spawnProvider) : base(parameters, spawnProvider)
+		{
+		}
+
+		/// <summary><para>Template: Call To Action Links Options</para><para>Field: SelectionMethod</para><para>Data type: Droplink</para></summary>
+		public virtual ILinkFieldWrapper SelectionMethod
+		{
+			get { return (Fortis.Model.RenderingParameters.Fields.LinkFieldWrapper)GetField("Selection Method", "droplink"); }
+		}
+
+		/// <summary><para>Template: Call To Action Links Options</para><para>Field: SelectionMethod</para><para>Data type: Droplink</para></summary>
+ 		public string SelectionMethodValue
+		{
+			get { return SelectionMethod.Value; }
+		}
+		/// <summary><para>Template: Call To Action Links Options</para><para>Field: AggregateBy</para><para>Data type: Droplink</para></summary>
+		public virtual ILinkFieldWrapper AggregateBy
+		{
+			get { return (Fortis.Model.RenderingParameters.Fields.LinkFieldWrapper)GetField("Aggregate By", "droplink"); }
+		}
+
+		/// <summary><para>Template: Call To Action Links Options</para><para>Field: AggregateBy</para><para>Data type: Droplink</para></summary>
+ 		public string AggregateByValue
+		{
+			get { return AggregateBy.Value; }
+		}
+		/// <summary><para>Template: Call To Action Links Options</para><para>Field: GroupTagsBy</para><para>Data type: Droplink</para></summary>
+		public virtual ILinkFieldWrapper GroupTagsBy
+		{
+			get { return (Fortis.Model.RenderingParameters.Fields.LinkFieldWrapper)GetField("Group Tags By", "droplink"); }
+		}
+
+		/// <summary><para>Template: Call To Action Links Options</para><para>Field: GroupTagsBy</para><para>Data type: Droplink</para></summary>
+ 		public string GroupTagsByValue
+		{
+			get { return GroupTagsBy.Value; }
+		}
+		/// <summary><para>Template: Call To Action Links Options</para><para>Field: Tags</para><para>Data type: Tags</para></summary>
+		public virtual IListFieldWrapper Tags
+		{
+			get { return (Fortis.Model.RenderingParameters.Fields.ListFieldWrapper)GetField("Tags", "tags"); }
+		}
+
+		/// <summary><para>Template: Call To Action Links Options</para><para>Field: Tags</para><para>Data type: Tags</para></summary>
+ 		public IEnumerable<Guid> TagsValue
+		{
+			get { return Tags.Value; }
+		}
+		/// <summary><para>Template: Call To Action Links Options</para><para>Field: OrderBy</para><para>Data type: Droplink</para></summary>
+		public virtual ILinkFieldWrapper OrderBy
+		{
+			get { return (Fortis.Model.RenderingParameters.Fields.LinkFieldWrapper)GetField("Order By", "droplink"); }
+		}
+
+		/// <summary><para>Template: Call To Action Links Options</para><para>Field: OrderBy</para><para>Data type: Droplink</para></summary>
+ 		public string OrderByValue
+		{
+			get { return OrderBy.Value; }
+		}
+		/// <summary><para>Template: Call To Action Links Options</para><para>Field: OrderDirection</para><para>Data type: Droplink</para></summary>
+		public virtual ILinkFieldWrapper OrderDirection
+		{
+			get { return (Fortis.Model.RenderingParameters.Fields.LinkFieldWrapper)GetField("Order Direction", "droplink"); }
+		}
+
+		/// <summary><para>Template: Call To Action Links Options</para><para>Field: OrderDirection</para><para>Data type: Droplink</para></summary>
+ 		public string OrderDirectionValue
+		{
+			get { return OrderDirection.Value; }
+		}
+		/// <summary><para>Template: Call To Action Links Options</para><para>Field: ItemsPerPage</para><para>Data type: Integer</para></summary>
+		public virtual IIntegerFieldWrapper ItemsPerPage
+		{
+			get { return (Fortis.Model.RenderingParameters.Fields.IntegerFieldWrapper)GetField("Items Per Page", "integer"); }
+		}
+
+		/// <summary><para>Template: Call To Action Links Options</para><para>Field: ItemsPerPage</para><para>Data type: Integer</para></summary>
+ 		public long ItemsPerPageValue
+		{
+			get { return ItemsPerPage.Value; }
+		}
+		/// <summary><para>Template: Call To Action Links Options</para><para>Field: CallToActionGroup</para><para>Data type: Droptree</para></summary>
+		public virtual ILinkFieldWrapper CallToActionGroup
+		{
+			get { return (Fortis.Model.RenderingParameters.Fields.LinkFieldWrapper)GetField("Call To Action Group", "droptree"); }
+		}
+
+		/// <summary><para>Template: Call To Action Links Options</para><para>Field: CallToActionGroup</para><para>Data type: Droptree</para></summary>
+ 		public string CallToActionGroupValue
+		{
+			get { return CallToActionGroup.Value; }
+		}
+	
+	}
+}
+#endregion
 
 
 
@@ -963,6 +1780,8 @@ namespace Rocketcore.Model.Templates.UserDefined
 	using Sitecore.ContentSearch.Linq.Common;
     using Fortis.Model;
 	using Fortis.Model.Fields;
+	using Fortis.Providers;
+
 
 	/// <summary>
 	/// <para>Template interface</para>
@@ -983,8 +1802,7 @@ namespace Rocketcore.Model.Templates.UserDefined
 		/// <para>Template: Content Category</para><para>Field: Category</para><para>Data type: Droptree</para>
         /// </summary>
 		[IndexField("category")]
-		string CategoryValue { get; }
-		
+ 		string CategoryValue { get; }
 	}
 
 	/// <summary>
@@ -996,13 +1814,13 @@ namespace Rocketcore.Model.Templates.UserDefined
 	{
 		private Item _item = null;
 
-		public ContentCategory() : base(null) { }
+		public ContentCategory(ISpawnProvider spawnProvider) : base(null, spawnProvider) { }
 
-		public ContentCategory(Guid id) : base(id) { }
+		public ContentCategory(Guid id, ISpawnProvider spawnProvider) : base(id, spawnProvider) { }
 
-		public ContentCategory(Guid id, Dictionary<string, object> lazyFields) : base(id, lazyFields) { }
+		public ContentCategory(Guid id, Dictionary<string, object> lazyFields, ISpawnProvider spawnProvider) : base(id, lazyFields, spawnProvider) { }
 
-		public ContentCategory(Item item) : base(item)
+		public ContentCategory(Item item, ISpawnProvider spawnProvider) : base(item, spawnProvider)
 		{
 			_item = item;
 		}
@@ -1016,11 +1834,10 @@ namespace Rocketcore.Model.Templates.UserDefined
 
 		/// <summary><para>Template: Content Category</para><para>Field: Category</para><para>Data type: Droptree</para></summary>
 		[IndexField("category")]
-		public string CategoryValue
+ 		public string CategoryValue
 		{
 			get { return Category.Value; }
 		}
-
 	
 	}
 }
@@ -1035,6 +1852,8 @@ namespace Rocketcore.Model.Templates.UserDefined
 	using Sitecore.ContentSearch.Linq.Common;
     using Fortis.Model;
 	using Fortis.Model.Fields;
+	using Fortis.Providers;
+
 
 	/// <summary>
 	/// <para>Template interface</para>
@@ -1056,13 +1875,13 @@ namespace Rocketcore.Model.Templates.UserDefined
 	{
 		private Item _item = null;
 
-		public Page() : base(null) { }
+		public Page(ISpawnProvider spawnProvider) : base(null, spawnProvider) { }
 
-		public Page(Guid id) : base(id) { }
+		public Page(Guid id, ISpawnProvider spawnProvider) : base(id, spawnProvider) { }
 
-		public Page(Guid id, Dictionary<string, object> lazyFields) : base(id, lazyFields) { }
+		public Page(Guid id, Dictionary<string, object> lazyFields, ISpawnProvider spawnProvider) : base(id, lazyFields, spawnProvider) { }
 
-		public Page(Item item) : base(item)
+		public Page(Item item, ISpawnProvider spawnProvider) : base(item, spawnProvider)
 		{
 			_item = item;
 		}
@@ -1076,11 +1895,10 @@ namespace Rocketcore.Model.Templates.UserDefined
 
 		/// <summary><para>Template: Page</para><para>Field: Description</para><para>Data type: Multi-Line Text</para></summary>
 		[IndexField("description")]
-		public string DescriptionValue
+ 		public string DescriptionValue
 		{
 			get { return Description.Value; }
 		}
-
 		/// <summary><para>Template: Page</para><para>Field: Keywords</para><para>Data type: Multi-Line Text</para></summary>
 		[IndexField("keywords_t")]
 		public virtual ITextFieldWrapper Keywords
@@ -1090,11 +1908,10 @@ namespace Rocketcore.Model.Templates.UserDefined
 
 		/// <summary><para>Template: Page</para><para>Field: Keywords</para><para>Data type: Multi-Line Text</para></summary>
 		[IndexField("keywords")]
-		public string KeywordsValue
+ 		public string KeywordsValue
 		{
 			get { return Keywords.Value; }
 		}
-
 		/// <summary><para>Template: Page</para><para>Field: PageTitle</para><para>Data type: Single-Line Text</para></summary>
 		[IndexField("page_title_t")]
 		public virtual ITextFieldWrapper PageTitle
@@ -1104,11 +1921,10 @@ namespace Rocketcore.Model.Templates.UserDefined
 
 		/// <summary><para>Template: Page</para><para>Field: PageTitle</para><para>Data type: Single-Line Text</para></summary>
 		[IndexField("page_title")]
-		public string PageTitleValue
+ 		public string PageTitleValue
 		{
 			get { return PageTitle.Value; }
 		}
-
 		/// <summary><para>Template: Page</para><para>Field: BreadcrumbTitle</para><para>Data type: Single-Line Text</para></summary>
 		[IndexField("breadcrumb_title_t")]
 		public virtual ITextFieldWrapper BreadcrumbTitle
@@ -1118,11 +1934,10 @@ namespace Rocketcore.Model.Templates.UserDefined
 
 		/// <summary><para>Template: Page</para><para>Field: BreadcrumbTitle</para><para>Data type: Single-Line Text</para></summary>
 		[IndexField("breadcrumb_title")]
-		public string BreadcrumbTitleValue
+ 		public string BreadcrumbTitleValue
 		{
 			get { return BreadcrumbTitle.Value; }
 		}
-
 		/// <summary><para>Template: Page</para><para>Field: HideFromBreadcrumb</para><para>Data type: Checkbox</para></summary>
 		[IndexField("hide_from_breadcrumb_b")]
 		public virtual IBooleanFieldWrapper HideFromBreadcrumb
@@ -1132,11 +1947,10 @@ namespace Rocketcore.Model.Templates.UserDefined
 
 		/// <summary><para>Template: Page</para><para>Field: HideFromBreadcrumb</para><para>Data type: Checkbox</para></summary>
 		[IndexField("hide_from_breadcrumb")]
-		public bool HideFromBreadcrumbValue
+ 		public bool HideFromBreadcrumbValue
 		{
 			get { return HideFromBreadcrumb.Value; }
 		}
-
 		/// <summary><para>Template: Page</para><para>Field: HideFromNavigation</para><para>Data type: Checkbox</para></summary>
 		[IndexField("hide_from_navigation_b")]
 		public virtual IBooleanFieldWrapper HideFromNavigation
@@ -1146,11 +1960,10 @@ namespace Rocketcore.Model.Templates.UserDefined
 
 		/// <summary><para>Template: Page</para><para>Field: HideFromNavigation</para><para>Data type: Checkbox</para></summary>
 		[IndexField("hide_from_navigation")]
-		public bool HideFromNavigationValue
+ 		public bool HideFromNavigationValue
 		{
 			get { return HideFromNavigation.Value; }
 		}
-
 		/// <summary><para>Template: Page</para><para>Field: NavigationTitle</para><para>Data type: Single-Line Text</para></summary>
 		[IndexField("navigation_title_t")]
 		public virtual ITextFieldWrapper NavigationTitle
@@ -1160,11 +1973,10 @@ namespace Rocketcore.Model.Templates.UserDefined
 
 		/// <summary><para>Template: Page</para><para>Field: NavigationTitle</para><para>Data type: Single-Line Text</para></summary>
 		[IndexField("navigation_title")]
-		public string NavigationTitleValue
+ 		public string NavigationTitleValue
 		{
 			get { return NavigationTitle.Value; }
 		}
-
 		/// <summary><para>Template: Page</para><para>Field: Tags</para><para>Data type: Tags</para></summary>
 		[IndexField("tags_sm")]
 		public virtual IListFieldWrapper Tags
@@ -1174,11 +1986,10 @@ namespace Rocketcore.Model.Templates.UserDefined
 
 		/// <summary><para>Template: Page</para><para>Field: Tags</para><para>Data type: Tags</para></summary>
 		[IndexField("tags")]
-		public IEnumerable<Guid> TagsValue
+ 		public IEnumerable<Guid> TagsValue
 		{
 			get { return Tags.Value; }
 		}
-
 	
 	}
 }
@@ -1194,6 +2005,8 @@ namespace Rocketcore.Model.Templates.UserDefined
 	using Sitecore.ContentSearch.Linq.Common;
     using Fortis.Model;
 	using Fortis.Model.Fields;
+	using Fortis.Providers;
+
     using Fortis.Model.RenderingParameters;
 
 	/// <summary>
@@ -1203,7 +2016,7 @@ namespace Rocketcore.Model.Templates.UserDefined
 	/// <para>/sitecore/templates/User Defined/Rocketcore/Rocketcore Rendering Parameters</para>
 	/// </summary>
 	[TemplateMapping("{76D9D059-77E5-48F7-8BDA-65E78BC61A9B}", "InterfaceRenderingParameter")]
-	public partial interface IRocketcoreRenderingParameters : IRenderingParameterWrapper , Rocketcore.Model.Templates.ScSystem.IStandardTemplate, Rocketcore.Model.Templates.ScSystem.IStandardRenderingParameters
+	public partial interface IRocketcoreRenderingParameters : IRenderingParameterWrapper 
 	{		
 	}
 
@@ -1214,80 +2027,8 @@ namespace Rocketcore.Model.Templates.UserDefined
 	[TemplateMapping("{76D9D059-77E5-48F7-8BDA-65E78BC61A9B}", "RenderingParameter")]
 	public partial class RocketcoreRenderingParameters : RenderingParameterWrapper, IRocketcoreRenderingParameters
 	{
-		public RocketcoreRenderingParameters(Dictionary<string, string> parameters) : base(parameters)
+		public RocketcoreRenderingParameters(Dictionary<string, string> parameters, ISpawnProvider spawnProvider) : base(parameters, spawnProvider)
 		{
-		}
-
-		/// <summary><para>Template: Rocketcore Rendering Parameters</para><para>Field: Caching</para><para>Data type: Custom</para></summary>
-		public virtual ITextFieldWrapper Caching
-		{
-			get { return (Fortis.Model.RenderingParameters.Fields.TextFieldWrapper)GetField("Caching", "custom"); }
-		}
-
-		/// <summary><para>Template: Rocketcore Rendering Parameters</para><para>Field: Caching</para><para>Data type: Custom</para></summary>
-		public string CachingValue
-		{
-			get { return Caching.Value; }
-		}
-
-		/// <summary><para>Template: Rocketcore Rendering Parameters</para><para>Field: DataSource</para><para>Data type: Query Datasource</para></summary>
-		public virtual ITextFieldWrapper DataSource
-		{
-			get { return (Fortis.Model.RenderingParameters.Fields.TextFieldWrapper)GetField("Data Source", "query datasource"); }
-		}
-
-		/// <summary><para>Template: Rocketcore Rendering Parameters</para><para>Field: DataSource</para><para>Data type: Query Datasource</para></summary>
-		public string DataSourceValue
-		{
-			get { return DataSource.Value; }
-		}
-
-		/// <summary><para>Template: Rocketcore Rendering Parameters</para><para>Field: Placeholder</para><para>Data type: Single-Line Text</para></summary>
-		public virtual ITextFieldWrapper Placeholder
-		{
-			get { return (Fortis.Model.RenderingParameters.Fields.TextFieldWrapper)GetField("Placeholder", "single-line text"); }
-		}
-
-		/// <summary><para>Template: Rocketcore Rendering Parameters</para><para>Field: Placeholder</para><para>Data type: Single-Line Text</para></summary>
-		public string PlaceholderValue
-		{
-			get { return Placeholder.Value; }
-		}
-
-		/// <summary><para>Template: Rocketcore Rendering Parameters</para><para>Field: AdditionalParameters</para><para>Data type: Name Value List</para></summary>
-		public virtual ITextFieldWrapper AdditionalParameters
-		{
-			get { return (Fortis.Model.RenderingParameters.Fields.TextFieldWrapper)GetField("Additional Parameters", "name value list"); }
-		}
-
-		/// <summary><para>Template: Rocketcore Rendering Parameters</para><para>Field: AdditionalParameters</para><para>Data type: Name Value List</para></summary>
-		public string AdditionalParametersValue
-		{
-			get { return AdditionalParameters.Value; }
-		}
-
-		/// <summary><para>Template: Rocketcore Rendering Parameters</para><para>Field: Personalization</para><para>Data type: Custom</para></summary>
-		public virtual ITextFieldWrapper Personalization
-		{
-			get { return (Fortis.Model.RenderingParameters.Fields.TextFieldWrapper)GetField("Personalization", "custom"); }
-		}
-
-		/// <summary><para>Template: Rocketcore Rendering Parameters</para><para>Field: Personalization</para><para>Data type: Custom</para></summary>
-		public string PersonalizationValue
-		{
-			get { return Personalization.Value; }
-		}
-
-		/// <summary><para>Template: Rocketcore Rendering Parameters</para><para>Field: Tests</para><para>Data type: Internal Link</para></summary>
-		public virtual ITextFieldWrapper Tests
-		{
-			get { return (Fortis.Model.RenderingParameters.Fields.TextFieldWrapper)GetField("Tests", "internal link"); }
-		}
-
-		/// <summary><para>Template: Rocketcore Rendering Parameters</para><para>Field: Tests</para><para>Data type: Internal Link</para></summary>
-		public string TestsValue
-		{
-			get { return Tests.Value; }
 		}
 
 	
@@ -1304,6 +2045,8 @@ namespace Rocketcore.Model.Templates.UserDefined
 	using Sitecore.ContentSearch.Linq.Common;
     using Fortis.Model;
 	using Fortis.Model.Fields;
+	using Fortis.Providers;
+
 
 	/// <summary>
 	/// <para>Template interface</para>
@@ -1324,8 +2067,7 @@ namespace Rocketcore.Model.Templates.UserDefined
 		/// <para>Template: Meta Data</para><para>Field: Description</para><para>Data type: Multi-Line Text</para>
         /// </summary>
 		[IndexField("description")]
-		string DescriptionValue { get; }
-		
+ 		string DescriptionValue { get; }
     	/// <summary>
 		/// <para>Template: Meta Data</para><para>Field: Keywords</para><para>Data type: Multi-Line Text</para>
         /// </summary>
@@ -1336,8 +2078,7 @@ namespace Rocketcore.Model.Templates.UserDefined
 		/// <para>Template: Meta Data</para><para>Field: Keywords</para><para>Data type: Multi-Line Text</para>
         /// </summary>
 		[IndexField("keywords")]
-		string KeywordsValue { get; }
-		
+ 		string KeywordsValue { get; }
     	/// <summary>
 		/// <para>Template: Meta Data</para><para>Field: PageTitle</para><para>Data type: Single-Line Text</para>
         /// </summary>
@@ -1348,8 +2089,7 @@ namespace Rocketcore.Model.Templates.UserDefined
 		/// <para>Template: Meta Data</para><para>Field: PageTitle</para><para>Data type: Single-Line Text</para>
         /// </summary>
 		[IndexField("page_title")]
-		string PageTitleValue { get; }
-		
+ 		string PageTitleValue { get; }
 	}
 
 	/// <summary>
@@ -1361,13 +2101,13 @@ namespace Rocketcore.Model.Templates.UserDefined
 	{
 		private Item _item = null;
 
-		public MetaData() : base(null) { }
+		public MetaData(ISpawnProvider spawnProvider) : base(null, spawnProvider) { }
 
-		public MetaData(Guid id) : base(id) { }
+		public MetaData(Guid id, ISpawnProvider spawnProvider) : base(id, spawnProvider) { }
 
-		public MetaData(Guid id, Dictionary<string, object> lazyFields) : base(id, lazyFields) { }
+		public MetaData(Guid id, Dictionary<string, object> lazyFields, ISpawnProvider spawnProvider) : base(id, lazyFields, spawnProvider) { }
 
-		public MetaData(Item item) : base(item)
+		public MetaData(Item item, ISpawnProvider spawnProvider) : base(item, spawnProvider)
 		{
 			_item = item;
 		}
@@ -1381,11 +2121,10 @@ namespace Rocketcore.Model.Templates.UserDefined
 
 		/// <summary><para>Template: Meta Data</para><para>Field: Description</para><para>Data type: Multi-Line Text</para></summary>
 		[IndexField("description")]
-		public string DescriptionValue
+ 		public string DescriptionValue
 		{
 			get { return Description.Value; }
 		}
-
 		/// <summary><para>Template: Meta Data</para><para>Field: Keywords</para><para>Data type: Multi-Line Text</para></summary>
 		[IndexField("keywords_t")]
 		public virtual ITextFieldWrapper Keywords
@@ -1395,11 +2134,10 @@ namespace Rocketcore.Model.Templates.UserDefined
 
 		/// <summary><para>Template: Meta Data</para><para>Field: Keywords</para><para>Data type: Multi-Line Text</para></summary>
 		[IndexField("keywords")]
-		public string KeywordsValue
+ 		public string KeywordsValue
 		{
 			get { return Keywords.Value; }
 		}
-
 		/// <summary><para>Template: Meta Data</para><para>Field: PageTitle</para><para>Data type: Single-Line Text</para></summary>
 		[IndexField("page_title_t")]
 		public virtual ITextFieldWrapper PageTitle
@@ -1409,16 +2147,14 @@ namespace Rocketcore.Model.Templates.UserDefined
 
 		/// <summary><para>Template: Meta Data</para><para>Field: PageTitle</para><para>Data type: Single-Line Text</para></summary>
 		[IndexField("page_title")]
-		public string PageTitleValue
+ 		public string PageTitleValue
 		{
 			get { return PageTitle.Value; }
 		}
-
 	
 	}
 }
 #endregion
-
 
 
 
@@ -1444,6 +2180,8 @@ namespace Rocketcore.Model.Templates.UserDefined
 	using Sitecore.ContentSearch.Linq.Common;
     using Fortis.Model;
 	using Fortis.Model.Fields;
+	using Fortis.Providers;
+
 
 	/// <summary>
 	/// <para>Template interface</para>
@@ -1452,7 +2190,7 @@ namespace Rocketcore.Model.Templates.UserDefined
 	/// <para>/sitecore/templates/User Defined/Phrases/Phrase</para>
 	/// </summary>
 	[TemplateMapping("{860BC23B-03E7-4F97-A478-0704C18FD389}", "InterfaceMap")]
-	public partial interface IPhrase : ICustomItemWrapper , Rocketcore.Model.Templates.ScSystem.IStandardTemplate, Rocketcore.Model.Templates.UserDefined.IRocketcoreStandardTemplate
+	public partial interface IPhrase : ICustomItemWrapper , Rocketcore.Model.Templates.UserDefined.IRocketcoreStandardTemplate
 	{		
 	}
 
@@ -1465,13 +2203,13 @@ namespace Rocketcore.Model.Templates.UserDefined
 	{
 		private Item _item = null;
 
-		public Phrase() : base(null) { }
+		public Phrase(ISpawnProvider spawnProvider) : base(null, spawnProvider) { }
 
-		public Phrase(Guid id) : base(id) { }
+		public Phrase(Guid id, ISpawnProvider spawnProvider) : base(id, spawnProvider) { }
 
-		public Phrase(Guid id, Dictionary<string, object> lazyFields) : base(id, lazyFields) { }
+		public Phrase(Guid id, Dictionary<string, object> lazyFields, ISpawnProvider spawnProvider) : base(id, lazyFields, spawnProvider) { }
 
-		public Phrase(Item item) : base(item)
+		public Phrase(Item item, ISpawnProvider spawnProvider) : base(item, spawnProvider)
 		{
 			_item = item;
 		}
@@ -1490,6 +2228,8 @@ namespace Rocketcore.Model.Templates.UserDefined
 	using Sitecore.ContentSearch.Linq.Common;
     using Fortis.Model;
 	using Fortis.Model.Fields;
+	using Fortis.Providers;
+
     using Fortis.Model.RenderingParameters;
 
 	/// <summary>
@@ -1499,14 +2239,13 @@ namespace Rocketcore.Model.Templates.UserDefined
 	/// <para>/sitecore/templates/User Defined/Global/Presentation/Rendering Options/Selection Options</para>
 	/// </summary>
 	[TemplateMapping("{872FB55A-8617-48D9-9F92-A9D0EAB51A23}", "InterfaceRenderingParameter")]
-	public partial interface ISelectionOptions : IRenderingParameterWrapper , Rocketcore.Model.Templates.ScSystem.IStandardTemplate, Rocketcore.Model.Templates.UserDefined.IRocketcoreRenderingParameters
+	public partial interface ISelectionOptions : IRenderingParameterWrapper , Rocketcore.Model.Templates.UserDefined.IRocketcoreRenderingParameters
 	{		
     	/// <summary>
 		/// <para>Template: Selection Options</para><para>Field: SelectionMethod</para><para>Data type: Droplink</para>
         /// </summary>
 		ILinkFieldWrapper SelectionMethod { get; }
-		string SelectionMethodValue { get; }
-		
+ 		string SelectionMethodValue { get; }
 	}
 
 	/// <summary>
@@ -1516,80 +2255,8 @@ namespace Rocketcore.Model.Templates.UserDefined
 	[TemplateMapping("{872FB55A-8617-48D9-9F92-A9D0EAB51A23}", "RenderingParameter")]
 	public partial class SelectionOptions : RenderingParameterWrapper, ISelectionOptions
 	{
-		public SelectionOptions(Dictionary<string, string> parameters) : base(parameters)
+		public SelectionOptions(Dictionary<string, string> parameters, ISpawnProvider spawnProvider) : base(parameters, spawnProvider)
 		{
-		}
-
-		/// <summary><para>Template: Selection Options</para><para>Field: Caching</para><para>Data type: Custom</para></summary>
-		public virtual ITextFieldWrapper Caching
-		{
-			get { return (Fortis.Model.RenderingParameters.Fields.TextFieldWrapper)GetField("Caching", "custom"); }
-		}
-
-		/// <summary><para>Template: Selection Options</para><para>Field: Caching</para><para>Data type: Custom</para></summary>
-		public string CachingValue
-		{
-			get { return Caching.Value; }
-		}
-
-		/// <summary><para>Template: Selection Options</para><para>Field: DataSource</para><para>Data type: Query Datasource</para></summary>
-		public virtual ITextFieldWrapper DataSource
-		{
-			get { return (Fortis.Model.RenderingParameters.Fields.TextFieldWrapper)GetField("Data Source", "query datasource"); }
-		}
-
-		/// <summary><para>Template: Selection Options</para><para>Field: DataSource</para><para>Data type: Query Datasource</para></summary>
-		public string DataSourceValue
-		{
-			get { return DataSource.Value; }
-		}
-
-		/// <summary><para>Template: Selection Options</para><para>Field: Placeholder</para><para>Data type: Single-Line Text</para></summary>
-		public virtual ITextFieldWrapper Placeholder
-		{
-			get { return (Fortis.Model.RenderingParameters.Fields.TextFieldWrapper)GetField("Placeholder", "single-line text"); }
-		}
-
-		/// <summary><para>Template: Selection Options</para><para>Field: Placeholder</para><para>Data type: Single-Line Text</para></summary>
-		public string PlaceholderValue
-		{
-			get { return Placeholder.Value; }
-		}
-
-		/// <summary><para>Template: Selection Options</para><para>Field: AdditionalParameters</para><para>Data type: Name Value List</para></summary>
-		public virtual ITextFieldWrapper AdditionalParameters
-		{
-			get { return (Fortis.Model.RenderingParameters.Fields.TextFieldWrapper)GetField("Additional Parameters", "name value list"); }
-		}
-
-		/// <summary><para>Template: Selection Options</para><para>Field: AdditionalParameters</para><para>Data type: Name Value List</para></summary>
-		public string AdditionalParametersValue
-		{
-			get { return AdditionalParameters.Value; }
-		}
-
-		/// <summary><para>Template: Selection Options</para><para>Field: Personalization</para><para>Data type: Custom</para></summary>
-		public virtual ITextFieldWrapper Personalization
-		{
-			get { return (Fortis.Model.RenderingParameters.Fields.TextFieldWrapper)GetField("Personalization", "custom"); }
-		}
-
-		/// <summary><para>Template: Selection Options</para><para>Field: Personalization</para><para>Data type: Custom</para></summary>
-		public string PersonalizationValue
-		{
-			get { return Personalization.Value; }
-		}
-
-		/// <summary><para>Template: Selection Options</para><para>Field: Tests</para><para>Data type: Internal Link</para></summary>
-		public virtual ITextFieldWrapper Tests
-		{
-			get { return (Fortis.Model.RenderingParameters.Fields.TextFieldWrapper)GetField("Tests", "internal link"); }
-		}
-
-		/// <summary><para>Template: Selection Options</para><para>Field: Tests</para><para>Data type: Internal Link</para></summary>
-		public string TestsValue
-		{
-			get { return Tests.Value; }
 		}
 
 		/// <summary><para>Template: Selection Options</para><para>Field: SelectionMethod</para><para>Data type: Droplink</para></summary>
@@ -1599,11 +2266,10 @@ namespace Rocketcore.Model.Templates.UserDefined
 		}
 
 		/// <summary><para>Template: Selection Options</para><para>Field: SelectionMethod</para><para>Data type: Droplink</para></summary>
-		public string SelectionMethodValue
+ 		public string SelectionMethodValue
 		{
 			get { return SelectionMethod.Value; }
 		}
-
 	
 	}
 }
@@ -1618,6 +2284,8 @@ namespace Rocketcore.Model.Templates.UserDefined
 	using Sitecore.ContentSearch.Linq.Common;
     using Fortis.Model;
 	using Fortis.Model.Fields;
+	using Fortis.Providers;
+
 
 	/// <summary>
 	/// <para>Template interface</para>
@@ -1638,8 +2306,7 @@ namespace Rocketcore.Model.Templates.UserDefined
 		/// <para>Template: Content Gallery</para><para>Field: GalleryImages</para><para>Data type: Droptree</para>
         /// </summary>
 		[IndexField("gallery_images")]
-		string GalleryImagesValue { get; }
-		
+ 		string GalleryImagesValue { get; }
 	}
 
 	/// <summary>
@@ -1651,13 +2318,13 @@ namespace Rocketcore.Model.Templates.UserDefined
 	{
 		private Item _item = null;
 
-		public ContentGallery() : base(null) { }
+		public ContentGallery(ISpawnProvider spawnProvider) : base(null, spawnProvider) { }
 
-		public ContentGallery(Guid id) : base(id) { }
+		public ContentGallery(Guid id, ISpawnProvider spawnProvider) : base(id, spawnProvider) { }
 
-		public ContentGallery(Guid id, Dictionary<string, object> lazyFields) : base(id, lazyFields) { }
+		public ContentGallery(Guid id, Dictionary<string, object> lazyFields, ISpawnProvider spawnProvider) : base(id, lazyFields, spawnProvider) { }
 
-		public ContentGallery(Item item) : base(item)
+		public ContentGallery(Item item, ISpawnProvider spawnProvider) : base(item, spawnProvider)
 		{
 			_item = item;
 		}
@@ -1671,162 +2338,15 @@ namespace Rocketcore.Model.Templates.UserDefined
 
 		/// <summary><para>Template: Content Gallery</para><para>Field: GalleryImages</para><para>Data type: Droptree</para></summary>
 		[IndexField("gallery_images")]
-		public string GalleryImagesValue
+ 		public string GalleryImagesValue
 		{
 			get { return GalleryImages.Value; }
 		}
-
 	
 	}
 }
 #endregion
 
-#region Standard Rendering Parameters (ScSystem)
-namespace Rocketcore.Model.Templates.ScSystem
-{
-    using System;
-	using System.Collections.Generic;
-    using Sitecore.Data.Items;
-	using Sitecore.ContentSearch;
-	using Sitecore.ContentSearch.Linq.Common;
-    using Fortis.Model;
-	using Fortis.Model.Fields;
-    using Fortis.Model.RenderingParameters;
-
-	/// <summary>
-	/// <para>Template interface</para>
-	/// <para>Template: Standard Rendering Parameters</para>
-	/// <para>ID: {8CA06D6A-B353-44E8-BC31-B528C7306971}</para>
-	/// <para>/sitecore/templates/System/Layout/Rendering Parameters/Standard Rendering Parameters</para>
-	/// </summary>
-	[TemplateMapping("{8CA06D6A-B353-44E8-BC31-B528C7306971}", "InterfaceRenderingParameter")]
-	public partial interface IStandardRenderingParameters : IRenderingParameterWrapper , Rocketcore.Model.Templates.ScSystem.IStandardTemplate
-	{		
-    	/// <summary>
-		/// <para>Template: Standard Rendering Parameters</para><para>Field: Caching</para><para>Data type: Custom</para>
-        /// </summary>
-		ITextFieldWrapper Caching { get; }
-		string CachingValue { get; }
-		
-    	/// <summary>
-		/// <para>Template: Standard Rendering Parameters</para><para>Field: DataSource</para><para>Data type: Query Datasource</para>
-        /// </summary>
-		ITextFieldWrapper DataSource { get; }
-		string DataSourceValue { get; }
-		
-    	/// <summary>
-		/// <para>Template: Standard Rendering Parameters</para><para>Field: Placeholder</para><para>Data type: Single-Line Text</para>
-        /// </summary>
-		ITextFieldWrapper Placeholder { get; }
-		string PlaceholderValue { get; }
-		
-    	/// <summary>
-		/// <para>Template: Standard Rendering Parameters</para><para>Field: AdditionalParameters</para><para>Data type: Name Value List</para>
-        /// </summary>
-		ITextFieldWrapper AdditionalParameters { get; }
-		string AdditionalParametersValue { get; }
-		
-    	/// <summary>
-		/// <para>Template: Standard Rendering Parameters</para><para>Field: Personalization</para><para>Data type: Custom</para>
-        /// </summary>
-		ITextFieldWrapper Personalization { get; }
-		string PersonalizationValue { get; }
-		
-    	/// <summary>
-		/// <para>Template: Standard Rendering Parameters</para><para>Field: Tests</para><para>Data type: Internal Link</para>
-        /// </summary>
-		ITextFieldWrapper Tests { get; }
-		string TestsValue { get; }
-		
-	}
-
-	/// <summary>
-	/// <para>Template class</para><para>/sitecore/templates/System/Layout/Rendering Parameters/Standard Rendering Parameters</para>
-	/// </summary>
-	[PredefinedQuery("TemplateId", ComparisonType.Equal, "{8CA06D6A-B353-44E8-BC31-B528C7306971}", typeof(Guid))]
-	[TemplateMapping("{8CA06D6A-B353-44E8-BC31-B528C7306971}", "RenderingParameter")]
-	public partial class StandardRenderingParameters : RenderingParameterWrapper, IStandardRenderingParameters
-	{
-		public StandardRenderingParameters(Dictionary<string, string> parameters) : base(parameters)
-		{
-		}
-
-		/// <summary><para>Template: Standard Rendering Parameters</para><para>Field: Caching</para><para>Data type: Custom</para></summary>
-		public virtual ITextFieldWrapper Caching
-		{
-			get { return (Fortis.Model.RenderingParameters.Fields.TextFieldWrapper)GetField("Caching", "custom"); }
-		}
-
-		/// <summary><para>Template: Standard Rendering Parameters</para><para>Field: Caching</para><para>Data type: Custom</para></summary>
-		public string CachingValue
-		{
-			get { return Caching.Value; }
-		}
-
-		/// <summary><para>Template: Standard Rendering Parameters</para><para>Field: DataSource</para><para>Data type: Query Datasource</para></summary>
-		public virtual ITextFieldWrapper DataSource
-		{
-			get { return (Fortis.Model.RenderingParameters.Fields.TextFieldWrapper)GetField("Data Source", "query datasource"); }
-		}
-
-		/// <summary><para>Template: Standard Rendering Parameters</para><para>Field: DataSource</para><para>Data type: Query Datasource</para></summary>
-		public string DataSourceValue
-		{
-			get { return DataSource.Value; }
-		}
-
-		/// <summary><para>Template: Standard Rendering Parameters</para><para>Field: Placeholder</para><para>Data type: Single-Line Text</para></summary>
-		public virtual ITextFieldWrapper Placeholder
-		{
-			get { return (Fortis.Model.RenderingParameters.Fields.TextFieldWrapper)GetField("Placeholder", "single-line text"); }
-		}
-
-		/// <summary><para>Template: Standard Rendering Parameters</para><para>Field: Placeholder</para><para>Data type: Single-Line Text</para></summary>
-		public string PlaceholderValue
-		{
-			get { return Placeholder.Value; }
-		}
-
-		/// <summary><para>Template: Standard Rendering Parameters</para><para>Field: AdditionalParameters</para><para>Data type: Name Value List</para></summary>
-		public virtual ITextFieldWrapper AdditionalParameters
-		{
-			get { return (Fortis.Model.RenderingParameters.Fields.TextFieldWrapper)GetField("Additional Parameters", "name value list"); }
-		}
-
-		/// <summary><para>Template: Standard Rendering Parameters</para><para>Field: AdditionalParameters</para><para>Data type: Name Value List</para></summary>
-		public string AdditionalParametersValue
-		{
-			get { return AdditionalParameters.Value; }
-		}
-
-		/// <summary><para>Template: Standard Rendering Parameters</para><para>Field: Personalization</para><para>Data type: Custom</para></summary>
-		public virtual ITextFieldWrapper Personalization
-		{
-			get { return (Fortis.Model.RenderingParameters.Fields.TextFieldWrapper)GetField("Personalization", "custom"); }
-		}
-
-		/// <summary><para>Template: Standard Rendering Parameters</para><para>Field: Personalization</para><para>Data type: Custom</para></summary>
-		public string PersonalizationValue
-		{
-			get { return Personalization.Value; }
-		}
-
-		/// <summary><para>Template: Standard Rendering Parameters</para><para>Field: Tests</para><para>Data type: Internal Link</para></summary>
-		public virtual ITextFieldWrapper Tests
-		{
-			get { return (Fortis.Model.RenderingParameters.Fields.TextFieldWrapper)GetField("Tests", "internal link"); }
-		}
-
-		/// <summary><para>Template: Standard Rendering Parameters</para><para>Field: Tests</para><para>Data type: Internal Link</para></summary>
-		public string TestsValue
-		{
-			get { return Tests.Value; }
-		}
-
-	
-	}
-}
-#endregion
 
 
 
@@ -1841,6 +2361,8 @@ namespace Rocketcore.Model.Templates.UserDefined
 	using Sitecore.ContentSearch.Linq.Common;
     using Fortis.Model;
 	using Fortis.Model.Fields;
+	using Fortis.Providers;
+
 
 	/// <summary>
 	/// <para>Template interface</para>
@@ -1849,7 +2371,7 @@ namespace Rocketcore.Model.Templates.UserDefined
 	/// <para>/sitecore/templates/User Defined/Phrases/Html Phrase</para>
 	/// </summary>
 	[TemplateMapping("{93DE3003-93CC-40E8-86F3-43D80B216238}", "InterfaceMap")]
-	public partial interface IHtmlPhrase : ICustomItemWrapper , Rocketcore.Model.Templates.ScSystem.IStandardTemplate, Rocketcore.Model.Templates.UserDefined.IPhrase
+	public partial interface IHtmlPhrase : ICustomItemWrapper , Rocketcore.Model.Templates.UserDefined.IPhrase
 	{		
     	/// <summary>
 		/// <para>Template: Html Phrase</para><para>Field: Phrase</para><para>Data type: Rich Text</para>
@@ -1861,8 +2383,7 @@ namespace Rocketcore.Model.Templates.UserDefined
 		/// <para>Template: Html Phrase</para><para>Field: Phrase</para><para>Data type: Rich Text</para>
         /// </summary>
 		[IndexField("phrase")]
-		string PhraseValue { get; }
-		
+ 		string PhraseValue { get; }
 	}
 
 	/// <summary>
@@ -1874,13 +2395,13 @@ namespace Rocketcore.Model.Templates.UserDefined
 	{
 		private Item _item = null;
 
-		public HtmlPhrase() : base(null) { }
+		public HtmlPhrase(ISpawnProvider spawnProvider) : base(null, spawnProvider) { }
 
-		public HtmlPhrase(Guid id) : base(id) { }
+		public HtmlPhrase(Guid id, ISpawnProvider spawnProvider) : base(id, spawnProvider) { }
 
-		public HtmlPhrase(Guid id, Dictionary<string, object> lazyFields) : base(id, lazyFields) { }
+		public HtmlPhrase(Guid id, Dictionary<string, object> lazyFields, ISpawnProvider spawnProvider) : base(id, lazyFields, spawnProvider) { }
 
-		public HtmlPhrase(Item item) : base(item)
+		public HtmlPhrase(Item item, ISpawnProvider spawnProvider) : base(item, spawnProvider)
 		{
 			_item = item;
 		}
@@ -1894,11 +2415,10 @@ namespace Rocketcore.Model.Templates.UserDefined
 
 		/// <summary><para>Template: Html Phrase</para><para>Field: Phrase</para><para>Data type: Rich Text</para></summary>
 		[IndexField("phrase")]
-		public string PhraseValue
+ 		public string PhraseValue
 		{
 			get { return Phrase.Value; }
 		}
-
 	
 	}
 }
@@ -1914,6 +2434,8 @@ namespace Rocketcore.Model.Templates.UserDefined
 	using Sitecore.ContentSearch.Linq.Common;
     using Fortis.Model;
 	using Fortis.Model.Fields;
+	using Fortis.Providers;
+
 
 	/// <summary>
 	/// <para>Template interface</para>
@@ -1935,13 +2457,13 @@ namespace Rocketcore.Model.Templates.UserDefined
 	{
 		private Item _item = null;
 
-		public CategoryFolder() : base(null) { }
+		public CategoryFolder(ISpawnProvider spawnProvider) : base(null, spawnProvider) { }
 
-		public CategoryFolder(Guid id) : base(id) { }
+		public CategoryFolder(Guid id, ISpawnProvider spawnProvider) : base(id, spawnProvider) { }
 
-		public CategoryFolder(Guid id, Dictionary<string, object> lazyFields) : base(id, lazyFields) { }
+		public CategoryFolder(Guid id, Dictionary<string, object> lazyFields, ISpawnProvider spawnProvider) : base(id, lazyFields, spawnProvider) { }
 
-		public CategoryFolder(Item item) : base(item)
+		public CategoryFolder(Item item, ISpawnProvider spawnProvider) : base(item, spawnProvider)
 		{
 			_item = item;
 		}
@@ -1950,6 +2472,7 @@ namespace Rocketcore.Model.Templates.UserDefined
 	}
 }
 #endregion
+
 
 #region Text Phrase (UserDefined)
 namespace Rocketcore.Model.Templates.UserDefined
@@ -1961,6 +2484,8 @@ namespace Rocketcore.Model.Templates.UserDefined
 	using Sitecore.ContentSearch.Linq.Common;
     using Fortis.Model;
 	using Fortis.Model.Fields;
+	using Fortis.Providers;
+
 
 	/// <summary>
 	/// <para>Template interface</para>
@@ -1969,7 +2494,7 @@ namespace Rocketcore.Model.Templates.UserDefined
 	/// <para>/sitecore/templates/User Defined/Phrases/Text Phrase</para>
 	/// </summary>
 	[TemplateMapping("{9ACC757B-89EC-4E29-BAB5-1EB0D5E1EBD6}", "InterfaceMap")]
-	public partial interface ITextPhrase : ICustomItemWrapper , Rocketcore.Model.Templates.ScSystem.IStandardTemplate, Rocketcore.Model.Templates.UserDefined.IPhrase
+	public partial interface ITextPhrase : ICustomItemWrapper , Rocketcore.Model.Templates.UserDefined.IPhrase
 	{		
     	/// <summary>
 		/// <para>Template: Text Phrase</para><para>Field: Phrase</para><para>Data type: Single-Line Text</para>
@@ -1981,8 +2506,7 @@ namespace Rocketcore.Model.Templates.UserDefined
 		/// <para>Template: Text Phrase</para><para>Field: Phrase</para><para>Data type: Single-Line Text</para>
         /// </summary>
 		[IndexField("phrase")]
-		string PhraseValue { get; }
-		
+ 		string PhraseValue { get; }
 	}
 
 	/// <summary>
@@ -1994,13 +2518,13 @@ namespace Rocketcore.Model.Templates.UserDefined
 	{
 		private Item _item = null;
 
-		public TextPhrase() : base(null) { }
+		public TextPhrase(ISpawnProvider spawnProvider) : base(null, spawnProvider) { }
 
-		public TextPhrase(Guid id) : base(id) { }
+		public TextPhrase(Guid id, ISpawnProvider spawnProvider) : base(id, spawnProvider) { }
 
-		public TextPhrase(Guid id, Dictionary<string, object> lazyFields) : base(id, lazyFields) { }
+		public TextPhrase(Guid id, Dictionary<string, object> lazyFields, ISpawnProvider spawnProvider) : base(id, lazyFields, spawnProvider) { }
 
-		public TextPhrase(Item item) : base(item)
+		public TextPhrase(Item item, ISpawnProvider spawnProvider) : base(item, spawnProvider)
 		{
 			_item = item;
 		}
@@ -2014,15 +2538,15 @@ namespace Rocketcore.Model.Templates.UserDefined
 
 		/// <summary><para>Template: Text Phrase</para><para>Field: Phrase</para><para>Data type: Single-Line Text</para></summary>
 		[IndexField("phrase")]
-		public string PhraseValue
+ 		public string PhraseValue
 		{
 			get { return Phrase.Value; }
 		}
-
 	
 	}
 }
 #endregion
+
 #region Tagging Options (UserDefined)
 namespace Rocketcore.Model.Templates.UserDefined
 {
@@ -2033,6 +2557,8 @@ namespace Rocketcore.Model.Templates.UserDefined
 	using Sitecore.ContentSearch.Linq.Common;
     using Fortis.Model;
 	using Fortis.Model.Fields;
+	using Fortis.Providers;
+
     using Fortis.Model.RenderingParameters;
 
 	/// <summary>
@@ -2048,8 +2574,7 @@ namespace Rocketcore.Model.Templates.UserDefined
 		/// <para>Template: Tagging Options</para><para>Field: Tags</para><para>Data type: Tags</para>
         /// </summary>
 		IListFieldWrapper Tags { get; }
-		IEnumerable<Guid> TagsValue { get; }
-		
+ 		IEnumerable<Guid> TagsValue { get; }
 	}
 
 	/// <summary>
@@ -2059,80 +2584,8 @@ namespace Rocketcore.Model.Templates.UserDefined
 	[TemplateMapping("{9D978F80-78D4-489A-832B-CFD2358EC804}", "RenderingParameter")]
 	public partial class TaggingOptions : RenderingParameterWrapper, ITaggingOptions
 	{
-		public TaggingOptions(Dictionary<string, string> parameters) : base(parameters)
+		public TaggingOptions(Dictionary<string, string> parameters, ISpawnProvider spawnProvider) : base(parameters, spawnProvider)
 		{
-		}
-
-		/// <summary><para>Template: Tagging Options</para><para>Field: Caching</para><para>Data type: Custom</para></summary>
-		public virtual ITextFieldWrapper Caching
-		{
-			get { return (Fortis.Model.RenderingParameters.Fields.TextFieldWrapper)GetField("Caching", "custom"); }
-		}
-
-		/// <summary><para>Template: Tagging Options</para><para>Field: Caching</para><para>Data type: Custom</para></summary>
-		public string CachingValue
-		{
-			get { return Caching.Value; }
-		}
-
-		/// <summary><para>Template: Tagging Options</para><para>Field: DataSource</para><para>Data type: Query Datasource</para></summary>
-		public virtual ITextFieldWrapper DataSource
-		{
-			get { return (Fortis.Model.RenderingParameters.Fields.TextFieldWrapper)GetField("Data Source", "query datasource"); }
-		}
-
-		/// <summary><para>Template: Tagging Options</para><para>Field: DataSource</para><para>Data type: Query Datasource</para></summary>
-		public string DataSourceValue
-		{
-			get { return DataSource.Value; }
-		}
-
-		/// <summary><para>Template: Tagging Options</para><para>Field: Placeholder</para><para>Data type: Single-Line Text</para></summary>
-		public virtual ITextFieldWrapper Placeholder
-		{
-			get { return (Fortis.Model.RenderingParameters.Fields.TextFieldWrapper)GetField("Placeholder", "single-line text"); }
-		}
-
-		/// <summary><para>Template: Tagging Options</para><para>Field: Placeholder</para><para>Data type: Single-Line Text</para></summary>
-		public string PlaceholderValue
-		{
-			get { return Placeholder.Value; }
-		}
-
-		/// <summary><para>Template: Tagging Options</para><para>Field: AdditionalParameters</para><para>Data type: Name Value List</para></summary>
-		public virtual ITextFieldWrapper AdditionalParameters
-		{
-			get { return (Fortis.Model.RenderingParameters.Fields.TextFieldWrapper)GetField("Additional Parameters", "name value list"); }
-		}
-
-		/// <summary><para>Template: Tagging Options</para><para>Field: AdditionalParameters</para><para>Data type: Name Value List</para></summary>
-		public string AdditionalParametersValue
-		{
-			get { return AdditionalParameters.Value; }
-		}
-
-		/// <summary><para>Template: Tagging Options</para><para>Field: Personalization</para><para>Data type: Custom</para></summary>
-		public virtual ITextFieldWrapper Personalization
-		{
-			get { return (Fortis.Model.RenderingParameters.Fields.TextFieldWrapper)GetField("Personalization", "custom"); }
-		}
-
-		/// <summary><para>Template: Tagging Options</para><para>Field: Personalization</para><para>Data type: Custom</para></summary>
-		public string PersonalizationValue
-		{
-			get { return Personalization.Value; }
-		}
-
-		/// <summary><para>Template: Tagging Options</para><para>Field: Tests</para><para>Data type: Internal Link</para></summary>
-		public virtual ITextFieldWrapper Tests
-		{
-			get { return (Fortis.Model.RenderingParameters.Fields.TextFieldWrapper)GetField("Tests", "internal link"); }
-		}
-
-		/// <summary><para>Template: Tagging Options</para><para>Field: Tests</para><para>Data type: Internal Link</para></summary>
-		public string TestsValue
-		{
-			get { return Tests.Value; }
 		}
 
 		/// <summary><para>Template: Tagging Options</para><para>Field: Tags</para><para>Data type: Tags</para></summary>
@@ -2142,9 +2595,57 @@ namespace Rocketcore.Model.Templates.UserDefined
 		}
 
 		/// <summary><para>Template: Tagging Options</para><para>Field: Tags</para><para>Data type: Tags</para></summary>
-		public IEnumerable<Guid> TagsValue
+ 		public IEnumerable<Guid> TagsValue
 		{
 			get { return Tags.Value; }
+		}
+	
+	}
+}
+#endregion
+
+#region Lookup Folder (UserDefined)
+namespace Rocketcore.Model.Templates.UserDefined
+{
+    using System;
+	using System.Collections.Generic;
+    using Sitecore.Data.Items;
+	using Sitecore.ContentSearch;
+	using Sitecore.ContentSearch.Linq.Common;
+    using Fortis.Model;
+	using Fortis.Model.Fields;
+	using Fortis.Providers;
+
+
+	/// <summary>
+	/// <para>Template interface</para>
+	/// <para>Template: Lookup Folder</para>
+	/// <para>ID: {9F94F923-2D44-4EB3-AC1A-927366290303}</para>
+	/// <para>/sitecore/templates/User Defined/Global/Lookup/Lookup Folder</para>
+	/// </summary>
+	[TemplateMapping("{9F94F923-2D44-4EB3-AC1A-927366290303}", "InterfaceMap")]
+	public partial interface ILookupFolder : ICustomItemWrapper , Rocketcore.Model.Templates.UserDefined.IRocketcoreFolder
+	{		
+	}
+
+	/// <summary>
+	/// <para>Template class</para><para>/sitecore/templates/User Defined/Global/Lookup/Lookup Folder</para>
+	/// </summary>
+	[PredefinedQuery("TemplateId", ComparisonType.Equal, "{9F94F923-2D44-4EB3-AC1A-927366290303}", typeof(Guid))]
+	[TemplateMapping("{9F94F923-2D44-4EB3-AC1A-927366290303}", "")]
+	public partial class LookupFolder : CustomItemWrapper, ILookupFolder
+	{
+		private Item _item = null;
+
+		public LookupFolder(ISpawnProvider spawnProvider) : base(null, spawnProvider) { }
+
+		public LookupFolder(Guid id, ISpawnProvider spawnProvider) : base(id, spawnProvider) { }
+
+		public LookupFolder(Guid id, Dictionary<string, object> lazyFields, ISpawnProvider spawnProvider) : base(id, lazyFields, spawnProvider) { }
+
+		public LookupFolder(Item item, ISpawnProvider spawnProvider) : base(item, spawnProvider)
+		{
+			_item = item;
 		}
 
 	
@@ -2162,6 +2663,8 @@ namespace Rocketcore.Model.Templates.UserDefined
 	using Sitecore.ContentSearch.Linq.Common;
     using Fortis.Model;
 	using Fortis.Model.Fields;
+	using Fortis.Providers;
+
 
 	/// <summary>
 	/// <para>Template interface</para>
@@ -2170,7 +2673,7 @@ namespace Rocketcore.Model.Templates.UserDefined
 	/// <para>/sitecore/templates/User Defined/Navigation/Navigation</para>
 	/// </summary>
 	[TemplateMapping("{A3296576-C797-4ABC-8FAD-2B3BC3DD6DA0}", "InterfaceMap")]
-	public partial interface INavigation : ICustomItemWrapper , Rocketcore.Model.Templates.ScSystem.IStandardTemplate, Rocketcore.Model.Templates.UserDefined.IRocketcoreStandardTemplate
+	public partial interface INavigation : ICustomItemWrapper , Rocketcore.Model.Templates.UserDefined.IRocketcoreStandardTemplate
 	{		
     	/// <summary>
 		/// <para>Template: Navigation</para><para>Field: HideFromNavigation</para><para>Data type: Checkbox</para>
@@ -2182,8 +2685,7 @@ namespace Rocketcore.Model.Templates.UserDefined
 		/// <para>Template: Navigation</para><para>Field: HideFromNavigation</para><para>Data type: Checkbox</para>
         /// </summary>
 		[IndexField("hide_from_navigation")]
-		bool HideFromNavigationValue { get; }
-		
+ 		bool HideFromNavigationValue { get; }
     	/// <summary>
 		/// <para>Template: Navigation</para><para>Field: NavigationTitle</para><para>Data type: Single-Line Text</para>
         /// </summary>
@@ -2194,8 +2696,7 @@ namespace Rocketcore.Model.Templates.UserDefined
 		/// <para>Template: Navigation</para><para>Field: NavigationTitle</para><para>Data type: Single-Line Text</para>
         /// </summary>
 		[IndexField("navigation_title")]
-		string NavigationTitleValue { get; }
-		
+ 		string NavigationTitleValue { get; }
 	}
 
 	/// <summary>
@@ -2207,13 +2708,13 @@ namespace Rocketcore.Model.Templates.UserDefined
 	{
 		private Item _item = null;
 
-		public Navigation() : base(null) { }
+		public Navigation(ISpawnProvider spawnProvider) : base(null, spawnProvider) { }
 
-		public Navigation(Guid id) : base(id) { }
+		public Navigation(Guid id, ISpawnProvider spawnProvider) : base(id, spawnProvider) { }
 
-		public Navigation(Guid id, Dictionary<string, object> lazyFields) : base(id, lazyFields) { }
+		public Navigation(Guid id, Dictionary<string, object> lazyFields, ISpawnProvider spawnProvider) : base(id, lazyFields, spawnProvider) { }
 
-		public Navigation(Item item) : base(item)
+		public Navigation(Item item, ISpawnProvider spawnProvider) : base(item, spawnProvider)
 		{
 			_item = item;
 		}
@@ -2227,11 +2728,10 @@ namespace Rocketcore.Model.Templates.UserDefined
 
 		/// <summary><para>Template: Navigation</para><para>Field: HideFromNavigation</para><para>Data type: Checkbox</para></summary>
 		[IndexField("hide_from_navigation")]
-		public bool HideFromNavigationValue
+ 		public bool HideFromNavigationValue
 		{
 			get { return HideFromNavigation.Value; }
 		}
-
 		/// <summary><para>Template: Navigation</para><para>Field: NavigationTitle</para><para>Data type: Single-Line Text</para></summary>
 		[IndexField("navigation_title_t")]
 		public virtual ITextFieldWrapper NavigationTitle
@@ -2241,11 +2741,10 @@ namespace Rocketcore.Model.Templates.UserDefined
 
 		/// <summary><para>Template: Navigation</para><para>Field: NavigationTitle</para><para>Data type: Single-Line Text</para></summary>
 		[IndexField("navigation_title")]
-		public string NavigationTitleValue
+ 		public string NavigationTitleValue
 		{
 			get { return NavigationTitle.Value; }
 		}
-
 	
 	}
 }
@@ -2261,6 +2760,8 @@ namespace Rocketcore.Model.Templates.UserDefined
 	using Sitecore.ContentSearch.Linq.Common;
     using Fortis.Model;
 	using Fortis.Model.Fields;
+	using Fortis.Providers;
+
     using Fortis.Model.RenderingParameters;
 
 	/// <summary>
@@ -2281,80 +2782,8 @@ namespace Rocketcore.Model.Templates.UserDefined
 	[TemplateMapping("{A86728CE-890F-45A1-B5B5-EDCAD18F4516}", "RenderingParameter")]
 	public partial class TaggingPrototype : RenderingParameterWrapper, ITaggingPrototype
 	{
-		public TaggingPrototype(Dictionary<string, string> parameters) : base(parameters)
+		public TaggingPrototype(Dictionary<string, string> parameters, ISpawnProvider spawnProvider) : base(parameters, spawnProvider)
 		{
-		}
-
-		/// <summary><para>Template: Tagging Prototype</para><para>Field: Caching</para><para>Data type: Custom</para></summary>
-		public virtual ITextFieldWrapper Caching
-		{
-			get { return (Fortis.Model.RenderingParameters.Fields.TextFieldWrapper)GetField("Caching", "custom"); }
-		}
-
-		/// <summary><para>Template: Tagging Prototype</para><para>Field: Caching</para><para>Data type: Custom</para></summary>
-		public string CachingValue
-		{
-			get { return Caching.Value; }
-		}
-
-		/// <summary><para>Template: Tagging Prototype</para><para>Field: DataSource</para><para>Data type: Query Datasource</para></summary>
-		public virtual ITextFieldWrapper DataSource
-		{
-			get { return (Fortis.Model.RenderingParameters.Fields.TextFieldWrapper)GetField("Data Source", "query datasource"); }
-		}
-
-		/// <summary><para>Template: Tagging Prototype</para><para>Field: DataSource</para><para>Data type: Query Datasource</para></summary>
-		public string DataSourceValue
-		{
-			get { return DataSource.Value; }
-		}
-
-		/// <summary><para>Template: Tagging Prototype</para><para>Field: Placeholder</para><para>Data type: Single-Line Text</para></summary>
-		public virtual ITextFieldWrapper Placeholder
-		{
-			get { return (Fortis.Model.RenderingParameters.Fields.TextFieldWrapper)GetField("Placeholder", "single-line text"); }
-		}
-
-		/// <summary><para>Template: Tagging Prototype</para><para>Field: Placeholder</para><para>Data type: Single-Line Text</para></summary>
-		public string PlaceholderValue
-		{
-			get { return Placeholder.Value; }
-		}
-
-		/// <summary><para>Template: Tagging Prototype</para><para>Field: AdditionalParameters</para><para>Data type: Name Value List</para></summary>
-		public virtual ITextFieldWrapper AdditionalParameters
-		{
-			get { return (Fortis.Model.RenderingParameters.Fields.TextFieldWrapper)GetField("Additional Parameters", "name value list"); }
-		}
-
-		/// <summary><para>Template: Tagging Prototype</para><para>Field: AdditionalParameters</para><para>Data type: Name Value List</para></summary>
-		public string AdditionalParametersValue
-		{
-			get { return AdditionalParameters.Value; }
-		}
-
-		/// <summary><para>Template: Tagging Prototype</para><para>Field: Personalization</para><para>Data type: Custom</para></summary>
-		public virtual ITextFieldWrapper Personalization
-		{
-			get { return (Fortis.Model.RenderingParameters.Fields.TextFieldWrapper)GetField("Personalization", "custom"); }
-		}
-
-		/// <summary><para>Template: Tagging Prototype</para><para>Field: Personalization</para><para>Data type: Custom</para></summary>
-		public string PersonalizationValue
-		{
-			get { return Personalization.Value; }
-		}
-
-		/// <summary><para>Template: Tagging Prototype</para><para>Field: Tests</para><para>Data type: Internal Link</para></summary>
-		public virtual ITextFieldWrapper Tests
-		{
-			get { return (Fortis.Model.RenderingParameters.Fields.TextFieldWrapper)GetField("Tests", "internal link"); }
-		}
-
-		/// <summary><para>Template: Tagging Prototype</para><para>Field: Tests</para><para>Data type: Internal Link</para></summary>
-		public string TestsValue
-		{
-			get { return Tests.Value; }
 		}
 
 		/// <summary><para>Template: Tagging Prototype</para><para>Field: Tags</para><para>Data type: Tags</para></summary>
@@ -2364,16 +2793,202 @@ namespace Rocketcore.Model.Templates.UserDefined
 		}
 
 		/// <summary><para>Template: Tagging Prototype</para><para>Field: Tags</para><para>Data type: Tags</para></summary>
-		public IEnumerable<Guid> TagsValue
+ 		public IEnumerable<Guid> TagsValue
 		{
 			get { return Tags.Value; }
 		}
-
 	
 	}
 }
 #endregion
 
+#region Call To Action Slide (UserDefined)
+namespace Rocketcore.Model.Templates.UserDefined
+{
+    using System;
+	using System.Collections.Generic;
+    using Sitecore.Data.Items;
+	using Sitecore.ContentSearch;
+	using Sitecore.ContentSearch.Linq.Common;
+    using Fortis.Model;
+	using Fortis.Model.Fields;
+	using Fortis.Providers;
+
+
+	/// <summary>
+	/// <para>Template interface</para>
+	/// <para>Template: Call To Action Slide</para>
+	/// <para>ID: {A8D9CC6F-03F3-41C0-BD4B-3187A72FA148}</para>
+	/// <para>/sitecore/templates/User Defined/Call To Action/Call To Action Slide</para>
+	/// </summary>
+	[TemplateMapping("{A8D9CC6F-03F3-41C0-BD4B-3187A72FA148}", "InterfaceMap")]
+	public partial interface ICallToActionSlide : ICustomItemWrapper , Rocketcore.Model.Templates.UserDefined.IRocketcoreStandardTemplate, Rocketcore.Model.Templates.UserDefined.ICallToActionTarget
+	{		
+    	/// <summary>
+		/// <para>Template: Call To Action Slide</para><para>Field: RightAlignImageText</para><para>Data type: Checkbox</para>
+        /// </summary>
+		[IndexField("right_align_image_text_b")]
+		IBooleanFieldWrapper RightAlignImageText { get; }
+
+    	/// <summary>
+		/// <para>Template: Call To Action Slide</para><para>Field: RightAlignImageText</para><para>Data type: Checkbox</para>
+        /// </summary>
+		[IndexField("right_align_image_text")]
+ 		bool RightAlignImageTextValue { get; }
+	}
+
+	/// <summary>
+	/// <para>Template class</para><para>/sitecore/templates/User Defined/Call To Action/Call To Action Slide</para>
+	/// </summary>
+	[PredefinedQuery("TemplateId", ComparisonType.Equal, "{A8D9CC6F-03F3-41C0-BD4B-3187A72FA148}", typeof(Guid))]
+	[TemplateMapping("{A8D9CC6F-03F3-41C0-BD4B-3187A72FA148}", "")]
+	public partial class CallToActionSlide : CustomItemWrapper, ICallToActionSlide
+	{
+		private Item _item = null;
+
+		public CallToActionSlide(ISpawnProvider spawnProvider) : base(null, spawnProvider) { }
+
+		public CallToActionSlide(Guid id, ISpawnProvider spawnProvider) : base(id, spawnProvider) { }
+
+		public CallToActionSlide(Guid id, Dictionary<string, object> lazyFields, ISpawnProvider spawnProvider) : base(id, lazyFields, spawnProvider) { }
+
+		public CallToActionSlide(Item item, ISpawnProvider spawnProvider) : base(item, spawnProvider)
+		{
+			_item = item;
+		}
+
+		/// <summary><para>Template: Call To Action Slide</para><para>Field: Tags</para><para>Data type: Tags</para></summary>
+		[IndexField("tags_sm")]
+		public virtual IListFieldWrapper Tags
+		{
+			get { return GetField<ListFieldWrapper>("Tags", "tags_sm"); }
+		}
+
+		/// <summary><para>Template: Call To Action Slide</para><para>Field: Tags</para><para>Data type: Tags</para></summary>
+		[IndexField("tags")]
+ 		public IEnumerable<Guid> TagsValue
+		{
+			get { return Tags.Value; }
+		}
+		/// <summary><para>Template: Call To Action Slide</para><para>Field: SubTitle</para><para>Data type: Single-Line Text</para></summary>
+		[IndexField("sub_title_t")]
+		public virtual ITextFieldWrapper SubTitle
+		{
+			get { return GetField<TextFieldWrapper>("Sub Title", "sub_title_t"); }
+		}
+
+		/// <summary><para>Template: Call To Action Slide</para><para>Field: SubTitle</para><para>Data type: Single-Line Text</para></summary>
+		[IndexField("sub_title")]
+ 		public string SubTitleValue
+		{
+			get { return SubTitle.Value; }
+		}
+		/// <summary><para>Template: Call To Action Slide</para><para>Field: Title</para><para>Data type: Single-Line Text</para></summary>
+		[IndexField("title_t")]
+		public virtual ITextFieldWrapper Title
+		{
+			get { return GetField<TextFieldWrapper>("Title", "title_t"); }
+		}
+
+		/// <summary><para>Template: Call To Action Slide</para><para>Field: Title</para><para>Data type: Single-Line Text</para></summary>
+		[IndexField("title")]
+ 		public string TitleValue
+		{
+			get { return Title.Value; }
+		}
+		/// <summary><para>Template: Call To Action Slide</para><para>Field: Body</para><para>Data type: Rich Text</para></summary>
+		[IndexField("body_t")]
+		public virtual IRichTextFieldWrapper Body
+		{
+			get { return GetField<RichTextFieldWrapper>("Body", "body_t"); }
+		}
+
+		/// <summary><para>Template: Call To Action Slide</para><para>Field: Body</para><para>Data type: Rich Text</para></summary>
+		[IndexField("body")]
+ 		public string BodyValue
+		{
+			get { return Body.Value; }
+		}
+		/// <summary><para>Template: Call To Action Slide</para><para>Field: Image</para><para>Data type: Image</para></summary>
+		public virtual IImageFieldWrapper Image
+		{
+			get { return GetField<ImageFieldWrapper>("Image"); }
+		}
+
+		/// <summary><para>Template: Call To Action Slide</para><para>Field: Image</para><para>Data type: Image</para></summary>
+ 		public string ImageValue
+		{
+			get { return Image.Value; }
+		}
+		/// <summary><para>Template: Call To Action Slide</para><para>Field: DateAndTime</para><para>Data type: Datetime</para></summary>
+		[IndexField("date_and_time_tdt")]
+		public virtual IDateTimeFieldWrapper DateAndTime
+		{
+			get { return GetField<DateTimeFieldWrapper>("Date And Time", "date_and_time_tdt"); }
+		}
+
+		/// <summary><para>Template: Call To Action Slide</para><para>Field: DateAndTime</para><para>Data type: Datetime</para></summary>
+		[IndexField("date_and_time")]
+ 		public DateTime DateAndTimeValue
+		{
+			get { return DateAndTime.Value; }
+		}
+		/// <summary><para>Template: Call To Action Slide</para><para>Field: Link</para><para>Data type: General Link</para></summary>
+		[IndexField("link_t")]
+		public virtual IGeneralLinkFieldWrapper Link
+		{
+			get { return GetField<GeneralLinkFieldWrapper>("Link", "link_t"); }
+		}
+
+		/// <summary><para>Template: Call To Action Slide</para><para>Field: Link</para><para>Data type: General Link</para></summary>
+		[IndexField("link")]
+ 		public string LinkValue
+		{
+			get { return Link.Value; }
+		}
+		/// <summary><para>Template: Call To Action Slide</para><para>Field: HideFromNavigation</para><para>Data type: Checkbox</para></summary>
+		[IndexField("hide_from_navigation_b")]
+		public virtual IBooleanFieldWrapper HideFromNavigation
+		{
+			get { return GetField<BooleanFieldWrapper>("Hide From Navigation", "hide_from_navigation_b"); }
+		}
+
+		/// <summary><para>Template: Call To Action Slide</para><para>Field: HideFromNavigation</para><para>Data type: Checkbox</para></summary>
+		[IndexField("hide_from_navigation")]
+ 		public bool HideFromNavigationValue
+		{
+			get { return HideFromNavigation.Value; }
+		}
+		/// <summary><para>Template: Call To Action Slide</para><para>Field: NavigationTitle</para><para>Data type: Single-Line Text</para></summary>
+		[IndexField("navigation_title_t")]
+		public virtual ITextFieldWrapper NavigationTitle
+		{
+			get { return GetField<TextFieldWrapper>("Navigation Title", "navigation_title_t"); }
+		}
+
+		/// <summary><para>Template: Call To Action Slide</para><para>Field: NavigationTitle</para><para>Data type: Single-Line Text</para></summary>
+		[IndexField("navigation_title")]
+ 		public string NavigationTitleValue
+		{
+			get { return NavigationTitle.Value; }
+		}
+		/// <summary><para>Template: Call To Action Slide</para><para>Field: RightAlignImageText</para><para>Data type: Checkbox</para></summary>
+		[IndexField("right_align_image_text_b")]
+		public virtual IBooleanFieldWrapper RightAlignImageText
+		{
+			get { return GetField<BooleanFieldWrapper>("Right Align Image Text", "right_align_image_text_b"); }
+		}
+
+		/// <summary><para>Template: Call To Action Slide</para><para>Field: RightAlignImageText</para><para>Data type: Checkbox</para></summary>
+		[IndexField("right_align_image_text")]
+ 		public bool RightAlignImageTextValue
+		{
+			get { return RightAlignImageText.Value; }
+		}
+	
+	}
+}
+#endregion
 
 #region Aggregate Options (UserDefined)
 namespace Rocketcore.Model.Templates.UserDefined
@@ -2385,6 +3000,8 @@ namespace Rocketcore.Model.Templates.UserDefined
 	using Sitecore.ContentSearch.Linq.Common;
     using Fortis.Model;
 	using Fortis.Model.Fields;
+	using Fortis.Providers;
+
     using Fortis.Model.RenderingParameters;
 
 	/// <summary>
@@ -2394,14 +3011,13 @@ namespace Rocketcore.Model.Templates.UserDefined
 	/// <para>/sitecore/templates/User Defined/Global/Presentation/Rendering Options/Aggregate Options</para>
 	/// </summary>
 	[TemplateMapping("{AAA421D9-53C1-443B-AB8C-0499110138D8}", "InterfaceRenderingParameter")]
-	public partial interface IAggregateOptions : IRenderingParameterWrapper , Rocketcore.Model.Templates.ScSystem.IStandardTemplate, Rocketcore.Model.Templates.UserDefined.IRocketcoreRenderingParameters
+	public partial interface IAggregateOptions : IRenderingParameterWrapper , Rocketcore.Model.Templates.UserDefined.IRocketcoreRenderingParameters
 	{		
     	/// <summary>
 		/// <para>Template: Aggregate Options</para><para>Field: AggregateBy</para><para>Data type: Droplink</para>
         /// </summary>
 		ILinkFieldWrapper AggregateBy { get; }
-		string AggregateByValue { get; }
-		
+ 		string AggregateByValue { get; }
 	}
 
 	/// <summary>
@@ -2411,80 +3027,8 @@ namespace Rocketcore.Model.Templates.UserDefined
 	[TemplateMapping("{AAA421D9-53C1-443B-AB8C-0499110138D8}", "RenderingParameter")]
 	public partial class AggregateOptions : RenderingParameterWrapper, IAggregateOptions
 	{
-		public AggregateOptions(Dictionary<string, string> parameters) : base(parameters)
+		public AggregateOptions(Dictionary<string, string> parameters, ISpawnProvider spawnProvider) : base(parameters, spawnProvider)
 		{
-		}
-
-		/// <summary><para>Template: Aggregate Options</para><para>Field: Caching</para><para>Data type: Custom</para></summary>
-		public virtual ITextFieldWrapper Caching
-		{
-			get { return (Fortis.Model.RenderingParameters.Fields.TextFieldWrapper)GetField("Caching", "custom"); }
-		}
-
-		/// <summary><para>Template: Aggregate Options</para><para>Field: Caching</para><para>Data type: Custom</para></summary>
-		public string CachingValue
-		{
-			get { return Caching.Value; }
-		}
-
-		/// <summary><para>Template: Aggregate Options</para><para>Field: DataSource</para><para>Data type: Query Datasource</para></summary>
-		public virtual ITextFieldWrapper DataSource
-		{
-			get { return (Fortis.Model.RenderingParameters.Fields.TextFieldWrapper)GetField("Data Source", "query datasource"); }
-		}
-
-		/// <summary><para>Template: Aggregate Options</para><para>Field: DataSource</para><para>Data type: Query Datasource</para></summary>
-		public string DataSourceValue
-		{
-			get { return DataSource.Value; }
-		}
-
-		/// <summary><para>Template: Aggregate Options</para><para>Field: Placeholder</para><para>Data type: Single-Line Text</para></summary>
-		public virtual ITextFieldWrapper Placeholder
-		{
-			get { return (Fortis.Model.RenderingParameters.Fields.TextFieldWrapper)GetField("Placeholder", "single-line text"); }
-		}
-
-		/// <summary><para>Template: Aggregate Options</para><para>Field: Placeholder</para><para>Data type: Single-Line Text</para></summary>
-		public string PlaceholderValue
-		{
-			get { return Placeholder.Value; }
-		}
-
-		/// <summary><para>Template: Aggregate Options</para><para>Field: AdditionalParameters</para><para>Data type: Name Value List</para></summary>
-		public virtual ITextFieldWrapper AdditionalParameters
-		{
-			get { return (Fortis.Model.RenderingParameters.Fields.TextFieldWrapper)GetField("Additional Parameters", "name value list"); }
-		}
-
-		/// <summary><para>Template: Aggregate Options</para><para>Field: AdditionalParameters</para><para>Data type: Name Value List</para></summary>
-		public string AdditionalParametersValue
-		{
-			get { return AdditionalParameters.Value; }
-		}
-
-		/// <summary><para>Template: Aggregate Options</para><para>Field: Personalization</para><para>Data type: Custom</para></summary>
-		public virtual ITextFieldWrapper Personalization
-		{
-			get { return (Fortis.Model.RenderingParameters.Fields.TextFieldWrapper)GetField("Personalization", "custom"); }
-		}
-
-		/// <summary><para>Template: Aggregate Options</para><para>Field: Personalization</para><para>Data type: Custom</para></summary>
-		public string PersonalizationValue
-		{
-			get { return Personalization.Value; }
-		}
-
-		/// <summary><para>Template: Aggregate Options</para><para>Field: Tests</para><para>Data type: Internal Link</para></summary>
-		public virtual ITextFieldWrapper Tests
-		{
-			get { return (Fortis.Model.RenderingParameters.Fields.TextFieldWrapper)GetField("Tests", "internal link"); }
-		}
-
-		/// <summary><para>Template: Aggregate Options</para><para>Field: Tests</para><para>Data type: Internal Link</para></summary>
-		public string TestsValue
-		{
-			get { return Tests.Value; }
 		}
 
 		/// <summary><para>Template: Aggregate Options</para><para>Field: AggregateBy</para><para>Data type: Droplink</para></summary>
@@ -2494,15 +3038,15 @@ namespace Rocketcore.Model.Templates.UserDefined
 		}
 
 		/// <summary><para>Template: Aggregate Options</para><para>Field: AggregateBy</para><para>Data type: Droplink</para></summary>
-		public string AggregateByValue
+ 		public string AggregateByValue
 		{
 			get { return AggregateBy.Value; }
 		}
-
 	
 	}
 }
 #endregion
+
 
 
 
@@ -2517,6 +3061,8 @@ namespace Rocketcore.Model.Templates.UserDefined
 	using Sitecore.ContentSearch.Linq.Common;
     using Fortis.Model;
 	using Fortis.Model.Fields;
+	using Fortis.Providers;
+
 
 	/// <summary>
 	/// <para>Template interface</para>
@@ -2531,8 +3077,7 @@ namespace Rocketcore.Model.Templates.UserDefined
 		/// <para>Template: Content Image</para><para>Field: Image</para><para>Data type: Image</para>
         /// </summary>
 		IImageFieldWrapper Image { get; }
-		string ImageValue { get; }
-		
+ 		string ImageValue { get; }
 	}
 
 	/// <summary>
@@ -2544,13 +3089,13 @@ namespace Rocketcore.Model.Templates.UserDefined
 	{
 		private Item _item = null;
 
-		public ContentImage() : base(null) { }
+		public ContentImage(ISpawnProvider spawnProvider) : base(null, spawnProvider) { }
 
-		public ContentImage(Guid id) : base(id) { }
+		public ContentImage(Guid id, ISpawnProvider spawnProvider) : base(id, spawnProvider) { }
 
-		public ContentImage(Guid id, Dictionary<string, object> lazyFields) : base(id, lazyFields) { }
+		public ContentImage(Guid id, Dictionary<string, object> lazyFields, ISpawnProvider spawnProvider) : base(id, lazyFields, spawnProvider) { }
 
-		public ContentImage(Item item) : base(item)
+		public ContentImage(Item item, ISpawnProvider spawnProvider) : base(item, spawnProvider)
 		{
 			_item = item;
 		}
@@ -2562,17 +3107,90 @@ namespace Rocketcore.Model.Templates.UserDefined
 		}
 
 		/// <summary><para>Template: Content Image</para><para>Field: Image</para><para>Data type: Image</para></summary>
-		public string ImageValue
+ 		public string ImageValue
 		{
 			get { return Image.Value; }
 		}
-
 	
 	}
 }
 #endregion
 
 
+
+
+#region Call To Action Group (UserDefined)
+namespace Rocketcore.Model.Templates.UserDefined
+{
+    using System;
+	using System.Collections.Generic;
+    using Sitecore.Data.Items;
+	using Sitecore.ContentSearch;
+	using Sitecore.ContentSearch.Linq.Common;
+    using Fortis.Model;
+	using Fortis.Model.Fields;
+	using Fortis.Providers;
+
+
+	/// <summary>
+	/// <para>Template interface</para>
+	/// <para>Template: Call To Action Group</para>
+	/// <para>ID: {B40FA2F9-6328-4DC6-A7DA-6F447DFB2BE1}</para>
+	/// <para>/sitecore/templates/User Defined/Call To Action/Call To Action Group</para>
+	/// </summary>
+	[TemplateMapping("{B40FA2F9-6328-4DC6-A7DA-6F447DFB2BE1}", "InterfaceMap")]
+	public partial interface ICallToActionGroup : ICustomItemWrapper , Rocketcore.Model.Templates.UserDefined.IRocketcoreStandardTemplate
+	{		
+    	/// <summary>
+		/// <para>Template: Call To Action Group</para><para>Field: CallToActions</para><para>Data type: TreelistEx</para>
+        /// </summary>
+		[IndexField("call_to_actions_sm")]
+		IListFieldWrapper CallToActions { get; }
+
+    	/// <summary>
+		/// <para>Template: Call To Action Group</para><para>Field: CallToActions</para><para>Data type: TreelistEx</para>
+        /// </summary>
+		[IndexField("call_to_actions")]
+ 		IEnumerable<Guid> CallToActionsValue { get; }
+	}
+
+	/// <summary>
+	/// <para>Template class</para><para>/sitecore/templates/User Defined/Call To Action/Call To Action Group</para>
+	/// </summary>
+	[PredefinedQuery("TemplateId", ComparisonType.Equal, "{B40FA2F9-6328-4DC6-A7DA-6F447DFB2BE1}", typeof(Guid))]
+	[TemplateMapping("{B40FA2F9-6328-4DC6-A7DA-6F447DFB2BE1}", "")]
+	public partial class CallToActionGroup : CustomItemWrapper, ICallToActionGroup
+	{
+		private Item _item = null;
+
+		public CallToActionGroup(ISpawnProvider spawnProvider) : base(null, spawnProvider) { }
+
+		public CallToActionGroup(Guid id, ISpawnProvider spawnProvider) : base(id, spawnProvider) { }
+
+		public CallToActionGroup(Guid id, Dictionary<string, object> lazyFields, ISpawnProvider spawnProvider) : base(id, lazyFields, spawnProvider) { }
+
+		public CallToActionGroup(Item item, ISpawnProvider spawnProvider) : base(item, spawnProvider)
+		{
+			_item = item;
+		}
+
+		/// <summary><para>Template: Call To Action Group</para><para>Field: CallToActions</para><para>Data type: TreelistEx</para></summary>
+		[IndexField("call_to_actions_sm")]
+		public virtual IListFieldWrapper CallToActions
+		{
+			get { return GetField<ListFieldWrapper>("Call To Actions", "call_to_actions_sm"); }
+		}
+
+		/// <summary><para>Template: Call To Action Group</para><para>Field: CallToActions</para><para>Data type: TreelistEx</para></summary>
+		[IndexField("call_to_actions")]
+ 		public IEnumerable<Guid> CallToActionsValue
+		{
+			get { return CallToActions.Value; }
+		}
+	
+	}
+}
+#endregion
 
 
 
@@ -2587,6 +3205,8 @@ namespace Rocketcore.Model.Templates.UserDefined
 	using Sitecore.ContentSearch.Linq.Common;
     using Fortis.Model;
 	using Fortis.Model.Fields;
+	using Fortis.Providers;
+
 
 	/// <summary>
 	/// <para>Template interface</para>
@@ -2595,7 +3215,7 @@ namespace Rocketcore.Model.Templates.UserDefined
 	/// <para>/sitecore/templates/User Defined/Navigation/Breadcrumb</para>
 	/// </summary>
 	[TemplateMapping("{BB60121D-D8BD-4D1A-9B44-5ABCC2AAFE5D}", "InterfaceMap")]
-	public partial interface IBreadcrumb : ICustomItemWrapper , Rocketcore.Model.Templates.ScSystem.IStandardTemplate, Rocketcore.Model.Templates.UserDefined.IRocketcoreStandardTemplate
+	public partial interface IBreadcrumb : ICustomItemWrapper , Rocketcore.Model.Templates.UserDefined.IRocketcoreStandardTemplate
 	{		
     	/// <summary>
 		/// <para>Template: Breadcrumb</para><para>Field: BreadcrumbTitle</para><para>Data type: Single-Line Text</para>
@@ -2607,8 +3227,7 @@ namespace Rocketcore.Model.Templates.UserDefined
 		/// <para>Template: Breadcrumb</para><para>Field: BreadcrumbTitle</para><para>Data type: Single-Line Text</para>
         /// </summary>
 		[IndexField("breadcrumb_title")]
-		string BreadcrumbTitleValue { get; }
-		
+ 		string BreadcrumbTitleValue { get; }
     	/// <summary>
 		/// <para>Template: Breadcrumb</para><para>Field: HideFromBreadcrumb</para><para>Data type: Checkbox</para>
         /// </summary>
@@ -2619,8 +3238,7 @@ namespace Rocketcore.Model.Templates.UserDefined
 		/// <para>Template: Breadcrumb</para><para>Field: HideFromBreadcrumb</para><para>Data type: Checkbox</para>
         /// </summary>
 		[IndexField("hide_from_breadcrumb")]
-		bool HideFromBreadcrumbValue { get; }
-		
+ 		bool HideFromBreadcrumbValue { get; }
 	}
 
 	/// <summary>
@@ -2632,13 +3250,13 @@ namespace Rocketcore.Model.Templates.UserDefined
 	{
 		private Item _item = null;
 
-		public Breadcrumb() : base(null) { }
+		public Breadcrumb(ISpawnProvider spawnProvider) : base(null, spawnProvider) { }
 
-		public Breadcrumb(Guid id) : base(id) { }
+		public Breadcrumb(Guid id, ISpawnProvider spawnProvider) : base(id, spawnProvider) { }
 
-		public Breadcrumb(Guid id, Dictionary<string, object> lazyFields) : base(id, lazyFields) { }
+		public Breadcrumb(Guid id, Dictionary<string, object> lazyFields, ISpawnProvider spawnProvider) : base(id, lazyFields, spawnProvider) { }
 
-		public Breadcrumb(Item item) : base(item)
+		public Breadcrumb(Item item, ISpawnProvider spawnProvider) : base(item, spawnProvider)
 		{
 			_item = item;
 		}
@@ -2652,11 +3270,10 @@ namespace Rocketcore.Model.Templates.UserDefined
 
 		/// <summary><para>Template: Breadcrumb</para><para>Field: BreadcrumbTitle</para><para>Data type: Single-Line Text</para></summary>
 		[IndexField("breadcrumb_title")]
-		public string BreadcrumbTitleValue
+ 		public string BreadcrumbTitleValue
 		{
 			get { return BreadcrumbTitle.Value; }
 		}
-
 		/// <summary><para>Template: Breadcrumb</para><para>Field: HideFromBreadcrumb</para><para>Data type: Checkbox</para></summary>
 		[IndexField("hide_from_breadcrumb_b")]
 		public virtual IBooleanFieldWrapper HideFromBreadcrumb
@@ -2666,15 +3283,15 @@ namespace Rocketcore.Model.Templates.UserDefined
 
 		/// <summary><para>Template: Breadcrumb</para><para>Field: HideFromBreadcrumb</para><para>Data type: Checkbox</para></summary>
 		[IndexField("hide_from_breadcrumb")]
-		public bool HideFromBreadcrumbValue
+ 		public bool HideFromBreadcrumbValue
 		{
 			get { return HideFromBreadcrumb.Value; }
 		}
-
 	
 	}
 }
 #endregion
+
 
 
 
@@ -2689,6 +3306,8 @@ namespace Rocketcore.Model.Templates.UserDefined
 	using Sitecore.ContentSearch.Linq.Common;
     using Fortis.Model;
 	using Fortis.Model.Fields;
+	using Fortis.Providers;
+
     using Fortis.Model.RenderingParameters;
 
 	/// <summary>
@@ -2704,14 +3323,12 @@ namespace Rocketcore.Model.Templates.UserDefined
 		/// <para>Template: Tagging Filter Options</para><para>Field: GroupTagsBy</para><para>Data type: Droplink</para>
         /// </summary>
 		ILinkFieldWrapper GroupTagsBy { get; }
-		string GroupTagsByValue { get; }
-		
+ 		string GroupTagsByValue { get; }
     	/// <summary>
 		/// <para>Template: Tagging Filter Options</para><para>Field: Tags</para><para>Data type: Tags</para>
         /// </summary>
 		IListFieldWrapper Tags { get; }
-		IEnumerable<Guid> TagsValue { get; }
-		
+ 		IEnumerable<Guid> TagsValue { get; }
 	}
 
 	/// <summary>
@@ -2721,80 +3338,8 @@ namespace Rocketcore.Model.Templates.UserDefined
 	[TemplateMapping("{C489105D-4469-4B37-B247-72785F48165D}", "RenderingParameter")]
 	public partial class TaggingFilterOptions : RenderingParameterWrapper, ITaggingFilterOptions
 	{
-		public TaggingFilterOptions(Dictionary<string, string> parameters) : base(parameters)
+		public TaggingFilterOptions(Dictionary<string, string> parameters, ISpawnProvider spawnProvider) : base(parameters, spawnProvider)
 		{
-		}
-
-		/// <summary><para>Template: Tagging Filter Options</para><para>Field: Caching</para><para>Data type: Custom</para></summary>
-		public virtual ITextFieldWrapper Caching
-		{
-			get { return (Fortis.Model.RenderingParameters.Fields.TextFieldWrapper)GetField("Caching", "custom"); }
-		}
-
-		/// <summary><para>Template: Tagging Filter Options</para><para>Field: Caching</para><para>Data type: Custom</para></summary>
-		public string CachingValue
-		{
-			get { return Caching.Value; }
-		}
-
-		/// <summary><para>Template: Tagging Filter Options</para><para>Field: DataSource</para><para>Data type: Query Datasource</para></summary>
-		public virtual ITextFieldWrapper DataSource
-		{
-			get { return (Fortis.Model.RenderingParameters.Fields.TextFieldWrapper)GetField("Data Source", "query datasource"); }
-		}
-
-		/// <summary><para>Template: Tagging Filter Options</para><para>Field: DataSource</para><para>Data type: Query Datasource</para></summary>
-		public string DataSourceValue
-		{
-			get { return DataSource.Value; }
-		}
-
-		/// <summary><para>Template: Tagging Filter Options</para><para>Field: Placeholder</para><para>Data type: Single-Line Text</para></summary>
-		public virtual ITextFieldWrapper Placeholder
-		{
-			get { return (Fortis.Model.RenderingParameters.Fields.TextFieldWrapper)GetField("Placeholder", "single-line text"); }
-		}
-
-		/// <summary><para>Template: Tagging Filter Options</para><para>Field: Placeholder</para><para>Data type: Single-Line Text</para></summary>
-		public string PlaceholderValue
-		{
-			get { return Placeholder.Value; }
-		}
-
-		/// <summary><para>Template: Tagging Filter Options</para><para>Field: AdditionalParameters</para><para>Data type: Name Value List</para></summary>
-		public virtual ITextFieldWrapper AdditionalParameters
-		{
-			get { return (Fortis.Model.RenderingParameters.Fields.TextFieldWrapper)GetField("Additional Parameters", "name value list"); }
-		}
-
-		/// <summary><para>Template: Tagging Filter Options</para><para>Field: AdditionalParameters</para><para>Data type: Name Value List</para></summary>
-		public string AdditionalParametersValue
-		{
-			get { return AdditionalParameters.Value; }
-		}
-
-		/// <summary><para>Template: Tagging Filter Options</para><para>Field: Personalization</para><para>Data type: Custom</para></summary>
-		public virtual ITextFieldWrapper Personalization
-		{
-			get { return (Fortis.Model.RenderingParameters.Fields.TextFieldWrapper)GetField("Personalization", "custom"); }
-		}
-
-		/// <summary><para>Template: Tagging Filter Options</para><para>Field: Personalization</para><para>Data type: Custom</para></summary>
-		public string PersonalizationValue
-		{
-			get { return Personalization.Value; }
-		}
-
-		/// <summary><para>Template: Tagging Filter Options</para><para>Field: Tests</para><para>Data type: Internal Link</para></summary>
-		public virtual ITextFieldWrapper Tests
-		{
-			get { return (Fortis.Model.RenderingParameters.Fields.TextFieldWrapper)GetField("Tests", "internal link"); }
-		}
-
-		/// <summary><para>Template: Tagging Filter Options</para><para>Field: Tests</para><para>Data type: Internal Link</para></summary>
-		public string TestsValue
-		{
-			get { return Tests.Value; }
 		}
 
 		/// <summary><para>Template: Tagging Filter Options</para><para>Field: GroupTagsBy</para><para>Data type: Droplink</para></summary>
@@ -2804,11 +3349,10 @@ namespace Rocketcore.Model.Templates.UserDefined
 		}
 
 		/// <summary><para>Template: Tagging Filter Options</para><para>Field: GroupTagsBy</para><para>Data type: Droplink</para></summary>
-		public string GroupTagsByValue
+ 		public string GroupTagsByValue
 		{
 			get { return GroupTagsBy.Value; }
 		}
-
 		/// <summary><para>Template: Tagging Filter Options</para><para>Field: Tags</para><para>Data type: Tags</para></summary>
 		public virtual IListFieldWrapper Tags
 		{
@@ -2816,16 +3360,14 @@ namespace Rocketcore.Model.Templates.UserDefined
 		}
 
 		/// <summary><para>Template: Tagging Filter Options</para><para>Field: Tags</para><para>Data type: Tags</para></summary>
-		public IEnumerable<Guid> TagsValue
+ 		public IEnumerable<Guid> TagsValue
 		{
 			get { return Tags.Value; }
 		}
-
 	
 	}
 }
 #endregion
-
 
 
 #region Presentation Settings (UserDefined)
@@ -2838,6 +3380,8 @@ namespace Rocketcore.Model.Templates.UserDefined
 	using Sitecore.ContentSearch.Linq.Common;
     using Fortis.Model;
 	using Fortis.Model.Fields;
+	using Fortis.Providers;
+
 
 	/// <summary>
 	/// <para>Template interface</para>
@@ -2859,13 +3403,13 @@ namespace Rocketcore.Model.Templates.UserDefined
 	{
 		private Item _item = null;
 
-		public PresentationSettings() : base(null) { }
+		public PresentationSettings(ISpawnProvider spawnProvider) : base(null, spawnProvider) { }
 
-		public PresentationSettings(Guid id) : base(id) { }
+		public PresentationSettings(Guid id, ISpawnProvider spawnProvider) : base(id, spawnProvider) { }
 
-		public PresentationSettings(Guid id, Dictionary<string, object> lazyFields) : base(id, lazyFields) { }
+		public PresentationSettings(Guid id, Dictionary<string, object> lazyFields, ISpawnProvider spawnProvider) : base(id, lazyFields, spawnProvider) { }
 
-		public PresentationSettings(Item item) : base(item)
+		public PresentationSettings(Item item, ISpawnProvider spawnProvider) : base(item, spawnProvider)
 		{
 			_item = item;
 		}
@@ -2874,6 +3418,7 @@ namespace Rocketcore.Model.Templates.UserDefined
 	}
 }
 #endregion
+
 
 #region Content Date Time (UserDefined)
 namespace Rocketcore.Model.Templates.UserDefined
@@ -2885,6 +3430,8 @@ namespace Rocketcore.Model.Templates.UserDefined
 	using Sitecore.ContentSearch.Linq.Common;
     using Fortis.Model;
 	using Fortis.Model.Fields;
+	using Fortis.Providers;
+
 
 	/// <summary>
 	/// <para>Template interface</para>
@@ -2905,8 +3452,7 @@ namespace Rocketcore.Model.Templates.UserDefined
 		/// <para>Template: Content Date Time</para><para>Field: DateAndTime</para><para>Data type: Datetime</para>
         /// </summary>
 		[IndexField("date_and_time")]
-		DateTime DateAndTimeValue { get; }
-		
+ 		DateTime DateAndTimeValue { get; }
 	}
 
 	/// <summary>
@@ -2918,13 +3464,13 @@ namespace Rocketcore.Model.Templates.UserDefined
 	{
 		private Item _item = null;
 
-		public ContentDateTime() : base(null) { }
+		public ContentDateTime(ISpawnProvider spawnProvider) : base(null, spawnProvider) { }
 
-		public ContentDateTime(Guid id) : base(id) { }
+		public ContentDateTime(Guid id, ISpawnProvider spawnProvider) : base(id, spawnProvider) { }
 
-		public ContentDateTime(Guid id, Dictionary<string, object> lazyFields) : base(id, lazyFields) { }
+		public ContentDateTime(Guid id, Dictionary<string, object> lazyFields, ISpawnProvider spawnProvider) : base(id, lazyFields, spawnProvider) { }
 
-		public ContentDateTime(Item item) : base(item)
+		public ContentDateTime(Item item, ISpawnProvider spawnProvider) : base(item, spawnProvider)
 		{
 			_item = item;
 		}
@@ -2938,11 +3484,10 @@ namespace Rocketcore.Model.Templates.UserDefined
 
 		/// <summary><para>Template: Content Date Time</para><para>Field: DateAndTime</para><para>Data type: Datetime</para></summary>
 		[IndexField("date_and_time")]
-		public DateTime DateAndTimeValue
+ 		public DateTime DateAndTimeValue
 		{
 			get { return DateAndTime.Value; }
 		}
-
 	
 	}
 }
@@ -2958,6 +3503,8 @@ namespace Rocketcore.Model.Templates.UserDefined
 	using Sitecore.ContentSearch.Linq.Common;
     using Fortis.Model;
 	using Fortis.Model.Fields;
+	using Fortis.Providers;
+
 
 	/// <summary>
 	/// <para>Template interface</para>
@@ -2979,13 +3526,13 @@ namespace Rocketcore.Model.Templates.UserDefined
 	{
 		private Item _item = null;
 
-		public Tag() : base(null) { }
+		public Tag(ISpawnProvider spawnProvider) : base(null, spawnProvider) { }
 
-		public Tag(Guid id) : base(id) { }
+		public Tag(Guid id, ISpawnProvider spawnProvider) : base(id, spawnProvider) { }
 
-		public Tag(Guid id, Dictionary<string, object> lazyFields) : base(id, lazyFields) { }
+		public Tag(Guid id, Dictionary<string, object> lazyFields, ISpawnProvider spawnProvider) : base(id, lazyFields, spawnProvider) { }
 
-		public Tag(Item item) : base(item)
+		public Tag(Item item, ISpawnProvider spawnProvider) : base(item, spawnProvider)
 		{
 			_item = item;
 		}
@@ -2994,6 +3541,7 @@ namespace Rocketcore.Model.Templates.UserDefined
 	}
 }
 #endregion
+
 
 #region Rocketcore Standard Template (UserDefined)
 namespace Rocketcore.Model.Templates.UserDefined
@@ -3005,6 +3553,8 @@ namespace Rocketcore.Model.Templates.UserDefined
 	using Sitecore.ContentSearch.Linq.Common;
     using Fortis.Model;
 	using Fortis.Model.Fields;
+	using Fortis.Providers;
+
 
 	/// <summary>
 	/// <para>Template interface</para>
@@ -3013,7 +3563,7 @@ namespace Rocketcore.Model.Templates.UserDefined
 	/// <para>/sitecore/templates/User Defined/Rocketcore/Rocketcore Standard Template</para>
 	/// </summary>
 	[TemplateMapping("{D902D3A4-630C-4E8D-9261-4EAF6E14B8EA}", "InterfaceMap")]
-	public partial interface IRocketcoreStandardTemplate : ICustomItemWrapper , Rocketcore.Model.Templates.ScSystem.IStandardTemplate, Rocketcore.Model.Templates.UserDefined.IRocketcorePermissions
+	public partial interface IRocketcoreStandardTemplate : ICustomItemWrapper , Rocketcore.Model.Templates.UserDefined.IRocketcorePermissions
 	{		
 	}
 
@@ -3026,13 +3576,13 @@ namespace Rocketcore.Model.Templates.UserDefined
 	{
 		private Item _item = null;
 
-		public RocketcoreStandardTemplate() : base(null) { }
+		public RocketcoreStandardTemplate(ISpawnProvider spawnProvider) : base(null, spawnProvider) { }
 
-		public RocketcoreStandardTemplate(Guid id) : base(id) { }
+		public RocketcoreStandardTemplate(Guid id, ISpawnProvider spawnProvider) : base(id, spawnProvider) { }
 
-		public RocketcoreStandardTemplate(Guid id, Dictionary<string, object> lazyFields) : base(id, lazyFields) { }
+		public RocketcoreStandardTemplate(Guid id, Dictionary<string, object> lazyFields, ISpawnProvider spawnProvider) : base(id, lazyFields, spawnProvider) { }
 
-		public RocketcoreStandardTemplate(Item item) : base(item)
+		public RocketcoreStandardTemplate(Item item, ISpawnProvider spawnProvider) : base(item, spawnProvider)
 		{
 			_item = item;
 		}
@@ -3044,7 +3594,130 @@ namespace Rocketcore.Model.Templates.UserDefined
 
 
 
+#region Call To Action (UserDefined)
+namespace Rocketcore.Model.Templates.UserDefined
+{
+    using System;
+	using System.Collections.Generic;
+    using Sitecore.Data.Items;
+	using Sitecore.ContentSearch;
+	using Sitecore.ContentSearch.Linq.Common;
+    using Fortis.Model;
+	using Fortis.Model.Fields;
+	using Fortis.Providers;
 
+
+	/// <summary>
+	/// <para>Template interface</para>
+	/// <para>Template: Call To Action</para>
+	/// <para>ID: {E83B1FB1-1261-4D1E-BE25-ABAE7FDD8DFF}</para>
+	/// <para>/sitecore/templates/User Defined/Call To Action/Call To Action</para>
+	/// </summary>
+	[TemplateMapping("{E83B1FB1-1261-4D1E-BE25-ABAE7FDD8DFF}", "InterfaceMap")]
+	public partial interface ICallToAction : ICustomItemWrapper , Rocketcore.Model.Templates.UserDefined.IRocketcoreStandardTemplate, Rocketcore.Model.Templates.UserDefined.ITagging, Rocketcore.Model.Templates.UserDefined.IContentHeadings, Rocketcore.Model.Templates.UserDefined.IContentBody, Rocketcore.Model.Templates.UserDefined.IContentImage, Rocketcore.Model.Templates.UserDefined.IContentDateTime
+	{		
+	}
+
+	/// <summary>
+	/// <para>Template class</para><para>/sitecore/templates/User Defined/Call To Action/Call To Action</para>
+	/// </summary>
+	[PredefinedQuery("TemplateId", ComparisonType.Equal, "{E83B1FB1-1261-4D1E-BE25-ABAE7FDD8DFF}", typeof(Guid))]
+	[TemplateMapping("{E83B1FB1-1261-4D1E-BE25-ABAE7FDD8DFF}", "")]
+	public partial class CallToAction : CustomItemWrapper, ICallToAction
+	{
+		private Item _item = null;
+
+		public CallToAction(ISpawnProvider spawnProvider) : base(null, spawnProvider) { }
+
+		public CallToAction(Guid id, ISpawnProvider spawnProvider) : base(id, spawnProvider) { }
+
+		public CallToAction(Guid id, Dictionary<string, object> lazyFields, ISpawnProvider spawnProvider) : base(id, lazyFields, spawnProvider) { }
+
+		public CallToAction(Item item, ISpawnProvider spawnProvider) : base(item, spawnProvider)
+		{
+			_item = item;
+		}
+
+		/// <summary><para>Template: Call To Action</para><para>Field: Tags</para><para>Data type: Tags</para></summary>
+		[IndexField("tags_sm")]
+		public virtual IListFieldWrapper Tags
+		{
+			get { return GetField<ListFieldWrapper>("Tags", "tags_sm"); }
+		}
+
+		/// <summary><para>Template: Call To Action</para><para>Field: Tags</para><para>Data type: Tags</para></summary>
+		[IndexField("tags")]
+ 		public IEnumerable<Guid> TagsValue
+		{
+			get { return Tags.Value; }
+		}
+		/// <summary><para>Template: Call To Action</para><para>Field: SubTitle</para><para>Data type: Single-Line Text</para></summary>
+		[IndexField("sub_title_t")]
+		public virtual ITextFieldWrapper SubTitle
+		{
+			get { return GetField<TextFieldWrapper>("Sub Title", "sub_title_t"); }
+		}
+
+		/// <summary><para>Template: Call To Action</para><para>Field: SubTitle</para><para>Data type: Single-Line Text</para></summary>
+		[IndexField("sub_title")]
+ 		public string SubTitleValue
+		{
+			get { return SubTitle.Value; }
+		}
+		/// <summary><para>Template: Call To Action</para><para>Field: Title</para><para>Data type: Single-Line Text</para></summary>
+		[IndexField("title_t")]
+		public virtual ITextFieldWrapper Title
+		{
+			get { return GetField<TextFieldWrapper>("Title", "title_t"); }
+		}
+
+		/// <summary><para>Template: Call To Action</para><para>Field: Title</para><para>Data type: Single-Line Text</para></summary>
+		[IndexField("title")]
+ 		public string TitleValue
+		{
+			get { return Title.Value; }
+		}
+		/// <summary><para>Template: Call To Action</para><para>Field: Body</para><para>Data type: Rich Text</para></summary>
+		[IndexField("body_t")]
+		public virtual IRichTextFieldWrapper Body
+		{
+			get { return GetField<RichTextFieldWrapper>("Body", "body_t"); }
+		}
+
+		/// <summary><para>Template: Call To Action</para><para>Field: Body</para><para>Data type: Rich Text</para></summary>
+		[IndexField("body")]
+ 		public string BodyValue
+		{
+			get { return Body.Value; }
+		}
+		/// <summary><para>Template: Call To Action</para><para>Field: Image</para><para>Data type: Image</para></summary>
+		public virtual IImageFieldWrapper Image
+		{
+			get { return GetField<ImageFieldWrapper>("Image"); }
+		}
+
+		/// <summary><para>Template: Call To Action</para><para>Field: Image</para><para>Data type: Image</para></summary>
+ 		public string ImageValue
+		{
+			get { return Image.Value; }
+		}
+		/// <summary><para>Template: Call To Action</para><para>Field: DateAndTime</para><para>Data type: Datetime</para></summary>
+		[IndexField("date_and_time_tdt")]
+		public virtual IDateTimeFieldWrapper DateAndTime
+		{
+			get { return GetField<DateTimeFieldWrapper>("Date And Time", "date_and_time_tdt"); }
+		}
+
+		/// <summary><para>Template: Call To Action</para><para>Field: DateAndTime</para><para>Data type: Datetime</para></summary>
+		[IndexField("date_and_time")]
+ 		public DateTime DateAndTimeValue
+		{
+			get { return DateAndTime.Value; }
+		}
+	
+	}
+}
+#endregion
 #region Content Headings (UserDefined)
 namespace Rocketcore.Model.Templates.UserDefined
 {
@@ -3055,6 +3728,8 @@ namespace Rocketcore.Model.Templates.UserDefined
 	using Sitecore.ContentSearch.Linq.Common;
     using Fortis.Model;
 	using Fortis.Model.Fields;
+	using Fortis.Providers;
+
 
 	/// <summary>
 	/// <para>Template interface</para>
@@ -3063,7 +3738,7 @@ namespace Rocketcore.Model.Templates.UserDefined
 	/// <para>/sitecore/templates/User Defined/Generic/Content Headings</para>
 	/// </summary>
 	[TemplateMapping("{E9A38444-4157-4BF9-A525-C2DBCBBDFEBA}", "InterfaceMap")]
-	public partial interface IContentHeadings : ICustomItemWrapper , Rocketcore.Model.Templates.ScSystem.IStandardTemplate
+	public partial interface IContentHeadings : ICustomItemWrapper 
 	{		
     	/// <summary>
 		/// <para>Template: Content Headings</para><para>Field: SubTitle</para><para>Data type: Single-Line Text</para>
@@ -3075,8 +3750,7 @@ namespace Rocketcore.Model.Templates.UserDefined
 		/// <para>Template: Content Headings</para><para>Field: SubTitle</para><para>Data type: Single-Line Text</para>
         /// </summary>
 		[IndexField("sub_title")]
-		string SubTitleValue { get; }
-		
+ 		string SubTitleValue { get; }
     	/// <summary>
 		/// <para>Template: Content Headings</para><para>Field: Title</para><para>Data type: Single-Line Text</para>
         /// </summary>
@@ -3087,8 +3761,7 @@ namespace Rocketcore.Model.Templates.UserDefined
 		/// <para>Template: Content Headings</para><para>Field: Title</para><para>Data type: Single-Line Text</para>
         /// </summary>
 		[IndexField("title")]
-		string TitleValue { get; }
-		
+ 		string TitleValue { get; }
 	}
 
 	/// <summary>
@@ -3100,13 +3773,13 @@ namespace Rocketcore.Model.Templates.UserDefined
 	{
 		private Item _item = null;
 
-		public ContentHeadings() : base(null) { }
+		public ContentHeadings(ISpawnProvider spawnProvider) : base(null, spawnProvider) { }
 
-		public ContentHeadings(Guid id) : base(id) { }
+		public ContentHeadings(Guid id, ISpawnProvider spawnProvider) : base(id, spawnProvider) { }
 
-		public ContentHeadings(Guid id, Dictionary<string, object> lazyFields) : base(id, lazyFields) { }
+		public ContentHeadings(Guid id, Dictionary<string, object> lazyFields, ISpawnProvider spawnProvider) : base(id, lazyFields, spawnProvider) { }
 
-		public ContentHeadings(Item item) : base(item)
+		public ContentHeadings(Item item, ISpawnProvider spawnProvider) : base(item, spawnProvider)
 		{
 			_item = item;
 		}
@@ -3120,11 +3793,10 @@ namespace Rocketcore.Model.Templates.UserDefined
 
 		/// <summary><para>Template: Content Headings</para><para>Field: SubTitle</para><para>Data type: Single-Line Text</para></summary>
 		[IndexField("sub_title")]
-		public string SubTitleValue
+ 		public string SubTitleValue
 		{
 			get { return SubTitle.Value; }
 		}
-
 		/// <summary><para>Template: Content Headings</para><para>Field: Title</para><para>Data type: Single-Line Text</para></summary>
 		[IndexField("title_t")]
 		public virtual ITextFieldWrapper Title
@@ -3134,15 +3806,15 @@ namespace Rocketcore.Model.Templates.UserDefined
 
 		/// <summary><para>Template: Content Headings</para><para>Field: Title</para><para>Data type: Single-Line Text</para></summary>
 		[IndexField("title")]
-		public string TitleValue
+ 		public string TitleValue
 		{
 			get { return Title.Value; }
 		}
-
 	
 	}
 }
 #endregion
+
 
 
 
@@ -3156,6 +3828,8 @@ namespace Rocketcore.Model.Templates.UserDefined
 	using Sitecore.ContentSearch.Linq.Common;
     using Fortis.Model;
 	using Fortis.Model.Fields;
+	using Fortis.Providers;
+
     using Fortis.Model.RenderingParameters;
 
 	/// <summary>
@@ -3171,14 +3845,12 @@ namespace Rocketcore.Model.Templates.UserDefined
 		/// <para>Template: Category Filter Options</para><para>Field: Categories</para><para>Data type: Tags</para>
         /// </summary>
 		IListFieldWrapper Categories { get; }
-		IEnumerable<Guid> CategoriesValue { get; }
-		
+ 		IEnumerable<Guid> CategoriesValue { get; }
     	/// <summary>
 		/// <para>Template: Category Filter Options</para><para>Field: GroupCategoriesBy</para><para>Data type: Droplink</para>
         /// </summary>
 		ILinkFieldWrapper GroupCategoriesBy { get; }
-		string GroupCategoriesByValue { get; }
-		
+ 		string GroupCategoriesByValue { get; }
 	}
 
 	/// <summary>
@@ -3188,80 +3860,8 @@ namespace Rocketcore.Model.Templates.UserDefined
 	[TemplateMapping("{F2CAC251-A899-4F34-ADCB-7D6BA305B419}", "RenderingParameter")]
 	public partial class CategoryFilterOptions : RenderingParameterWrapper, ICategoryFilterOptions
 	{
-		public CategoryFilterOptions(Dictionary<string, string> parameters) : base(parameters)
+		public CategoryFilterOptions(Dictionary<string, string> parameters, ISpawnProvider spawnProvider) : base(parameters, spawnProvider)
 		{
-		}
-
-		/// <summary><para>Template: Category Filter Options</para><para>Field: Caching</para><para>Data type: Custom</para></summary>
-		public virtual ITextFieldWrapper Caching
-		{
-			get { return (Fortis.Model.RenderingParameters.Fields.TextFieldWrapper)GetField("Caching", "custom"); }
-		}
-
-		/// <summary><para>Template: Category Filter Options</para><para>Field: Caching</para><para>Data type: Custom</para></summary>
-		public string CachingValue
-		{
-			get { return Caching.Value; }
-		}
-
-		/// <summary><para>Template: Category Filter Options</para><para>Field: DataSource</para><para>Data type: Query Datasource</para></summary>
-		public virtual ITextFieldWrapper DataSource
-		{
-			get { return (Fortis.Model.RenderingParameters.Fields.TextFieldWrapper)GetField("Data Source", "query datasource"); }
-		}
-
-		/// <summary><para>Template: Category Filter Options</para><para>Field: DataSource</para><para>Data type: Query Datasource</para></summary>
-		public string DataSourceValue
-		{
-			get { return DataSource.Value; }
-		}
-
-		/// <summary><para>Template: Category Filter Options</para><para>Field: Placeholder</para><para>Data type: Single-Line Text</para></summary>
-		public virtual ITextFieldWrapper Placeholder
-		{
-			get { return (Fortis.Model.RenderingParameters.Fields.TextFieldWrapper)GetField("Placeholder", "single-line text"); }
-		}
-
-		/// <summary><para>Template: Category Filter Options</para><para>Field: Placeholder</para><para>Data type: Single-Line Text</para></summary>
-		public string PlaceholderValue
-		{
-			get { return Placeholder.Value; }
-		}
-
-		/// <summary><para>Template: Category Filter Options</para><para>Field: AdditionalParameters</para><para>Data type: Name Value List</para></summary>
-		public virtual ITextFieldWrapper AdditionalParameters
-		{
-			get { return (Fortis.Model.RenderingParameters.Fields.TextFieldWrapper)GetField("Additional Parameters", "name value list"); }
-		}
-
-		/// <summary><para>Template: Category Filter Options</para><para>Field: AdditionalParameters</para><para>Data type: Name Value List</para></summary>
-		public string AdditionalParametersValue
-		{
-			get { return AdditionalParameters.Value; }
-		}
-
-		/// <summary><para>Template: Category Filter Options</para><para>Field: Personalization</para><para>Data type: Custom</para></summary>
-		public virtual ITextFieldWrapper Personalization
-		{
-			get { return (Fortis.Model.RenderingParameters.Fields.TextFieldWrapper)GetField("Personalization", "custom"); }
-		}
-
-		/// <summary><para>Template: Category Filter Options</para><para>Field: Personalization</para><para>Data type: Custom</para></summary>
-		public string PersonalizationValue
-		{
-			get { return Personalization.Value; }
-		}
-
-		/// <summary><para>Template: Category Filter Options</para><para>Field: Tests</para><para>Data type: Internal Link</para></summary>
-		public virtual ITextFieldWrapper Tests
-		{
-			get { return (Fortis.Model.RenderingParameters.Fields.TextFieldWrapper)GetField("Tests", "internal link"); }
-		}
-
-		/// <summary><para>Template: Category Filter Options</para><para>Field: Tests</para><para>Data type: Internal Link</para></summary>
-		public string TestsValue
-		{
-			get { return Tests.Value; }
 		}
 
 		/// <summary><para>Template: Category Filter Options</para><para>Field: Categories</para><para>Data type: Tags</para></summary>
@@ -3271,11 +3871,10 @@ namespace Rocketcore.Model.Templates.UserDefined
 		}
 
 		/// <summary><para>Template: Category Filter Options</para><para>Field: Categories</para><para>Data type: Tags</para></summary>
-		public IEnumerable<Guid> CategoriesValue
+ 		public IEnumerable<Guid> CategoriesValue
 		{
 			get { return Categories.Value; }
 		}
-
 		/// <summary><para>Template: Category Filter Options</para><para>Field: GroupCategoriesBy</para><para>Data type: Droplink</para></summary>
 		public virtual ILinkFieldWrapper GroupCategoriesBy
 		{
@@ -3283,11 +3882,10 @@ namespace Rocketcore.Model.Templates.UserDefined
 		}
 
 		/// <summary><para>Template: Category Filter Options</para><para>Field: GroupCategoriesBy</para><para>Data type: Droplink</para></summary>
-		public string GroupCategoriesByValue
+ 		public string GroupCategoriesByValue
 		{
 			get { return GroupCategoriesBy.Value; }
 		}
-
 	
 	}
 }
@@ -3302,6 +3900,8 @@ namespace Rocketcore.Model.Templates.UserDefined
 	using Sitecore.ContentSearch.Linq.Common;
     using Fortis.Model;
 	using Fortis.Model.Fields;
+	using Fortis.Providers;
+
 
 	/// <summary>
 	/// <para>Template interface</para>
@@ -3322,8 +3922,7 @@ namespace Rocketcore.Model.Templates.UserDefined
 		/// <para>Template: Categories</para><para>Field: PrimaryCategory</para><para>Data type: Droptree</para>
         /// </summary>
 		[IndexField("primary_category")]
-		string PrimaryCategoryValue { get; }
-		
+ 		string PrimaryCategoryValue { get; }
     	/// <summary>
 		/// <para>Template: Categories</para><para>Field: RelatedCategories</para><para>Data type: TreelistEx</para>
         /// </summary>
@@ -3334,8 +3933,7 @@ namespace Rocketcore.Model.Templates.UserDefined
 		/// <para>Template: Categories</para><para>Field: RelatedCategories</para><para>Data type: TreelistEx</para>
         /// </summary>
 		[IndexField("related_categories")]
-		IEnumerable<Guid> RelatedCategoriesValue { get; }
-		
+ 		IEnumerable<Guid> RelatedCategoriesValue { get; }
 	}
 
 	/// <summary>
@@ -3347,13 +3945,13 @@ namespace Rocketcore.Model.Templates.UserDefined
 	{
 		private Item _item = null;
 
-		public Categories() : base(null) { }
+		public Categories(ISpawnProvider spawnProvider) : base(null, spawnProvider) { }
 
-		public Categories(Guid id) : base(id) { }
+		public Categories(Guid id, ISpawnProvider spawnProvider) : base(id, spawnProvider) { }
 
-		public Categories(Guid id, Dictionary<string, object> lazyFields) : base(id, lazyFields) { }
+		public Categories(Guid id, Dictionary<string, object> lazyFields, ISpawnProvider spawnProvider) : base(id, lazyFields, spawnProvider) { }
 
-		public Categories(Item item) : base(item)
+		public Categories(Item item, ISpawnProvider spawnProvider) : base(item, spawnProvider)
 		{
 			_item = item;
 		}
@@ -3367,11 +3965,10 @@ namespace Rocketcore.Model.Templates.UserDefined
 
 		/// <summary><para>Template: Categories</para><para>Field: PrimaryCategory</para><para>Data type: Droptree</para></summary>
 		[IndexField("primary_category")]
-		public string PrimaryCategoryValue
+ 		public string PrimaryCategoryValue
 		{
 			get { return PrimaryCategory.Value; }
 		}
-
 		/// <summary><para>Template: Categories</para><para>Field: RelatedCategories</para><para>Data type: TreelistEx</para></summary>
 		[IndexField("related_categories_sm")]
 		public virtual IListFieldWrapper RelatedCategories
@@ -3381,11 +3978,10 @@ namespace Rocketcore.Model.Templates.UserDefined
 
 		/// <summary><para>Template: Categories</para><para>Field: RelatedCategories</para><para>Data type: TreelistEx</para></summary>
 		[IndexField("related_categories")]
-		public IEnumerable<Guid> RelatedCategoriesValue
+ 		public IEnumerable<Guid> RelatedCategoriesValue
 		{
 			get { return RelatedCategories.Value; }
 		}
-
 	
 	}
 }
@@ -3400,6 +3996,8 @@ namespace Rocketcore.Model.Templates.UserDefined
 	using Sitecore.ContentSearch.Linq.Common;
     using Fortis.Model;
 	using Fortis.Model.Fields;
+	using Fortis.Providers;
+
 
 	/// <summary>
 	/// <para>Template interface</para>
@@ -3408,7 +4006,7 @@ namespace Rocketcore.Model.Templates.UserDefined
 	/// <para>/sitecore/templates/User Defined/Rocketcore/Rocketcore Permissions</para>
 	/// </summary>
 	[TemplateMapping("{F40D98A0-19D9-407A-8541-0FC885BB452A}", "InterfaceMap")]
-	public partial interface IRocketcorePermissions : ICustomItemWrapper , Rocketcore.Model.Templates.ScSystem.IStandardTemplate
+	public partial interface IRocketcorePermissions : ICustomItemWrapper 
 	{		
 	}
 
@@ -3421,13 +4019,13 @@ namespace Rocketcore.Model.Templates.UserDefined
 	{
 		private Item _item = null;
 
-		public RocketcorePermissions() : base(null) { }
+		public RocketcorePermissions(ISpawnProvider spawnProvider) : base(null, spawnProvider) { }
 
-		public RocketcorePermissions(Guid id) : base(id) { }
+		public RocketcorePermissions(Guid id, ISpawnProvider spawnProvider) : base(id, spawnProvider) { }
 
-		public RocketcorePermissions(Guid id, Dictionary<string, object> lazyFields) : base(id, lazyFields) { }
+		public RocketcorePermissions(Guid id, Dictionary<string, object> lazyFields, ISpawnProvider spawnProvider) : base(id, lazyFields, spawnProvider) { }
 
-		public RocketcorePermissions(Item item) : base(item)
+		public RocketcorePermissions(Item item, ISpawnProvider spawnProvider) : base(item, spawnProvider)
 		{
 			_item = item;
 		}
@@ -3436,7 +4034,6 @@ namespace Rocketcore.Model.Templates.UserDefined
 	}
 }
 #endregion
-
 
 
 
@@ -3450,6 +4047,8 @@ namespace Rocketcore.Model.Templates.UserDefined
 	using Sitecore.ContentSearch.Linq.Common;
     using Fortis.Model;
 	using Fortis.Model.Fields;
+	using Fortis.Providers;
+
 
 	/// <summary>
 	/// <para>Template interface</para>
@@ -3470,8 +4069,7 @@ namespace Rocketcore.Model.Templates.UserDefined
 		/// <para>Template: Content Body</para><para>Field: Body</para><para>Data type: Rich Text</para>
         /// </summary>
 		[IndexField("body")]
-		string BodyValue { get; }
-		
+ 		string BodyValue { get; }
 	}
 
 	/// <summary>
@@ -3483,13 +4081,13 @@ namespace Rocketcore.Model.Templates.UserDefined
 	{
 		private Item _item = null;
 
-		public ContentBody() : base(null) { }
+		public ContentBody(ISpawnProvider spawnProvider) : base(null, spawnProvider) { }
 
-		public ContentBody(Guid id) : base(id) { }
+		public ContentBody(Guid id, ISpawnProvider spawnProvider) : base(id, spawnProvider) { }
 
-		public ContentBody(Guid id, Dictionary<string, object> lazyFields) : base(id, lazyFields) { }
+		public ContentBody(Guid id, Dictionary<string, object> lazyFields, ISpawnProvider spawnProvider) : base(id, lazyFields, spawnProvider) { }
 
-		public ContentBody(Item item) : base(item)
+		public ContentBody(Item item, ISpawnProvider spawnProvider) : base(item, spawnProvider)
 		{
 			_item = item;
 		}
@@ -3503,11 +4101,10 @@ namespace Rocketcore.Model.Templates.UserDefined
 
 		/// <summary><para>Template: Content Body</para><para>Field: Body</para><para>Data type: Rich Text</para></summary>
 		[IndexField("body")]
-		public string BodyValue
+ 		public string BodyValue
 		{
 			get { return Body.Value; }
 		}
-
 	
 	}
 }
@@ -3522,6 +4119,8 @@ namespace Rocketcore.Model.Templates.UserDefined
 	using Sitecore.ContentSearch.Linq.Common;
     using Fortis.Model;
 	using Fortis.Model.Fields;
+	using Fortis.Providers;
+
 
 	/// <summary>
 	/// <para>Template interface</para>
@@ -3543,13 +4142,13 @@ namespace Rocketcore.Model.Templates.UserDefined
 	{
 		private Item _item = null;
 
-		public Category() : base(null) { }
+		public Category(ISpawnProvider spawnProvider) : base(null, spawnProvider) { }
 
-		public Category(Guid id) : base(id) { }
+		public Category(Guid id, ISpawnProvider spawnProvider) : base(id, spawnProvider) { }
 
-		public Category(Guid id, Dictionary<string, object> lazyFields) : base(id, lazyFields) { }
+		public Category(Guid id, Dictionary<string, object> lazyFields, ISpawnProvider spawnProvider) : base(id, lazyFields, spawnProvider) { }
 
-		public Category(Item item) : base(item)
+		public Category(Item item, ISpawnProvider spawnProvider) : base(item, spawnProvider)
 		{
 			_item = item;
 		}
@@ -3563,11 +4162,10 @@ namespace Rocketcore.Model.Templates.UserDefined
 
 		/// <summary><para>Template: Category</para><para>Field: SubTitle</para><para>Data type: Single-Line Text</para></summary>
 		[IndexField("sub_title")]
-		public string SubTitleValue
+ 		public string SubTitleValue
 		{
 			get { return SubTitle.Value; }
 		}
-
 		/// <summary><para>Template: Category</para><para>Field: Title</para><para>Data type: Single-Line Text</para></summary>
 		[IndexField("title_t")]
 		public virtual ITextFieldWrapper Title
@@ -3577,9 +4175,57 @@ namespace Rocketcore.Model.Templates.UserDefined
 
 		/// <summary><para>Template: Category</para><para>Field: Title</para><para>Data type: Single-Line Text</para></summary>
 		[IndexField("title")]
-		public string TitleValue
+ 		public string TitleValue
 		{
 			get { return Title.Value; }
+		}
+	
+	}
+}
+#endregion
+
+#region Lookup (UserDefined)
+namespace Rocketcore.Model.Templates.UserDefined
+{
+    using System;
+	using System.Collections.Generic;
+    using Sitecore.Data.Items;
+	using Sitecore.ContentSearch;
+	using Sitecore.ContentSearch.Linq.Common;
+    using Fortis.Model;
+	using Fortis.Model.Fields;
+	using Fortis.Providers;
+
+
+	/// <summary>
+	/// <para>Template interface</para>
+	/// <para>Template: Lookup</para>
+	/// <para>ID: {FAAF2F41-C07C-4146-8C4D-1C7DC29EE12D}</para>
+	/// <para>/sitecore/templates/User Defined/Global/Lookup/Lookup</para>
+	/// </summary>
+	[TemplateMapping("{FAAF2F41-C07C-4146-8C4D-1C7DC29EE12D}", "InterfaceMap")]
+	public partial interface ILookup : ICustomItemWrapper , Rocketcore.Model.Templates.UserDefined.IRocketcoreStandardTemplate
+	{		
+	}
+
+	/// <summary>
+	/// <para>Template class</para><para>/sitecore/templates/User Defined/Global/Lookup/Lookup</para>
+	/// </summary>
+	[PredefinedQuery("TemplateId", ComparisonType.Equal, "{FAAF2F41-C07C-4146-8C4D-1C7DC29EE12D}", typeof(Guid))]
+	[TemplateMapping("{FAAF2F41-C07C-4146-8C4D-1C7DC29EE12D}", "")]
+	public partial class Lookup : CustomItemWrapper, ILookup
+	{
+		private Item _item = null;
+
+		public Lookup(ISpawnProvider spawnProvider) : base(null, spawnProvider) { }
+
+		public Lookup(Guid id, ISpawnProvider spawnProvider) : base(id, spawnProvider) { }
+
+		public Lookup(Guid id, Dictionary<string, object> lazyFields, ISpawnProvider spawnProvider) : base(id, lazyFields, spawnProvider) { }
+
+		public Lookup(Item item, ISpawnProvider spawnProvider) : base(item, spawnProvider)
+		{
+			_item = item;
 		}
 
 	
@@ -3589,6 +4235,123 @@ namespace Rocketcore.Model.Templates.UserDefined
 
 
 
+#region Call To Action List Options (UserDefined)
+namespace Rocketcore.Model.Templates.UserDefined
+{
+    using System;
+	using System.Collections.Generic;
+    using Sitecore.Data.Items;
+	using Sitecore.ContentSearch;
+	using Sitecore.ContentSearch.Linq.Common;
+    using Fortis.Model;
+	using Fortis.Model.Fields;
+	using Fortis.Providers;
+
+    using Fortis.Model.RenderingParameters;
+
+	/// <summary>
+	/// <para>Template interface</para>
+	/// <para>Template: Call To Action List Options</para>
+	/// <para>ID: {FB56AAF5-CFA4-4D50-91D0-E1121E4AB0D1}</para>
+	/// <para>/sitecore/templates/User Defined/Call To Action/Rendering Options/Call To Action List Options</para>
+	/// </summary>
+	[TemplateMapping("{FB56AAF5-CFA4-4D50-91D0-E1121E4AB0D1}", "InterfaceRenderingParameter")]
+	public partial interface ICallToActionListOptions : IRenderingParameterWrapper , Rocketcore.Model.Templates.UserDefined.IRocketcoreRenderingParameters, Rocketcore.Model.Templates.UserDefined.ISelectionOptions, Rocketcore.Model.Templates.UserDefined.IAggregateOptions, Rocketcore.Model.Templates.UserDefined.ITaggingFilterOptions, Rocketcore.Model.Templates.UserDefined.IOrderingOptions, Rocketcore.Model.Templates.UserDefined.IPaginationOptions
+	{		
+	}
+
+	/// <summary>
+	/// <para>Template class</para><para>/sitecore/templates/User Defined/Call To Action/Rendering Options/Call To Action List Options</para>
+	/// </summary>
+	[PredefinedQuery("TemplateId", ComparisonType.Equal, "{FB56AAF5-CFA4-4D50-91D0-E1121E4AB0D1}", typeof(Guid))]
+	[TemplateMapping("{FB56AAF5-CFA4-4D50-91D0-E1121E4AB0D1}", "RenderingParameter")]
+	public partial class CallToActionListOptions : RenderingParameterWrapper, ICallToActionListOptions
+	{
+		public CallToActionListOptions(Dictionary<string, string> parameters, ISpawnProvider spawnProvider) : base(parameters, spawnProvider)
+		{
+		}
+
+		/// <summary><para>Template: Call To Action List Options</para><para>Field: SelectionMethod</para><para>Data type: Droplink</para></summary>
+		public virtual ILinkFieldWrapper SelectionMethod
+		{
+			get { return (Fortis.Model.RenderingParameters.Fields.LinkFieldWrapper)GetField("Selection Method", "droplink"); }
+		}
+
+		/// <summary><para>Template: Call To Action List Options</para><para>Field: SelectionMethod</para><para>Data type: Droplink</para></summary>
+ 		public string SelectionMethodValue
+		{
+			get { return SelectionMethod.Value; }
+		}
+		/// <summary><para>Template: Call To Action List Options</para><para>Field: AggregateBy</para><para>Data type: Droplink</para></summary>
+		public virtual ILinkFieldWrapper AggregateBy
+		{
+			get { return (Fortis.Model.RenderingParameters.Fields.LinkFieldWrapper)GetField("Aggregate By", "droplink"); }
+		}
+
+		/// <summary><para>Template: Call To Action List Options</para><para>Field: AggregateBy</para><para>Data type: Droplink</para></summary>
+ 		public string AggregateByValue
+		{
+			get { return AggregateBy.Value; }
+		}
+		/// <summary><para>Template: Call To Action List Options</para><para>Field: GroupTagsBy</para><para>Data type: Droplink</para></summary>
+		public virtual ILinkFieldWrapper GroupTagsBy
+		{
+			get { return (Fortis.Model.RenderingParameters.Fields.LinkFieldWrapper)GetField("Group Tags By", "droplink"); }
+		}
+
+		/// <summary><para>Template: Call To Action List Options</para><para>Field: GroupTagsBy</para><para>Data type: Droplink</para></summary>
+ 		public string GroupTagsByValue
+		{
+			get { return GroupTagsBy.Value; }
+		}
+		/// <summary><para>Template: Call To Action List Options</para><para>Field: Tags</para><para>Data type: Tags</para></summary>
+		public virtual IListFieldWrapper Tags
+		{
+			get { return (Fortis.Model.RenderingParameters.Fields.ListFieldWrapper)GetField("Tags", "tags"); }
+		}
+
+		/// <summary><para>Template: Call To Action List Options</para><para>Field: Tags</para><para>Data type: Tags</para></summary>
+ 		public IEnumerable<Guid> TagsValue
+		{
+			get { return Tags.Value; }
+		}
+		/// <summary><para>Template: Call To Action List Options</para><para>Field: OrderBy</para><para>Data type: Droplink</para></summary>
+		public virtual ILinkFieldWrapper OrderBy
+		{
+			get { return (Fortis.Model.RenderingParameters.Fields.LinkFieldWrapper)GetField("Order By", "droplink"); }
+		}
+
+		/// <summary><para>Template: Call To Action List Options</para><para>Field: OrderBy</para><para>Data type: Droplink</para></summary>
+ 		public string OrderByValue
+		{
+			get { return OrderBy.Value; }
+		}
+		/// <summary><para>Template: Call To Action List Options</para><para>Field: OrderDirection</para><para>Data type: Droplink</para></summary>
+		public virtual ILinkFieldWrapper OrderDirection
+		{
+			get { return (Fortis.Model.RenderingParameters.Fields.LinkFieldWrapper)GetField("Order Direction", "droplink"); }
+		}
+
+		/// <summary><para>Template: Call To Action List Options</para><para>Field: OrderDirection</para><para>Data type: Droplink</para></summary>
+ 		public string OrderDirectionValue
+		{
+			get { return OrderDirection.Value; }
+		}
+		/// <summary><para>Template: Call To Action List Options</para><para>Field: ItemsPerPage</para><para>Data type: Integer</para></summary>
+		public virtual IIntegerFieldWrapper ItemsPerPage
+		{
+			get { return (Fortis.Model.RenderingParameters.Fields.IntegerFieldWrapper)GetField("Items Per Page", "integer"); }
+		}
+
+		/// <summary><para>Template: Call To Action List Options</para><para>Field: ItemsPerPage</para><para>Data type: Integer</para></summary>
+ 		public long ItemsPerPageValue
+		{
+			get { return ItemsPerPage.Value; }
+		}
+	
+	}
+}
+#endregion
 #region Filter Options (UserDefined)
 namespace Rocketcore.Model.Templates.UserDefined
 {
@@ -3599,6 +4362,8 @@ namespace Rocketcore.Model.Templates.UserDefined
 	using Sitecore.ContentSearch.Linq.Common;
     using Fortis.Model;
 	using Fortis.Model.Fields;
+	using Fortis.Providers;
+
     using Fortis.Model.RenderingParameters;
 
 	/// <summary>
@@ -3619,80 +4384,8 @@ namespace Rocketcore.Model.Templates.UserDefined
 	[TemplateMapping("{FE222C7A-3E9C-4D05-808C-972968FC5E81}", "RenderingParameter")]
 	public partial class FilterOptions : RenderingParameterWrapper, IFilterOptions
 	{
-		public FilterOptions(Dictionary<string, string> parameters) : base(parameters)
+		public FilterOptions(Dictionary<string, string> parameters, ISpawnProvider spawnProvider) : base(parameters, spawnProvider)
 		{
-		}
-
-		/// <summary><para>Template: Filter Options</para><para>Field: Caching</para><para>Data type: Custom</para></summary>
-		public virtual ITextFieldWrapper Caching
-		{
-			get { return (Fortis.Model.RenderingParameters.Fields.TextFieldWrapper)GetField("Caching", "custom"); }
-		}
-
-		/// <summary><para>Template: Filter Options</para><para>Field: Caching</para><para>Data type: Custom</para></summary>
-		public string CachingValue
-		{
-			get { return Caching.Value; }
-		}
-
-		/// <summary><para>Template: Filter Options</para><para>Field: DataSource</para><para>Data type: Query Datasource</para></summary>
-		public virtual ITextFieldWrapper DataSource
-		{
-			get { return (Fortis.Model.RenderingParameters.Fields.TextFieldWrapper)GetField("Data Source", "query datasource"); }
-		}
-
-		/// <summary><para>Template: Filter Options</para><para>Field: DataSource</para><para>Data type: Query Datasource</para></summary>
-		public string DataSourceValue
-		{
-			get { return DataSource.Value; }
-		}
-
-		/// <summary><para>Template: Filter Options</para><para>Field: Placeholder</para><para>Data type: Single-Line Text</para></summary>
-		public virtual ITextFieldWrapper Placeholder
-		{
-			get { return (Fortis.Model.RenderingParameters.Fields.TextFieldWrapper)GetField("Placeholder", "single-line text"); }
-		}
-
-		/// <summary><para>Template: Filter Options</para><para>Field: Placeholder</para><para>Data type: Single-Line Text</para></summary>
-		public string PlaceholderValue
-		{
-			get { return Placeholder.Value; }
-		}
-
-		/// <summary><para>Template: Filter Options</para><para>Field: AdditionalParameters</para><para>Data type: Name Value List</para></summary>
-		public virtual ITextFieldWrapper AdditionalParameters
-		{
-			get { return (Fortis.Model.RenderingParameters.Fields.TextFieldWrapper)GetField("Additional Parameters", "name value list"); }
-		}
-
-		/// <summary><para>Template: Filter Options</para><para>Field: AdditionalParameters</para><para>Data type: Name Value List</para></summary>
-		public string AdditionalParametersValue
-		{
-			get { return AdditionalParameters.Value; }
-		}
-
-		/// <summary><para>Template: Filter Options</para><para>Field: Personalization</para><para>Data type: Custom</para></summary>
-		public virtual ITextFieldWrapper Personalization
-		{
-			get { return (Fortis.Model.RenderingParameters.Fields.TextFieldWrapper)GetField("Personalization", "custom"); }
-		}
-
-		/// <summary><para>Template: Filter Options</para><para>Field: Personalization</para><para>Data type: Custom</para></summary>
-		public string PersonalizationValue
-		{
-			get { return Personalization.Value; }
-		}
-
-		/// <summary><para>Template: Filter Options</para><para>Field: Tests</para><para>Data type: Internal Link</para></summary>
-		public virtual ITextFieldWrapper Tests
-		{
-			get { return (Fortis.Model.RenderingParameters.Fields.TextFieldWrapper)GetField("Tests", "internal link"); }
-		}
-
-		/// <summary><para>Template: Filter Options</para><para>Field: Tests</para><para>Data type: Internal Link</para></summary>
-		public string TestsValue
-		{
-			get { return Tests.Value; }
 		}
 
 		/// <summary><para>Template: Filter Options</para><para>Field: GroupTagsBy</para><para>Data type: Droplink</para></summary>
@@ -3702,11 +4395,10 @@ namespace Rocketcore.Model.Templates.UserDefined
 		}
 
 		/// <summary><para>Template: Filter Options</para><para>Field: GroupTagsBy</para><para>Data type: Droplink</para></summary>
-		public string GroupTagsByValue
+ 		public string GroupTagsByValue
 		{
 			get { return GroupTagsBy.Value; }
 		}
-
 		/// <summary><para>Template: Filter Options</para><para>Field: Tags</para><para>Data type: Tags</para></summary>
 		public virtual IListFieldWrapper Tags
 		{
@@ -3714,11 +4406,10 @@ namespace Rocketcore.Model.Templates.UserDefined
 		}
 
 		/// <summary><para>Template: Filter Options</para><para>Field: Tags</para><para>Data type: Tags</para></summary>
-		public IEnumerable<Guid> TagsValue
+ 		public IEnumerable<Guid> TagsValue
 		{
 			get { return Tags.Value; }
 		}
-
 		/// <summary><para>Template: Filter Options</para><para>Field: Categories</para><para>Data type: Tags</para></summary>
 		public virtual IListFieldWrapper Categories
 		{
@@ -3726,11 +4417,10 @@ namespace Rocketcore.Model.Templates.UserDefined
 		}
 
 		/// <summary><para>Template: Filter Options</para><para>Field: Categories</para><para>Data type: Tags</para></summary>
-		public IEnumerable<Guid> CategoriesValue
+ 		public IEnumerable<Guid> CategoriesValue
 		{
 			get { return Categories.Value; }
 		}
-
 		/// <summary><para>Template: Filter Options</para><para>Field: GroupCategoriesBy</para><para>Data type: Droplink</para></summary>
 		public virtual ILinkFieldWrapper GroupCategoriesBy
 		{
@@ -3738,11 +4428,10 @@ namespace Rocketcore.Model.Templates.UserDefined
 		}
 
 		/// <summary><para>Template: Filter Options</para><para>Field: GroupCategoriesBy</para><para>Data type: Droplink</para></summary>
-		public string GroupCategoriesByValue
+ 		public string GroupCategoriesByValue
 		{
 			get { return GroupCategoriesBy.Value; }
 		}
-
 	
 	}
 }

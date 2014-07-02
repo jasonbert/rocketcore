@@ -1,0 +1,62 @@
+﻿<!DOCTYPE html>
+<!--[if lt IE 7]><html class="no-js lt-ie9 lt-ie8 lt-ie7"> <![endif]-->
+<!--[if IE 7]><html class="no-js lt-ie9 lt-ie8"> <![endif]-->
+<!--[if IE 8]><html class="no-js lt-ie9"> <![endif]-->
+<!--[if gt IE 8]><!-->
+<html class="no-js">
+ <!--<![endif]-->
+<head>
+	@Html.Sitecore().Placeholder("metadata")
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+	<title>#Meta Data Title#</title>
+	<meta name="description" content="">
+	<link rel="stylesheet" href="/_include/css/base.css">
+	<script src="/_include/js/modernizr.custom.js"></script>
+
+	<meta name="vs_defaultClientScript" content="JavaScript" />
+	<meta name="vs_targetSchema" content="http://schemas.microsoft.com/intellisense/ie5" />
+</head>
+<body>
+	<div id="outline">
+		<header role="banner" class="abs">
+			@Html.Sitecore().Placeholder("header")
+			<div class="container group">
+				<div class="gutter group">
+					<a href="#" title="" id="logo"><img src="images/layout/logo.gif" alt="Goblin Rocket Engineering Ltd" /></a>
+					<nav role="navigation">
+						<ul>
+							<li><a class="active" href="#" title="">Home</a></li>
+							<li><a href="#" title="">About</a></li>
+							<li><a href="#" title="">Services</a></li>
+							<li><a href="#" title="">Contact</a></li>
+						</ul>
+					</nav>
+				</div>
+			</div>
+		</header>
+		<!-- remove this section to hide slider -->
+		@Html.Sitecore().Placeholder("slider")
+		<!-- remove this section to hide slider -->
+		<div role="main" class="group white_bg tb_pad">
+			<div class="container">
+				@Html.Sitecore().Placeholder("body")
+			</div>
+		<footer role="contentinfo">
+			@Html.Sitecore().Placeholder("footer")
+			<div class="container">
+				<div class="gutter group">
+					<div class="column c12">
+						<p class="copyright">&copy; 1997 - 2013 Lightmaker Group</p>
+						<a href="http://www.lightmaker.com" class="site_by" target="_blank" title="site by Lightmaker">site by Lightmaker</a>
+					</div>
+				</div>
+			</div>
+		</footer>
+	</div>
+	<script src="//ajax.googleapis.com/ajax/libs/jquery/1.9.0/jquery.min.js"></script>
+	<script>window.jQuery || document.write('<script src="_include/js/vendor/jquery-1.9.0.min.js"><\/script>')</script>
+	<script src="_include/js/plugins.js"></script>
+	<script src="_include/js/common.js"></script>
+</body>
+</html>

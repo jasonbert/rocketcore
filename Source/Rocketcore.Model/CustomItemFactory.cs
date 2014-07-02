@@ -10,8 +10,8 @@ namespace Rocketcore.Model
 {
 	public class CustomItemFactory : ItemFactory, ICustomItemFactory
 	{
-		public CustomItemFactory(IContextProvider itemContextProvider)
-			: base(itemContextProvider)
+		public CustomItemFactory(IContextProvider itemContextProvider, ISpawnProvider spawnProvider)
+			: base(itemContextProvider, spawnProvider)
 		{
 
 		}

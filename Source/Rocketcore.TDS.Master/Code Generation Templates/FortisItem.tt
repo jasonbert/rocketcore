@@ -140,6 +140,8 @@ namespace <#= FullNamespace(template) #>
 	using Sitecore.ContentSearch.Linq.Common;
     using Fortis.Model;
 	using Fortis.Model.Fields;
+	using Fortis.Providers;
+
 <#
 	var isRenderingParametersTemplate = HasRenderingOptionsBase(combinedTemplateList);
 
@@ -184,8 +186,7 @@ namespace <#= FullNamespace(template) #>
         /// </summary>
 		[IndexField("<#= field.Name.Replace(" ", "_").ToLowerInvariant() #>")]
 <# } #>
-		<#= GetReturnType(GetFieldWrapperType(field.Type)) #> <#= TitleCase(field.Name) #>Value { get; }
-		
+ 		<#= GetReturnType(GetFieldWrapperType(field.Type)) #> <#= TitleCase(field.Name) #>Value { get; }
 <#
 		}
 #>
@@ -201,14 +202,14 @@ namespace <#= FullNamespace(template) #>
 <# if (!isRenderingParametersTemplate) { #>
 		private Item _item = null;
 
-		public <#= ClassName(template.Name) #>() : base(null) { }
+		public <#= ClassName(template.Name) #>(ISpawnProvider spawnProvider) : base(null, spawnProvider) { }
 
-		public <#= ClassName(template.Name) #>(Guid id) : base(id) { }
+		public <#= ClassName(template.Name) #>(Guid id, ISpawnProvider spawnProvider) : base(id, spawnProvider) { }
 
-		public <#= ClassName(template.Name) #>(Guid id, Dictionary<string, object> lazyFields) : base(id, lazyFields) { }
+		public <#= ClassName(template.Name) #>(Guid id, Dictionary<string, object> lazyFields, ISpawnProvider spawnProvider) : base(id, lazyFields, spawnProvider) { }
 
 <# } #>
-		public <#= ClassName(template.Name) #>(<#= GetConstructorParameters(isRenderingParametersTemplate) #>) : base(<#= GetBaseConstructorParameters(isRenderingParametersTemplate) #>)
+		public <#= ClassName(template.Name) #>(<#= GetConstructorParameters(isRenderingParametersTemplate) #>, ISpawnProvider spawnProvider) : base(<#= GetBaseConstructorParameters(isRenderingParametersTemplate) #>, spawnProvider)
 		{
 <# if (!isRenderingParametersTemplate) { #>
 			_item = item;
@@ -238,11 +239,10 @@ namespace <#= FullNamespace(template) #>
 <# if (!isRenderingParametersTemplate && IsSupportedSearchFieldType(field.Type)) { #>
 		[IndexField("<#= field.Name.Replace(" ", "_").ToLowerInvariant() #>")]
 <# } #>
-		public <#= GetReturnType(GetFieldWrapperType(field.Type)) #> <#= TitleCase(field.Name) #>Value
+ 		public <#= GetReturnType(GetFieldWrapperType(field.Type)) #> <#= TitleCase(field.Name) #>Value
 		{
 			get { return <#= TitleCase(field.Name) #>.Value; }
 		}
-
 <#
 		}
 	}
@@ -320,6 +320,7 @@ public bool IsSupportedSearchFieldType(string typeName)
 		case "droplink":
 		case "droptree":
 		case "general link":
+		case "general link with search":
 		case "text":
 		case "single-line text":
 		case "multi-line text":
@@ -360,6 +361,7 @@ public string GetFieldTypeSearchAffix(string typeName)
 			affix = "_s";
 			break;
 		case "general link":
+		case "general link with search":
 		case "text":
 		case "single-line text":
 		case "multi-line text":
@@ -417,6 +419,7 @@ public string GetFieldWrapperType(string typeName)
 			wrapperType = "LinkFieldWrapper";
 			break;
 		case "general link":
+		case "general link with search":
 			wrapperType = "GeneralLinkFieldWrapper";
 			break;
 		case "text":
@@ -534,6 +537,11 @@ public string FullNamespace(SitecoreTemplate template)
 public IEnumerable<SitecoreTemplate> RecursiveBaseTemplateList(SitecoreTemplate template)
 {
 	var list = new List<SitecoreTemplate>();
+
+	if (template == null || template.BaseTemplates == null)
+	{
+		return list;
+	}
 	
 	foreach (var baseTemplate in template.BaseTemplates)
 	{
@@ -556,7 +564,7 @@ public IEnumerable<SitecoreTemplate> RecursiveBaseTemplateList(SitecoreTemplate 
 
 public bool HasRenderingOptionsBase(IEnumerable<SitecoreTemplate> templateItems)
 {
-	var renderingParameterTemplateId = "8CA06D6A-B353-44E8-BC31-B528C7306971".ToLower();
+	var renderingParameterTemplateId = "76D9D059-77E5-48F7-8BDA-65E78BC61A9B".ToLower();
 	return templateItems.Any(t => t.ID.ToString() == renderingParameterTemplateId);
 }
 #>

@@ -1,0 +1,44 @@
+----item----
+version: 1
+id: {9FA2B904-BE90-46EE-975C-3CF56F7DA150}
+database: master
+path: /sitecore/system/Presentation Settings/Filter Options/Order By/Automatic
+parent: {C00AA51E-3B0B-43AD-B01C-4360B1A16002}
+name: Automatic
+master: {00000000-0000-0000-0000-000000000000}
+template: {FAAF2F41-C07C-4146-8C4D-1C7DC29EE12D}
+templatekey: Lookup
+
+----version----
+language: en
+version: 1
+revision: 56ebd3a2-712d-4ebd-9cc1-4aae55f81aa4
+
+----field----
+field: {25BED78C-4957-4165-998A-CA1B52F67497}
+name: __Created
+key: __created
+content-length: 15
+
+20140702T171602
+----field----
+field: {8CDC337E-A112-42FB-BBB4-4143751E123F}
+name: __Revision
+key: __revision
+content-length: 36
+
+56ebd3a2-712d-4ebd-9cc1-4aae55f81aa4
+----field----
+field: {D9CF14B1-FA16-4BA6-9288-E8A174D4D522}
+name: __Updated
+key: __updated
+content-length: 34
+
+20140702T171602:635399181624606857
+----field----
+field: {BADD9CF9-53E0-4D0C-BCC0-2D784C282F6A}
+name: __Updated by
+key: __updated by
+content-length: 14
+
+sitecore\admin

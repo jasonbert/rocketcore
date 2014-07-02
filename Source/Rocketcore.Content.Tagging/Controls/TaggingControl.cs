@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using System.IO;
 using System.Web.UI;
 
-namespace Rocketcore.Tagging.Controls
+namespace Rocketcore.Content.Tagging.Controls
 {
 	public class TaggingControl : UserControl
 	{

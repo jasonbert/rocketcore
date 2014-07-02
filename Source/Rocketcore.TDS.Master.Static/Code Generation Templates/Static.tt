@@ -24,7 +24,7 @@ while (item != null)
 ancestors.Reverse();
 #>
 #region <#= Model.Name #> (<#= Model.Path #>)
-namespace LM.Model.Static {
+namespace Rocketcore.Model.Static {
 	using System;
 <#
 foreach (SitecoreItem ancestor in ancestors) {#>

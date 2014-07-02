@@ -52,6 +52,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Rocketcore.Mvc", "Rocketcor
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Rocketcore.Website", "Rocketcore.Website\Rocketcore.Website.csproj", "{673FAF97-56EB-4E34-A10E-34E482B59E6C}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Rocketcore.Search", "Rocketcore.Search\Rocketcore.Search.csproj", "{03967CB0-8F1D-4277-9F28-35CE663975BF}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -112,6 +114,10 @@ Global
 		{673FAF97-56EB-4E34-A10E-34E482B59E6C}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{673FAF97-56EB-4E34-A10E-34E482B59E6C}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{673FAF97-56EB-4E34-A10E-34E482B59E6C}.Release|Any CPU.Build.0 = Release|Any CPU
+		{03967CB0-8F1D-4277-9F28-35CE663975BF}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{03967CB0-8F1D-4277-9F28-35CE663975BF}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{03967CB0-8F1D-4277-9F28-35CE663975BF}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{03967CB0-8F1D-4277-9F28-35CE663975BF}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
@@ -135,5 +141,6 @@ Global
 		{A3CE59A8-4B14-43AA-B9E5-FC0914286A2E} = {6E5C2FE8-C252-4EEA-AF6E-B74C40AD2CBA}
 		{6A25BB58-21BF-403A-8E58-260F7994F954} = {A3CE59A8-4B14-43AA-B9E5-FC0914286A2E}
 		{483D855A-151F-4914-A229-A78C379B1731} = {3294A567-FA85-4B2A-992B-1E3F69089A48}
+		{03967CB0-8F1D-4277-9F28-35CE663975BF} = {3294A567-FA85-4B2A-992B-1E3F69089A48}
 	EndGlobalSection
 EndGlobal
