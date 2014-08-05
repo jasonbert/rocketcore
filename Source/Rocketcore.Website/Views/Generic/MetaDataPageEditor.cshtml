@@ -1,0 +1,11 @@
+﻿@model RenderingModel<IMetaData, IMetaData>
+<div style="height: 100px; background-color: gray; padding: 10px;">
+	<h3>Meta Data</h3>
+	<div>
+		<span style="font-weight: bold;">Title:</span> @Model.RenderingItem.PageTitle
+		<br />
+		<span style="font-weight: bold;">Description:</span> @Model.RenderingItem.Description
+		<br />
+		<span style="font-weight: bold;">Keywords:</span> @Model.RenderingItem.Keywords
+	</div>
+</div>

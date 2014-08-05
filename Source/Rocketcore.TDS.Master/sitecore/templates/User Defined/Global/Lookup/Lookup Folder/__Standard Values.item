@@ -1,0 +1,51 @@
+----item----
+version: 1
+id: {D7F8D156-BA31-472F-90C0-F8849B3B8627}
+database: master
+path: /sitecore/templates/User Defined/Global/Lookup/Lookup Folder/__Standard Values
+parent: {9F94F923-2D44-4EB3-AC1A-927366290303}
+name: __Standard Values
+master: {00000000-0000-0000-0000-000000000000}
+template: {9F94F923-2D44-4EB3-AC1A-927366290303}
+templatekey: Lookup Folder
+
+----field----
+field: {1172F251-DAD4-4EFB-A329-0C63500E4F1E}
+name: __Masters
+key: __masters
+content-length: 38
+
+{FAAF2F41-C07C-4146-8C4D-1C7DC29EE12D}
+----version----
+language: en
+version: 1
+revision: d1f3a0a2-cdd1-4fe0-ac6c-69255129b8cd
+
+----field----
+field: {25BED78C-4957-4165-998A-CA1B52F67497}
+name: __Created
+key: __created
+content-length: 15
+
+20140702T171032
+----field----
+field: {8CDC337E-A112-42FB-BBB4-4143751E123F}
+name: __Revision
+key: __revision
+content-length: 36
+
+d1f3a0a2-cdd1-4fe0-ac6c-69255129b8cd
+----field----
+field: {D9CF14B1-FA16-4BA6-9288-E8A174D4D522}
+name: __Updated
+key: __updated
+content-length: 34
+
+20140702T171104:635399178643631622
+----field----
+field: {BADD9CF9-53E0-4D0C-BCC0-2D784C282F6A}
+name: __Updated by
+key: __updated by
+content-length: 14
+
+sitecore\admin

@@ -1,0 +1,11 @@
+﻿@model Rocketcore.Content.CallToAction.Models.ICallToActionListModel<ICallToActionListOptions>
+<div class="flexslider">
+	<div class="slides">
+	@foreach (var callToAction in Model.CallToActions)
+	{
+		<div class="item">
+			@callToAction.Image.Render(new { width = 960, height = 330, crop = 1 })
+		</div>
+	}
+	</div>
+</div>

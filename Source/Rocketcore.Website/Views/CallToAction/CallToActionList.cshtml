@@ -1,0 +1,25 @@
+﻿@model Rocketcore.Content.CallToAction.Models.ICallToActionListModel<ICallToActionListOptions>
+<div>
+	@if (Model.Heading != null)
+	{
+	<h3>@Model.Heading.RenderPhrase()</h3>
+	}
+	@foreach (var callToAction in Model.CallToActions)
+	{
+		<div class="callToAction">
+			@callToAction.Image.Render(new { @class = "dynamic", crop = 1 })
+			<div class="inner">
+				<h3 class="title">@callToAction.Title</h3>
+				<div class="body">
+					@callToAction.Body
+				</div>
+				<div class="datetime">
+					@callToAction.DateAndTime
+				</div>
+			</div>
+			<div class="link">
+				<a href="@callToAction.GenerateUrl()">@callToAction.DisplayName</a>
+			</div>
+		</div>
+	}
+</div>

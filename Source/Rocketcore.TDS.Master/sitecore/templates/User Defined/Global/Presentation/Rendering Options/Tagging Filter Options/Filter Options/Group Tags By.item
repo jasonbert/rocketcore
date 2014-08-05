@@ -1,0 +1,65 @@
+----item----
+version: 1
+id: {8C9D2C3B-5777-4CA4-8BD6-550F7AD73CAD}
+database: master
+path: /sitecore/templates/User Defined/Global/Presentation/Rendering Options/Tagging Filter Options/Filter Options/Group Tags By
+parent: {047F98BF-D78D-42E5-BAF6-46F48C05C096}
+name: Group Tags By
+master: {00000000-0000-0000-0000-000000000000}
+template: {455A3E98-A627-4B40-8035-E683A0331AC7}
+templatekey: Template field
+
+----field----
+field: {AB162CC0-DC80-4ABF-8871-998EE5D7BA32}
+name: Type
+key: type
+content-length: 8
+
+Droplink
+----field----
+field: {1EB8AE32-E190-44A6-968D-ED904C794EBF}
+name: Source
+key: source
+content-length: 38
+
+{4CB57FF1-A88E-46B7-A539-F67748BC792F}
+----field----
+field: {BA3F86A2-4A1C-4D78-B63D-91C2779C1B5E}
+name: __Sortorder
+key: __sortorder
+content-length: 3
+
+200
+----version----
+language: en
+version: 1
+revision: c508c897-2c8a-40a4-ae27-7786667967b0
+
+----field----
+field: {25BED78C-4957-4165-998A-CA1B52F67497}
+name: __Created
+key: __created
+content-length: 15
+
+20131223T151706
+----field----
+field: {8CDC337E-A112-42FB-BBB4-4143751E123F}
+name: __Revision
+key: __revision
+content-length: 36
+
+c508c897-2c8a-40a4-ae27-7786667967b0
+----field----
+field: {D9CF14B1-FA16-4BA6-9288-E8A174D4D522}
+name: __Updated
+key: __updated
+content-length: 34
+
+20140702T172642:635399188029259583
+----field----
+field: {BADD9CF9-53E0-4D0C-BCC0-2D784C282F6A}
+name: __Updated by
+key: __updated by
+content-length: 14
+
+sitecore\admin
