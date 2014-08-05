@@ -8,19 +8,6 @@ using Rocketcore.Model.Templates.UserDefined;
 
 namespace Rocketcore.Content.CallToAction.Models
 {
-
-
-    public class CallToActionSliderModel : CallToActionModel, ICallToActionSlideModel
-    {
-        public CallToActionSliderModel(IPage pageItem, ICallToAction callToAction)
-            : base(pageItem, callToAction)
-        {
-            Slide = callToAction as ICallToActionSlide;
-        }
-
-        public ICallToActionSlide Slide { get; set; }
-    }
-
     public class CallToActionModel : RenderingModel<IPage, ICallToAction>, ICallToActionModel
     {
         public CallToActionModel(IRenderingModel<IPage, ICallToAction> model)

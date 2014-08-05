@@ -62,6 +62,9 @@
     <Reference Include="SimpleInjector.Integration.Web.Mvc">
       <HintPath>..\packages\SimpleInjector.Integration.Web.Mvc.2.5.0\lib\net40\SimpleInjector.Integration.Web.Mvc.dll</HintPath>
     </Reference>
+    <Reference Include="Sitecore.Igloo.Shared">
+      <HintPath>..\..\_Libraries\Sitecore.Igloo.Shared.dll</HintPath>
+    </Reference>
     <Reference Include="System" />
     <Reference Include="System.Data" />
     <Reference Include="System.Drawing" />
@@ -73,27 +76,27 @@
     <Reference Include="System.Data.DataSetExtensions" />
     <Reference Include="System.Web.Helpers, Version=3.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
       <SpecificVersion>False</SpecificVersion>
-      <HintPath>..\packages\Microsoft.AspNet.WebPages.3.1.2\lib\net45\System.Web.Helpers.dll</HintPath>
+      <HintPath>..\packages\Microsoft.AspNet.WebPages.3.2.0\lib\net45\System.Web.Helpers.dll</HintPath>
     </Reference>
-    <Reference Include="System.Web.Mvc, Version=5.1.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+    <Reference Include="System.Web.Mvc, Version=5.2.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
       <SpecificVersion>False</SpecificVersion>
-      <HintPath>..\packages\Microsoft.AspNet.Mvc.5.1.2\lib\net45\System.Web.Mvc.dll</HintPath>
+      <HintPath>..\packages\Microsoft.AspNet.Mvc.5.2.0\lib\net45\System.Web.Mvc.dll</HintPath>
     </Reference>
     <Reference Include="System.Web.Razor, Version=3.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
       <SpecificVersion>False</SpecificVersion>
-      <HintPath>..\packages\Microsoft.AspNet.Razor.3.1.2\lib\net45\System.Web.Razor.dll</HintPath>
+      <HintPath>..\packages\Microsoft.AspNet.Razor.3.2.0\lib\net45\System.Web.Razor.dll</HintPath>
     </Reference>
     <Reference Include="System.Web.WebPages, Version=3.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
       <SpecificVersion>False</SpecificVersion>
-      <HintPath>..\packages\Microsoft.AspNet.WebPages.3.1.2\lib\net45\System.Web.WebPages.dll</HintPath>
+      <HintPath>..\packages\Microsoft.AspNet.WebPages.3.2.0\lib\net45\System.Web.WebPages.dll</HintPath>
     </Reference>
     <Reference Include="System.Web.WebPages.Deployment, Version=3.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
       <SpecificVersion>False</SpecificVersion>
-      <HintPath>..\packages\Microsoft.AspNet.WebPages.3.1.2\lib\net45\System.Web.WebPages.Deployment.dll</HintPath>
+      <HintPath>..\packages\Microsoft.AspNet.WebPages.3.2.0\lib\net45\System.Web.WebPages.Deployment.dll</HintPath>
     </Reference>
     <Reference Include="System.Web.WebPages.Razor, Version=3.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
       <SpecificVersion>False</SpecificVersion>
-      <HintPath>..\packages\Microsoft.AspNet.WebPages.3.1.2\lib\net45\System.Web.WebPages.Razor.dll</HintPath>
+      <HintPath>..\packages\Microsoft.AspNet.WebPages.3.2.0\lib\net45\System.Web.WebPages.Razor.dll</HintPath>
     </Reference>
     <Reference Include="System.Xml.Linq" />
     <Reference Include="System.Web" />
@@ -145,27 +148,31 @@
     <Content Include="Rocketcore\FieldTypes\assets\Tagging\css\rocketcore-tags-field.css" />
     <Content Include="Rocketcore\FieldTypes\assets\Tagging\icons\icons.png" />
     <Content Include="Rocketcore\FieldTypes\assets\Tagging\js\rocketcore-tags-field.js" />
-    <Content Include="Rocketcore\FieldTypes\icons.png" />
     <Content Include="Rocketcore\FieldTypes\Tagging.ascx" />
-    <Content Include="Web.config" />
+    <Content Include="Web.config">
+      <SubType>Designer</SubType>
+    </Content>
     <Content Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
     </Content>
     <Content Include="Web.Release.config">
       <DependentUpon>Web.config</DependentUpon>
     </Content>
-    <Content Include="Views\Web.config" />
+    <Content Include="Views\Web.config">
+      <SubType>Designer</SubType>
+    </Content>
     <Content Include="_include\css\base.css" />
     <Content Include="_include\css\fonts\ff_din_condensed_black-webfont.svg" />
     <Content Include="_include\css\fonts\ff_din_condensed_medium-webfont.svg" />
-    <Content Include="_include\css\games.css" />
+    <Content Include="_include\css\rocketcore.css" />
+    <Content Include="_include\js\jquery.flexslider-min.js" />
+    <Content Include="_include\js\jquery.min.js" />
+    <Content Include="_include\js\rocketcore.js" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
     <Folder Include="Controllers\" />
     <Folder Include="Models\" />
-    <Folder Include="Views\CallToAction\" />
-    <Folder Include="_include\js\" />
   </ItemGroup>
   <ItemGroup>
     <Content Include="packages.config" />
@@ -174,6 +181,7 @@
     <Content Include="App_Config\Include\Rocketcore\Rocketcore.Mvc.config" />
     <Content Include="App_Config\Include\Rocketcore\Rocketcore.config" />
     <Content Include="App_Config\Include\Fortis\Fortis.Mvc.config" />
+    <Content Include="App_Config\Include\ImageProcessor.config" />
     <None Include="App_Config\Include\Rocketcore\Rocketcore.Search.Solr.config">
       <SubType>Designer</SubType>
     </None>
@@ -186,6 +194,16 @@
     <Content Include="Views\Generic\Body.cshtml" />
     <Content Include="Views\Generic\Title.cshtml" />
     <Content Include="Views\Generic\Image.cshtml" />
+    <Content Include="Views\CallToAction\CallToAction.cshtml" />
+    <Content Include="Views\CallToAction\CallToActionList.cshtml" />
+    <Content Include="Views\CallToAction\CallToActionSlider.cshtml" />
+    <Content Include="Views\Generic\MetaData.cshtml" />
+    <Content Include="Views\Generic\MetaDataPageEditor.cshtml" />
+    <Content Include="Views\Navigation\MainNavigation.cshtml" />
+    <Content Include="Views\CallToAction\CallToActionHeroSlider.cshtml" />
+    <Content Include="Views\Container\TwoColumnLeft.cshtml" />
+    <Content Include="Views\Container\TwoColumnRight.cshtml" />
+    <Content Include="Views\CallToAction\CallToActionCompactList.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\Rocketcore.Content.CallToAction\Rocketcore.Content.CallToAction.csproj">
@@ -204,6 +222,10 @@
       <Project>{c02c068f-9611-4ea9-bbe0-4482a95a895e}</Project>
       <Name>Rocketcore.Content.Navigation</Name>
     </ProjectReference>
+    <ProjectReference Include="..\Rocketcore.Content.Phrases\Rocketcore.Content.Phrases.csproj">
+      <Project>{fdb88a83-6d14-44f5-b770-0357492a5fb8}</Project>
+      <Name>Rocketcore.Content.Phrases</Name>
+    </ProjectReference>
     <ProjectReference Include="..\Rocketcore.Content.Tagging\Rocketcore.Content.Tagging.csproj">
       <Project>{6a25bb58-21bf-403a-8e58-260f7994f954}</Project>
       <Name>Rocketcore.Content.Tagging</Name>
@@ -219,6 +241,10 @@
     <ProjectReference Include="..\Rocketcore.Search\Rocketcore.Search.csproj">
       <Project>{03967cb0-8f1d-4277-9f28-35ce663975bf}</Project>
       <Name>Rocketcore.Search</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Rocketcore\Rocketcore.csproj">
+      <Project>{ff385355-c7c0-425a-a113-4864b05bbff0}</Project>
+      <Name>Rocketcore</Name>
     </ProjectReference>
     <ProjectReference Include="..\Rocket\Rocket.csproj">
       <Project>{96ff311a-0431-4a61-95c8-7b56e1c3a9d5}</Project>

@@ -364,6 +364,22 @@ namespace Rocketcore.Model.Static {
 	}
 }
 #endregion
+#region Call To Actions (/sitecore/content/Shared/Call To Actions)
+namespace Rocketcore.Model.Static {
+	using System;
+	public static partial class Content {
+		public static partial class Shared {
+			/// <summary><para>Sitecore Path: /sitecore/content/Shared/Call To Actions</para><para>Template: Call To Action Folder</para></summary>
+			public static partial class CallToActions {
+				public static Guid Id = new Guid("{AC734F12-01D0-4079-AEB1-3CF799CCD7F4}");
+				public static string Name { get { return "Call To Actions"; } }
+				public static string Path { get { return "/sitecore/content/Shared/Call To Actions"; } }
+				public static string TemplateName { get { return "Call To Action Folder"; } }
+			}
+		}
+	}
+}
+#endregion
 #region Categories (/sitecore/system/Presentation Settings/Filter Options/Aggregate By/Categories)
 namespace Rocketcore.Model.Static {
 	using System;
@@ -397,6 +413,22 @@ namespace Rocketcore.Model.Static {
 					public static string Path { get { return "/sitecore/system/Presentation Settings/Filter Options/Order By"; } }
 					public static string TemplateName { get { return "Lookup Folder"; } }
 				}
+			}
+		}
+	}
+}
+#endregion
+#region Phrases (/sitecore/content/Shared/Phrases)
+namespace Rocketcore.Model.Static {
+	using System;
+	public static partial class Content {
+		public static partial class Shared {
+			/// <summary><para>Sitecore Path: /sitecore/content/Shared/Phrases</para><para>Template: Phrase Folder</para></summary>
+			public static partial class Phrases {
+				public static Guid Id = new Guid("{DD654E35-C1BD-4793-8A5A-AF5520008FD5}");
+				public static string Name { get { return "Phrases"; } }
+				public static string Path { get { return "/sitecore/content/Shared/Phrases"; } }
+				public static string TemplateName { get { return "Phrase Folder"; } }
 			}
 		}
 	}

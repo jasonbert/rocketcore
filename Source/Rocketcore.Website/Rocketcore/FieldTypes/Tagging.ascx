@@ -20,11 +20,12 @@
             <% } %>
         </div>
     </div>
-    <script src="//ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
     <link rel="stylesheet" type="text/css" href="/Rocketcore/FieldTypes/assets/Tagging/css/rocketcore-tags-field.css"/>
-    <!-- Required JS file /Rocketcore/FieldTypes/assets/Tagging/js/lightcore-tags-field.js is included inside config "LM.Lightcore.Tagging.config" -->
+	<script>window.jQuery || document.write('<script src="//ajax.googleapis.com/ajax/libs/jquery/1.9.0/jquery.min.js"><\/script>')</script>
     <script type="text/javascript">
-        jQuery(document).ready(function() {
+    	var $j = jQuery.noConflict();
+
+        $j(document).ready(function() {
             var taggingFunctionality<%=ID%> = new TagField("#<%=ID%>_TagField", ".tagHiddenInputBox", ".tagsAdded", ".addtagbtn", ".tagInputBox", ".tagSuggestionBox", "<%= Filter %>", ".messageTextBox");
         });
     </script>

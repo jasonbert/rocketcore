@@ -86,11 +86,11 @@
     <Compile Include="Models\CallToActionModel.cs" />
     <Compile Include="Models\ICallToActionListModel.cs" />
     <Compile Include="Models\ICallToActionModel.cs" />
-    <Compile Include="Models\ICallToActionSlideModel.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup />
   <ItemGroup>
+    <None Include="app.config" />
     <None Include="packages.config" />
   </ItemGroup>
   <ItemGroup>

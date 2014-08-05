@@ -12,7 +12,7 @@
 .suggestedTagItem.hover{ background:#f3f3f3; cursor:pointer;}
 .addedTagItem:hover { background:#f3f3f3; cursor:pointer;}
 .addedTagItemCloseBtn{float:right; position:relative;}
-.addedTagItemCloseBtn:before{content:""; position:absolute; background: url("/rockcore/fieldtypes/assets/Tagging/icons/icons.png"); width: 18px; height:19px; top:-2px;left:5px;; background-position:0 19px;}
+.addedTagItemCloseBtn:before{content:""; position:absolute; background: url("/rocketcore/fieldtypes/assets/Tagging/icons/icons.png"); width: 18px; height:19px; top:-2px;left:5px;; background-position:0 19px;}
 .addedTagItemCloseBtn:hover{cursor:pointer;}
 .addedTagItemCloseBtn:hover:before{background-position:0 -19px;}
 .messageTextBox{float:left; min-width:50px; margin-left:30px; display:inline-block; line-height:16px; margin-top:4px; margin-bottom:4px; font-weight: bold; color: #000; font-size: 14px; border-left:1px solid #000;padding-left:10px;}

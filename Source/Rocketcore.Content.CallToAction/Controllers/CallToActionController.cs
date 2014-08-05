@@ -28,10 +28,61 @@ namespace Rocketcore.Content.CallToAction.Controllers
 		{
 			var model = new CallToActionListModel<ICallToActionListOptions>(ItemFactory.GetRenderingContextItems<IPage, ICallToActionGroup, ICallToActionListOptions>(ItemFactory));
 
+			model.CallToActions = model.RenderingParametersItem != null ?
+				GetCallToActionItems(model.PageItem, model.RenderingItem, model.RenderingParametersItem).ToList() :
+				Enumerable.Empty<ICallToAction>();
+
 			if (model.RenderingParametersItem != null)
 			{
-				model.CallToActionItems = GetCallToActionItems(model.PageItem, model.RenderingItem, model.RenderingParametersItem).ToList()
-					.Select(x => new CallToActionModel<ICallToActionOptions>(model.PageItem, x, model.RenderingParametersItem));
+				model.Heading = model.RenderingParametersItem.Heading.GetTarget<IPhrase>();
+			}
+
+			return View(model);
+		}
+
+		public ActionResult CallToActionCompactList()
+		{
+			var model = new CallToActionListModel<ICallToActionListOptions>(ItemFactory.GetRenderingContextItems<IPage, ICallToActionGroup, ICallToActionListOptions>(ItemFactory));
+
+			model.CallToActions = model.RenderingParametersItem != null ?
+				GetCallToActionItems(model.PageItem, model.RenderingItem, model.RenderingParametersItem).ToList() :
+				Enumerable.Empty<ICallToAction>();
+
+			if (model.RenderingParametersItem != null)
+			{
+				model.Heading = model.RenderingParametersItem.Heading.GetTarget<IPhrase>();
+			}
+
+			return View(model);
+		}
+
+		public ActionResult CallToActionSlider()
+		{
+			var model = new CallToActionListModel<ICallToActionListOptions>(ItemFactory.GetRenderingContextItems<IPage, ICallToActionGroup, ICallToActionListOptions>(ItemFactory));
+
+			model.CallToActions = model.RenderingParametersItem != null ?
+				GetCallToActionItems(model.PageItem, model.RenderingItem, model.RenderingParametersItem).ToList() :
+				Enumerable.Empty<ICallToAction>();
+
+			if (model.RenderingParametersItem != null)
+			{
+				model.Heading = model.RenderingParametersItem.Heading.GetTarget<IPhrase>();
+			}
+
+			return View(model);
+		}
+
+		public ActionResult CallToActionHeroSlider()
+		{
+			var model = new CallToActionListModel<ICallToActionListOptions>(ItemFactory.GetRenderingContextItems<IPage, ICallToActionGroup, ICallToActionListOptions>(ItemFactory));
+
+			model.CallToActions = model.RenderingParametersItem != null ?
+				GetCallToActionItems(model.PageItem, model.RenderingItem, model.RenderingParametersItem).ToList() :
+				Enumerable.Empty<ICallToAction>();
+
+			if (model.RenderingParametersItem != null)
+			{
+				model.Heading = model.RenderingParametersItem.Heading.GetTarget<IPhrase>();
 			}
 
 			return View(model);

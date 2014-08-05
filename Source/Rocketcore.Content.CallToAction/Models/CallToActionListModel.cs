@@ -17,7 +17,8 @@ namespace Rocketcore.Content.CallToAction.Models
 
 		}
 
-        public IEnumerable<ICallToActionModel<ICallToActionOptions>> CallToActionItems { get; set; }
+        public IEnumerable<ICallToAction> CallToActions { get; set; }
+		public IPhrase Heading { get; set; }
 	}
 
 	public class CallToActionListModel<TRenderingParametersItem> : RenderingModel<IPage, ICallToActionGroup, TRenderingParametersItem>, ICallToActionListModel<TRenderingParametersItem>
@@ -29,7 +30,8 @@ namespace Rocketcore.Content.CallToAction.Models
 
 		}
 
-        public IEnumerable<ICallToActionModel<ICallToActionOptions>> CallToActionItems { get; set; }
+        public IEnumerable<ICallToAction> CallToActions { get; set; }
+		public IPhrase Heading { get; set; }
 	}
 
     public interface ICallToActionGroupModel<TModel>
@@ -37,21 +39,4 @@ namespace Rocketcore.Content.CallToAction.Models
         ICallToActionGroup CallToActionGroup { get; set; }
         IEnumerable<TModel> Links { get; set; }
     }
-
-
-    public class CallToActionGroupModel<TModel> : ICallToActionGroupModel<TModel>
-    {
-        public ICallToActionGroup CallToActionGroup { get; set; }
-
-        public IEnumerable<TModel> Links { get; set; }
-
-        public CallToActionGroupModel(ICallToActionGroup callToActionGroup, IEnumerable<TModel> actionItems)
-        {
-            CallToActionGroup = callToActionGroup;
-            Links = actionItems;
-        }
-
-    }
-
-
 }

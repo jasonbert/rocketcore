@@ -1,0 +1,25 @@
+﻿@model Rocketcore.Content.CallToAction.Models.ICallToActionListModel<ICallToActionListOptions>
+@{
+	var id = "slider" + Guid.NewGuid().ToString();
+}
+<div class="slider">
+	<div id="@id" class="multislider">
+		<div class="slides">
+			@foreach (var callToAction in Model.CallToActions)
+			{
+				<div class="item">
+					@callToAction.Image.Render(new { @class = "dynamic", crop = 1 })@*, data_min_height = "330"*@
+				</div>
+			}
+		</div>
+	</div>
+</div>
+<script type="text/javascript" charset="utf-8">
+	$(window).load(function () {
+		$('#@id').flexslider({
+			namespace: "hero-",
+			selector: ".slides > .item",
+			directionNav: false
+		});
+	});
+</script>

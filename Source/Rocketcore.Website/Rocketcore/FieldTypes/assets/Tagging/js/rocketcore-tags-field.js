@@ -138,7 +138,7 @@ TagField = function (_fieldRootId, _hiddenAppliedIdsDiv, _appliedDisplayNameDiv,
             tagFieldRoot.find('.tagSuggestionBox_wrap').css({ 'display': 'none' });
             for (var i = 0; i < suggestedTagsArray.length; i++) {
                 tagFieldRoot.find('.tagSuggestionBox_wrap').css({ 'display': 'block' });
-                tagFieldRoot.find(suggestedTagsDiv).append('<span class="suggestedTagItem" data-displayText="' + suggestedTagsArray[i].tagDisplayText + '">' + suggestedTagsArray[i].tagDisplayText + " (Language: " + suggestedTagsArray[i].tagLanguage + " | Bucket: " + suggestedTagsArray[i].tagBucket + '<' + '/span>');
+                tagFieldRoot.find(suggestedTagsDiv).append('<span class="suggestedTagItem" data-displayText="' + suggestedTagsArray[i].tagDisplayText + '">' + suggestedTagsArray[i].tagDisplayText + " (Language: " + suggestedTagsArray[i].tagLanguage + " | Bucket: " + suggestedTagsArray[i].tagBucket + ')<' + '/span>');
                 tagFieldRoot.find('.closebtn').css({ 'display': 'block' });
 
                 tagFieldRoot.find(suggestedTagsDiv).find('.suggestedTagItem:nth-child(' + (i + 1) + ')').hover(function (event) {

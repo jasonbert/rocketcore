@@ -124,10 +124,24 @@ namespace Rocketcore.Model.Templates.UserDefined
 		{
 			get { return ItemsPerPage.Value; }
 		}
+		/// <summary><para>Template: Call To Action Slider Options</para><para>Field: Heading</para><para>Data type: Droptree</para></summary>
+		public virtual ILinkFieldWrapper Heading
+		{
+			get { return (Fortis.Model.RenderingParameters.Fields.LinkFieldWrapper)GetField("Heading", "droptree"); }
+		}
+
+		/// <summary><para>Template: Call To Action Slider Options</para><para>Field: Heading</para><para>Data type: Droptree</para></summary>
+ 		public string HeadingValue
+		{
+			get { return Heading.Value; }
+		}
 	
 	}
 }
 #endregion
+
+
+
 
 
 
@@ -365,6 +379,7 @@ namespace Rocketcore.Model.Templates.UserDefined
 
 
 
+
 #region Call To Action Folder (UserDefined)
 namespace Rocketcore.Model.Templates.UserDefined
 {
@@ -417,6 +432,7 @@ namespace Rocketcore.Model.Templates.UserDefined
 
 
 
+
 #region Content Page (UserDefined)
 namespace Rocketcore.Model.Templates.UserDefined
 {
@@ -437,7 +453,7 @@ namespace Rocketcore.Model.Templates.UserDefined
 	/// <para>/sitecore/templates/User Defined/Generic/Content Page</para>
 	/// </summary>
 	[TemplateMapping("{23D17BB0-08BC-43D7-8589-7724407E1422}", "InterfaceMap")]
-	public partial interface IContentPage : ICustomItemWrapper , Rocketcore.Model.Templates.UserDefined.IPage, Rocketcore.Model.Templates.UserDefined.IContentHeadings, Rocketcore.Model.Templates.UserDefined.IContentDateTime, Rocketcore.Model.Templates.UserDefined.IContentBody, Rocketcore.Model.Templates.UserDefined.IContentImage
+	public partial interface IContentPage : ICustomItemWrapper , Rocketcore.Model.Templates.UserDefined.IPage, Rocketcore.Model.Templates.UserDefined.IContentHeadings, Rocketcore.Model.Templates.UserDefined.IContentDateTime, Rocketcore.Model.Templates.UserDefined.IContentBody, Rocketcore.Model.Templates.UserDefined.IContentImage, Rocketcore.Model.Templates.UserDefined.ICallToActionOverride
 	{		
 	}
 
@@ -627,6 +643,19 @@ namespace Rocketcore.Model.Templates.UserDefined
  		public string ImageValue
 		{
 			get { return Image.Value; }
+		}
+		/// <summary><para>Template: Content Page</para><para>Field: CallToActionCustom</para><para>Data type: Droptree</para></summary>
+		[IndexField("call_to_action_custom_s")]
+		public virtual ILinkFieldWrapper CallToActionCustom
+		{
+			get { return GetField<LinkFieldWrapper>("Call To Action Custom", "call_to_action_custom_s"); }
+		}
+
+		/// <summary><para>Template: Content Page</para><para>Field: CallToActionCustom</para><para>Data type: Droptree</para></summary>
+		[IndexField("call_to_action_custom")]
+ 		public string CallToActionCustomValue
+		{
+			get { return CallToActionCustom.Value; }
 		}
 	
 	}
@@ -1022,6 +1051,7 @@ namespace Rocketcore.Model.Templates.UserDefined
 
 
 
+
 #region Call To Action Options (UserDefined)
 namespace Rocketcore.Model.Templates.UserDefined
 {
@@ -1168,10 +1198,22 @@ namespace Rocketcore.Model.Templates.UserDefined
 		{
 			get { return ItemsPerPage.Value; }
 		}
+		/// <summary><para>Template: Call To Action Options</para><para>Field: Heading</para><para>Data type: Droptree</para></summary>
+		public virtual ILinkFieldWrapper Heading
+		{
+			get { return (Fortis.Model.RenderingParameters.Fields.LinkFieldWrapper)GetField("Heading", "droptree"); }
+		}
+
+		/// <summary><para>Template: Call To Action Options</para><para>Field: Heading</para><para>Data type: Droptree</para></summary>
+ 		public string HeadingValue
+		{
+			get { return Heading.Value; }
+		}
 	
 	}
 }
 #endregion
+
 
 
 
@@ -1386,10 +1428,24 @@ namespace Rocketcore.Model.Templates.UserDefined
 		{
 			get { return Image.Value; }
 		}
+		/// <summary><para>Template: HomePage</para><para>Field: CallToActionCustom</para><para>Data type: Droptree</para></summary>
+		[IndexField("call_to_action_custom_s")]
+		public virtual ILinkFieldWrapper CallToActionCustom
+		{
+			get { return GetField<LinkFieldWrapper>("Call To Action Custom", "call_to_action_custom_s"); }
+		}
+
+		/// <summary><para>Template: HomePage</para><para>Field: CallToActionCustom</para><para>Data type: Droptree</para></summary>
+		[IndexField("call_to_action_custom")]
+ 		public string CallToActionCustomValue
+		{
+			get { return CallToActionCustom.Value; }
+		}
 	
 	}
 }
 #endregion
+
 
 
 
@@ -1522,6 +1578,8 @@ namespace Rocketcore.Model.Templates.UserDefined
 	}
 }
 #endregion
+
+
 #region Pagination Options (UserDefined)
 namespace Rocketcore.Model.Templates.UserDefined
 {
@@ -1580,6 +1638,7 @@ namespace Rocketcore.Model.Templates.UserDefined
 #endregion
 
 
+
 #region Tag Folder (UserDefined)
 namespace Rocketcore.Model.Templates.UserDefined
 {
@@ -1628,6 +1687,7 @@ namespace Rocketcore.Model.Templates.UserDefined
 	}
 }
 #endregion
+
 
 
 #region Call To Action Links Options (UserDefined)
@@ -1748,6 +1808,17 @@ namespace Rocketcore.Model.Templates.UserDefined
 		{
 			get { return ItemsPerPage.Value; }
 		}
+		/// <summary><para>Template: Call To Action Links Options</para><para>Field: Heading</para><para>Data type: Droptree</para></summary>
+		public virtual ILinkFieldWrapper Heading
+		{
+			get { return (Fortis.Model.RenderingParameters.Fields.LinkFieldWrapper)GetField("Heading", "droptree"); }
+		}
+
+		/// <summary><para>Template: Call To Action Links Options</para><para>Field: Heading</para><para>Data type: Droptree</para></summary>
+ 		public string HeadingValue
+		{
+			get { return Heading.Value; }
+		}
 		/// <summary><para>Template: Call To Action Links Options</para><para>Field: CallToActionGroup</para><para>Data type: Droptree</para></summary>
 		public virtual ILinkFieldWrapper CallToActionGroup
 		{
@@ -1767,6 +1838,62 @@ namespace Rocketcore.Model.Templates.UserDefined
 
 
 
+#region Phrase Heading (UserDefined)
+namespace Rocketcore.Model.Templates.UserDefined
+{
+    using System;
+	using System.Collections.Generic;
+    using Sitecore.Data.Items;
+	using Sitecore.ContentSearch;
+	using Sitecore.ContentSearch.Linq.Common;
+    using Fortis.Model;
+	using Fortis.Model.Fields;
+	using Fortis.Providers;
+
+    using Fortis.Model.RenderingParameters;
+
+	/// <summary>
+	/// <para>Template interface</para>
+	/// <para>Template: Phrase Heading</para>
+	/// <para>ID: {72096AC2-E80D-46E9-B77E-9B8A858FA414}</para>
+	/// <para>/sitecore/templates/User Defined/Phrases/Rendering Options/Phrase Heading</para>
+	/// </summary>
+	[TemplateMapping("{72096AC2-E80D-46E9-B77E-9B8A858FA414}", "InterfaceRenderingParameter")]
+	public partial interface IPhraseHeading : IRenderingParameterWrapper , Rocketcore.Model.Templates.UserDefined.IRocketcoreRenderingParameters
+	{		
+    	/// <summary>
+		/// <para>Template: Phrase Heading</para><para>Field: Heading</para><para>Data type: Droptree</para>
+        /// </summary>
+		ILinkFieldWrapper Heading { get; }
+ 		string HeadingValue { get; }
+	}
+
+	/// <summary>
+	/// <para>Template class</para><para>/sitecore/templates/User Defined/Phrases/Rendering Options/Phrase Heading</para>
+	/// </summary>
+	[PredefinedQuery("TemplateId", ComparisonType.Equal, "{72096AC2-E80D-46E9-B77E-9B8A858FA414}", typeof(Guid))]
+	[TemplateMapping("{72096AC2-E80D-46E9-B77E-9B8A858FA414}", "RenderingParameter")]
+	public partial class PhraseHeading : RenderingParameterWrapper, IPhraseHeading
+	{
+		public PhraseHeading(Dictionary<string, string> parameters, ISpawnProvider spawnProvider) : base(parameters, spawnProvider)
+		{
+		}
+
+		/// <summary><para>Template: Phrase Heading</para><para>Field: Heading</para><para>Data type: Droptree</para></summary>
+		public virtual ILinkFieldWrapper Heading
+		{
+			get { return (Fortis.Model.RenderingParameters.Fields.LinkFieldWrapper)GetField("Heading", "droptree"); }
+		}
+
+		/// <summary><para>Template: Phrase Heading</para><para>Field: Heading</para><para>Data type: Droptree</para></summary>
+ 		public string HeadingValue
+		{
+			get { return Heading.Value; }
+		}
+	
+	}
+}
+#endregion
 
 
 
@@ -1995,6 +2122,9 @@ namespace Rocketcore.Model.Templates.UserDefined
 }
 #endregion
 
+
+
+
 #region Rocketcore Rendering Parameters (UserDefined)
 namespace Rocketcore.Model.Templates.UserDefined
 {
@@ -2035,6 +2165,7 @@ namespace Rocketcore.Model.Templates.UserDefined
 	}
 }
 #endregion
+
 #region Meta Data (UserDefined)
 namespace Rocketcore.Model.Templates.UserDefined
 {
@@ -2155,6 +2286,9 @@ namespace Rocketcore.Model.Templates.UserDefined
 	}
 }
 #endregion
+
+
+
 
 
 
@@ -2351,6 +2485,8 @@ namespace Rocketcore.Model.Templates.UserDefined
 
 
 
+
+
 #region Html Phrase (UserDefined)
 namespace Rocketcore.Model.Templates.UserDefined
 {
@@ -2472,6 +2608,7 @@ namespace Rocketcore.Model.Templates.UserDefined
 	}
 }
 #endregion
+
 
 
 #region Text Phrase (UserDefined)
@@ -2749,6 +2886,7 @@ namespace Rocketcore.Model.Templates.UserDefined
 	}
 }
 #endregion
+
 
 #region Tagging Prototype (UserDefined)
 namespace Rocketcore.Model.Templates.UserDefined
@@ -3051,6 +3189,7 @@ namespace Rocketcore.Model.Templates.UserDefined
 
 
 
+
 #region Content Image (UserDefined)
 namespace Rocketcore.Model.Templates.UserDefined
 {
@@ -3115,6 +3254,7 @@ namespace Rocketcore.Model.Templates.UserDefined
 	}
 }
 #endregion
+
 
 
 
@@ -3296,6 +3436,7 @@ namespace Rocketcore.Model.Templates.UserDefined
 
 
 
+
 #region Tagging Filter Options (UserDefined)
 namespace Rocketcore.Model.Templates.UserDefined
 {
@@ -3368,6 +3509,7 @@ namespace Rocketcore.Model.Templates.UserDefined
 	}
 }
 #endregion
+
 
 
 #region Presentation Settings (UserDefined)
@@ -3594,6 +3736,9 @@ namespace Rocketcore.Model.Templates.UserDefined
 
 
 
+
+
+
 #region Call To Action (UserDefined)
 namespace Rocketcore.Model.Templates.UserDefined
 {
@@ -3814,6 +3959,9 @@ namespace Rocketcore.Model.Templates.UserDefined
 	}
 }
 #endregion
+
+
+
 
 
 
@@ -4256,7 +4404,7 @@ namespace Rocketcore.Model.Templates.UserDefined
 	/// <para>/sitecore/templates/User Defined/Call To Action/Rendering Options/Call To Action List Options</para>
 	/// </summary>
 	[TemplateMapping("{FB56AAF5-CFA4-4D50-91D0-E1121E4AB0D1}", "InterfaceRenderingParameter")]
-	public partial interface ICallToActionListOptions : IRenderingParameterWrapper , Rocketcore.Model.Templates.UserDefined.IRocketcoreRenderingParameters, Rocketcore.Model.Templates.UserDefined.ISelectionOptions, Rocketcore.Model.Templates.UserDefined.IAggregateOptions, Rocketcore.Model.Templates.UserDefined.ITaggingFilterOptions, Rocketcore.Model.Templates.UserDefined.IOrderingOptions, Rocketcore.Model.Templates.UserDefined.IPaginationOptions
+	public partial interface ICallToActionListOptions : IRenderingParameterWrapper , Rocketcore.Model.Templates.UserDefined.IRocketcoreRenderingParameters, Rocketcore.Model.Templates.UserDefined.ISelectionOptions, Rocketcore.Model.Templates.UserDefined.IAggregateOptions, Rocketcore.Model.Templates.UserDefined.ITaggingFilterOptions, Rocketcore.Model.Templates.UserDefined.IOrderingOptions, Rocketcore.Model.Templates.UserDefined.IPaginationOptions, Rocketcore.Model.Templates.UserDefined.IPhraseHeading
 	{		
 	}
 
@@ -4347,6 +4495,17 @@ namespace Rocketcore.Model.Templates.UserDefined
  		public long ItemsPerPageValue
 		{
 			get { return ItemsPerPage.Value; }
+		}
+		/// <summary><para>Template: Call To Action List Options</para><para>Field: Heading</para><para>Data type: Droptree</para></summary>
+		public virtual ILinkFieldWrapper Heading
+		{
+			get { return (Fortis.Model.RenderingParameters.Fields.LinkFieldWrapper)GetField("Heading", "droptree"); }
+		}
+
+		/// <summary><para>Template: Call To Action List Options</para><para>Field: Heading</para><para>Data type: Droptree</para></summary>
+ 		public string HeadingValue
+		{
+			get { return Heading.Value; }
 		}
 	
 	}

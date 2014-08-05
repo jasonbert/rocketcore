@@ -15,15 +15,10 @@ namespace Rocketcore.Content.CallToAction.Models
 	}
 
     public interface ICallToActionModel<TRenderingParametersItem> :
+		ICallToActionModel,
         IRenderingModel<IPage, ICallToAction, TRenderingParametersItem>
         where TRenderingParametersItem : IRenderingParameterWrapper
     {
-        ICallToActionTarget Target { get; }
-        INavigation Navigation { get; }
-    }
 
-    public interface ICallToActionMediaModel : ICallToActionModel<ICallToActionOptions>
-    {
-        ICallToActionGroupModel<ICallToActionModel> ExtraGroup { get; }
-	}
+    }
 }

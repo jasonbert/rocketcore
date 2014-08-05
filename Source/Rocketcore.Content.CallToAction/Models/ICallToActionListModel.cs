@@ -11,18 +11,15 @@ namespace Rocketcore.Content.CallToAction.Models
 {
 	public interface ICallToActionListModel : IRenderingModel<IPage, ICallToActionGroup>
 	{
-        IEnumerable<ICallToActionModel<ICallToActionOptions>> CallToActionItems  { get; }
+        IEnumerable<ICallToAction> CallToActions  { get; }
+		IPhrase Heading { get; }
 	}
 
-	public interface ICallToActionListModel<TRenderingParametersItem> : IRenderingModel<IPage, ICallToActionGroup, TRenderingParametersItem>
+	public interface ICallToActionListModel<TRenderingParametersItem> :
+		ICallToActionListModel,
+		IRenderingModel<IPage, ICallToActionGroup, TRenderingParametersItem>
 		where TRenderingParametersItem : IRenderingParameterWrapper
 	{
-        IEnumerable<ICallToActionModel<ICallToActionOptions>> CallToActionItems { get; }
-	}
 
-	public interface ICallToActionMediaListModel
-	{
-        ISizeOptions SizeOptions { get; }
-        IEnumerable<ICallToActionMediaModel> CallToActionItems { get; }
 	}
 }

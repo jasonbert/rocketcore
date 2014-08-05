@@ -14,6 +14,7 @@ namespace Rocketcore.Website.App_Start
 	using Fortis.Providers;
 	using Fortis.Mvc.Providers;
 	using Rocketcore.Search;
+	using Rocketcore.Content.Global;
     
     public static class SimpleInjectorInitializer
     {
@@ -21,10 +22,10 @@ namespace Rocketcore.Website.App_Start
         public static void Initialize()
         {
             var container = new Container();
-            
-            InitializeContainer(container);
 
             container.RegisterMvcControllers(Assembly.GetExecutingAssembly());
+
+			InitializeContainer(container);
             
             container.Verify();
             
@@ -33,8 +34,9 @@ namespace Rocketcore.Website.App_Start
      
         private static void InitializeContainer(Container container)
         {
-			InitialiseFortis(container);
 			InitialiseSearch(container);
+			InitialiseContentGlobal(container);
+			InitialiseFortis(container);
         }
 
 		private static void InitialiseFortis(Container container)
@@ -60,6 +62,11 @@ namespace Rocketcore.Website.App_Start
 					new SearchIndex("sitecore_core_index"),
 					new SearchIndex("sitecore_web_index")
 				), Lifestyle.Singleton);
+		}
+
+		private static void InitialiseContentGlobal(Container container)
+		{
+			container.Register<IAggregateManager, AggregateManager>();
 		}
     }
 }
