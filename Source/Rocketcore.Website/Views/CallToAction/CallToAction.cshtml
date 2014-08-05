@@ -1,0 +1,32 @@
+﻿@model Rocketcore.Content.CallToAction.Models.ICallToActionModel
+<div class="callToAction">
+	@if (Model.RenderingItem != null)
+	{
+		@Model.RenderingItem.Image.Render(new { @class = "dynamic", crop = 1 })
+		<div class="inner">
+			<h3 class="title">@Model.RenderingItem.Title</h3>
+			<div class="body">
+				@Model.RenderingItem.Body
+			</div>
+			<div class="datetime">
+				@Model.RenderingItem.DateAndTime
+			</div>
+			@if (Model.Target != null)
+			{
+			<div style="background:#161616 url(../../images/layout/hero-bg.gif) repeat; border-radius: 15px; width: 100%;">
+				@Model.Target.Link
+			</div>
+			}
+		</div>
+		<div class="link">
+			@if (Model.Target != null)
+			{
+				@Model.Target.Link
+			}
+			else
+			{
+				<a href="@Model.RenderingItem.GenerateUrl()">@Model.RenderingItem.DisplayName</a>
+			}
+		</div>
+	}
+</div>

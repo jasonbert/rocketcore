@@ -1,0 +1,79 @@
+----item----
+version: 1
+id: {23D17BB0-08BC-43D7-8589-7724407E1422}
+database: master
+path: /sitecore/templates/User Defined/Generic/Content Page
+parent: {EA9AC3C3-A666-4743-BEFB-F4BBE4C9592A}
+name: Content Page
+master: {00000000-0000-0000-0000-000000000000}
+template: {AB86861A-6030-46C5-B394-E8F99E8B87DB}
+templatekey: Template
+
+----field----
+field: {12C33F3F-86C5-43A5-AEB4-5598CEC45116}
+name: __Base template
+key: __base template
+content-length: 233
+
+{7418FF44-684F-43D6-8DF7-A0741E84C028}|{E9A38444-4157-4BF9-A525-C2DBCBBDFEBA}|{D354D790-34CF-4972-97B4-0E601E2F64FA}|{F884BA23-8688-4808-95C3-52E554F8A8FC}|{AF27068F-E9F3-491E-84B8-91A55F86D110}|{12BBD87B-1EE2-4E02-86F5-5AB1DA50307C}
+----field----
+field: {F7D48A55-2158-4F02-9356-756654404F73}
+name: __Standard values
+key: __standard values
+content-length: 38
+
+{6DC98731-66D5-4F82-8C8A-D534CA3D1EF8}
+----field----
+field: {C9283D9E-7C29-4419-9C28-5A5C8FF53E84}
+name: __Bucketable
+key: __bucketable
+content-length: 1
+
+1
+----field----
+field: {F1A1FE9E-A60C-4DDB-A3A0-BB5B29FE732E}
+name: __Renderings
+key: __renderings
+content-length: 0
+
+
+----version----
+language: en
+version: 1
+revision: c135e559-d1c3-4045-83b7-599eada1548a
+
+----field----
+field: {25BED78C-4957-4165-998A-CA1B52F67497}
+name: __Created
+key: __created
+content-length: 15
+
+20131213T103219
+----field----
+field: {5DD74568-4D4B-44C1-B513-0AF5F4CDA34F}
+name: __Created by
+key: __created by
+content-length: 14
+
+sitecore\admin
+----field----
+field: {8CDC337E-A112-42FB-BBB4-4143751E123F}
+name: __Revision
+key: __revision
+content-length: 36
+
+c135e559-d1c3-4045-83b7-599eada1548a
+----field----
+field: {D9CF14B1-FA16-4BA6-9288-E8A174D4D522}
+name: __Updated
+key: __updated
+content-length: 34
+
+20140703T223750:635400238705751537
+----field----
+field: {BADD9CF9-53E0-4D0C-BCC0-2D784C282F6A}
+name: __Updated by
+key: __updated by
+content-length: 14
+
+sitecore\admin
