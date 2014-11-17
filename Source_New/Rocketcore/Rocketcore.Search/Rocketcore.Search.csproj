@@ -45,6 +45,7 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="ComputedFields\CopyFields.cs" />
     <Compile Include="ISearchIndex.cs" />
     <Compile Include="ISearchManager.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />

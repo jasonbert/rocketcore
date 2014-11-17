@@ -18,7 +18,7 @@
 
 		var queryable = itemSearchFactory.Search<IContentPage>(searchContext);
 
-		queryableResults = queryable.Where(item => item.SubTitle.Value.Contains("Rocketcore")).ToList();
+		queryableResults = queryable.Where(item => item.AggregatedTags.Contains(new Guid("{AB1B5DC2-B122-48AE-9D42-C3B924FCB8EF}"))).ToList();
 		//queryableResults = queryable.ToList();
 
 		var templatesQueryable = itemSearchFactory.Search<ITag>(searchContext);
