@@ -1,26 +1,103 @@
 ﻿@using Rocketcore.Search
 @using Fortis.Search
+@using Sitecore.ContentSearch.SearchTypes
 @{
 	var results = new List<IItemWrapper>();
 	var searchManager = DependencyResolver.Current.GetService<ISearchManager>();
 	var itemSearchFactory = DependencyResolver.Current.GetService<IItemSearchFactory>();
+	SearchResults<SearchResultItem> scQueryableResults = null;
+	IEnumerable<IContentPage> queryableResults = null;
+	SearchResults<IItemWrapper> searchResults = null;
+	IEnumerable<ITag> templateResults = null;
 
 	using (var searchContext = searchManager.SearchContext)
 	{
-		var queryable = itemSearchFactory.Search<IItemWrapper>(searchContext);
-		var queryableResults = queryable.Where(item => item.Name == "Home").ToList();
-		//var queryableResults = queryable.GetResults();
-	}
-}
-<hr />
+		var scQueryable = searchContext.GetQueryable<SearchResultItem>();
+
+		scQueryableResults = scQueryable.Where(item => item.Name == "Home").GetResults();
+
+		var queryable = itemSearchFactory.Search<IContentPage>(searchContext);
+
+		queryableResults = queryable.Where(item => item.SubTitle.Value.Contains("Rocketcore")).ToList();
+		//queryableResults = queryable.ToList();
+
+		var templatesQueryable = itemSearchFactory.Search<ITag>(searchContext);
+
+		//homePageResults = homePageQueryable.Where(item => item.Name == "Home").ToList();
+		templateResults = templatesQueryable.ToList();
+
+		//var searchResultsQueryable = itemSearchFactory.Search<IItemWrapper>(searchContext);
+
+		//searchResults = searchResultsQueryable.Where(item => item.Name == "Home").GetResults();
+
 <h1>Search Test</h1>
-<h2>Results</h2>
+<hr />
+<h2>scQueryableResults Results</h2>
 <ul>
 	@{
-		foreach (var result in results)
+		if (scQueryableResults != null)
 		{
-			<li>@result.Name | @result.ItemLocation</li>
+			foreach (var result in scQueryableResults)
+			{
+				<li>@result.Document.Name | @result.Document.Path</li>
+			}
+		}
+		else
+		{
+			<li>Object is null</li>
 		}
 	}
 </ul>
 <hr />
+	<h2>queryableResults Results</h2>
+	<ul>
+		@{
+		if (queryableResults != null)
+		{
+			foreach (var result in queryableResults)
+			{
+				<li>@result.Name | @result.ItemLocation</li>
+			}
+		}
+		else
+		{
+			<li>Object is null</li>
+		}
+		}
+	</ul>
+	<hr />
+	<h2>templateResults Results</h2>
+	<ul>
+		@{
+		if (templateResults != null)
+		{
+			foreach (var result in templateResults)
+			{
+				<li>@result.Name | @result.ItemLocation</li>
+			}
+		}
+		else
+		{
+			<li>Object is null</li>
+		}
+		}
+	</ul>
+	<hr />
+	<h2>searchResults Results</h2>
+	<ul>
+		@{
+		if (searchResults != null)
+		{
+			foreach (var result in searchResults)
+			{
+				<li>@result.Document.Name | @result.Document.ItemLocation</li>
+			}
+		}
+		else
+		{
+			<li>Object is null</li>
+		}
+		}
+	</ul>
+	}
+}

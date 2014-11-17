@@ -176,7 +176,7 @@ namespace <#= FullNamespace(template) #>
 		/// <para>Template: <#= template.Name #></para><para>Field: <#= TitleCase(field.Name) #></para><para>Data type: <#= field.Type #></para>
         /// </summary>
 <# if (!isRenderingParametersTemplate && IsSupportedSearchFieldType(field.Type)) { #>
-		[IndexField("<#= field.Name.Replace(" ", "_").ToLowerInvariant() + GetFieldTypeSearchAffix(field.Type) #>")]
+		[IndexField("<#= field.Name.Replace(" ", "_").ToLowerInvariant() #>")]
 <# } #>
 		<#= GetFieldWrapperTypeInterface(field.Type) #> <#= TitleCase(field.Name) #> { get; }
 <# if (!isRenderingParametersTemplate && IsSupportedSearchFieldType(field.Type)) { #>

@@ -162,7 +162,7 @@ namespace Rocketcore.Model.Templates.UserDefined
     	/// <summary>
 		/// <para>Template: Call To Action Override</para><para>Field: CallToActionCustom</para><para>Data type: Droptree</para>
         /// </summary>
-		[IndexField("call_to_action_custom_s")]
+		[IndexField("call_to_action_custom")]
 		ILinkFieldWrapper CallToActionCustom { get; }
 
     	/// <summary>
@@ -730,7 +730,7 @@ namespace Rocketcore.Model.Templates.UserDefined
     	/// <summary>
 		/// <para>Template: Navigation Link</para><para>Field: Link</para><para>Data type: General Link</para>
         /// </summary>
-		[IndexField("link_t")]
+		[IndexField("link")]
 		IGeneralLinkFieldWrapper Link { get; }
 
     	/// <summary>
@@ -1476,7 +1476,7 @@ namespace Rocketcore.Model.Templates.UserDefined
     	/// <summary>
 		/// <para>Template: Tagging</para><para>Field: Tags</para><para>Data type: Tags</para>
         /// </summary>
-		[IndexField("tags_sm")]
+		[IndexField("tags")]
 		IListFieldWrapper Tags { get; }
 
     	/// <summary>
@@ -1852,7 +1852,7 @@ namespace Rocketcore.Model.Templates.UserDefined
     	/// <summary>
 		/// <para>Template: Content Category</para><para>Field: Category</para><para>Data type: Droptree</para>
         /// </summary>
-		[IndexField("category_s")]
+		[IndexField("category")]
 		ILinkFieldWrapper Category { get; }
 
     	/// <summary>
@@ -2116,7 +2116,7 @@ namespace Rocketcore.Model.Templates.UserDefined
     	/// <summary>
 		/// <para>Template: Meta Data</para><para>Field: Description</para><para>Data type: Multi-Line Text</para>
         /// </summary>
-		[IndexField("description_t")]
+		[IndexField("description")]
 		ITextFieldWrapper Description { get; }
 
     	/// <summary>
@@ -2127,7 +2127,7 @@ namespace Rocketcore.Model.Templates.UserDefined
     	/// <summary>
 		/// <para>Template: Meta Data</para><para>Field: Keywords</para><para>Data type: Multi-Line Text</para>
         /// </summary>
-		[IndexField("keywords_t")]
+		[IndexField("keywords")]
 		ITextFieldWrapper Keywords { get; }
 
     	/// <summary>
@@ -2138,7 +2138,7 @@ namespace Rocketcore.Model.Templates.UserDefined
     	/// <summary>
 		/// <para>Template: Meta Data</para><para>Field: PageTitle</para><para>Data type: Single-Line Text</para>
         /// </summary>
-		[IndexField("page_title_t")]
+		[IndexField("page_title")]
 		ITextFieldWrapper PageTitle { get; }
 
     	/// <summary>
@@ -2340,7 +2340,7 @@ namespace Rocketcore.Model.Templates.UserDefined
     	/// <summary>
 		/// <para>Template: Content Gallery</para><para>Field: GalleryImages</para><para>Data type: Droptree</para>
         /// </summary>
-		[IndexField("gallery_images_s")]
+		[IndexField("gallery_images")]
 		ILinkFieldWrapper GalleryImages { get; }
 
     	/// <summary>
@@ -2412,7 +2412,7 @@ namespace Rocketcore.Model.Templates.UserDefined
     	/// <summary>
 		/// <para>Template: Html Phrase</para><para>Field: Phrase</para><para>Data type: Rich Text</para>
         /// </summary>
-		[IndexField("phrase_t")]
+		[IndexField("phrase")]
 		IRichTextFieldWrapper Phrase { get; }
 
     	/// <summary>
@@ -2532,7 +2532,7 @@ namespace Rocketcore.Model.Templates.UserDefined
     	/// <summary>
 		/// <para>Template: Text Phrase</para><para>Field: Phrase</para><para>Data type: Single-Line Text</para>
         /// </summary>
-		[IndexField("phrase_t")]
+		[IndexField("phrase")]
 		ITextFieldWrapper Phrase { get; }
 
     	/// <summary>
@@ -2708,7 +2708,7 @@ namespace Rocketcore.Model.Templates.UserDefined
     	/// <summary>
 		/// <para>Template: Navigation</para><para>Field: HideFromNavigation</para><para>Data type: Checkbox</para>
         /// </summary>
-		[IndexField("hide_from_navigation_b")]
+		[IndexField("hide_from_navigation")]
 		IBooleanFieldWrapper HideFromNavigation { get; }
 
     	/// <summary>
@@ -2719,7 +2719,7 @@ namespace Rocketcore.Model.Templates.UserDefined
     	/// <summary>
 		/// <para>Template: Navigation</para><para>Field: NavigationTitle</para><para>Data type: Single-Line Text</para>
         /// </summary>
-		[IndexField("navigation_title_t")]
+		[IndexField("navigation_title")]
 		ITextFieldWrapper NavigationTitle { get; }
 
     	/// <summary>
@@ -2855,7 +2855,7 @@ namespace Rocketcore.Model.Templates.UserDefined
     	/// <summary>
 		/// <para>Template: Call To Action Slide</para><para>Field: RightAlignImageText</para><para>Data type: Checkbox</para>
         /// </summary>
-		[IndexField("right_align_image_text_b")]
+		[IndexField("right_align_image_text")]
 		IBooleanFieldWrapper RightAlignImageText { get; }
 
     	/// <summary>
@@ -3162,7 +3162,7 @@ namespace Rocketcore.Model.Templates.UserDefined
     	/// <summary>
 		/// <para>Template: Call To Action Group</para><para>Field: CallToActions</para><para>Data type: TreelistEx</para>
         /// </summary>
-		[IndexField("call_to_actions_sm")]
+		[IndexField("call_to_actions")]
 		IListFieldWrapper CallToActions { get; }
 
     	/// <summary>
@@ -3234,7 +3234,7 @@ namespace Rocketcore.Model.Templates.UserDefined
     	/// <summary>
 		/// <para>Template: Breadcrumb</para><para>Field: BreadcrumbTitle</para><para>Data type: Single-Line Text</para>
         /// </summary>
-		[IndexField("breadcrumb_title_t")]
+		[IndexField("breadcrumb_title")]
 		ITextFieldWrapper BreadcrumbTitle { get; }
 
     	/// <summary>
@@ -3245,7 +3245,7 @@ namespace Rocketcore.Model.Templates.UserDefined
     	/// <summary>
 		/// <para>Template: Breadcrumb</para><para>Field: HideFromBreadcrumb</para><para>Data type: Checkbox</para>
         /// </summary>
-		[IndexField("hide_from_breadcrumb_b")]
+		[IndexField("hide_from_breadcrumb")]
 		IBooleanFieldWrapper HideFromBreadcrumb { get; }
 
     	/// <summary>
@@ -3450,7 +3450,7 @@ namespace Rocketcore.Model.Templates.UserDefined
     	/// <summary>
 		/// <para>Template: Content Date Time</para><para>Field: DateAndTime</para><para>Data type: Datetime</para>
         /// </summary>
-		[IndexField("date_and_time_tdt")]
+		[IndexField("date_and_time")]
 		IDateTimeFieldWrapper DateAndTime { get; }
 
     	/// <summary>
@@ -3742,7 +3742,7 @@ namespace Rocketcore.Model.Templates.UserDefined
     	/// <summary>
 		/// <para>Template: Content Headings</para><para>Field: SubTitle</para><para>Data type: Single-Line Text</para>
         /// </summary>
-		[IndexField("sub_title_t")]
+		[IndexField("sub_title")]
 		ITextFieldWrapper SubTitle { get; }
 
     	/// <summary>
@@ -3753,7 +3753,7 @@ namespace Rocketcore.Model.Templates.UserDefined
     	/// <summary>
 		/// <para>Template: Content Headings</para><para>Field: Title</para><para>Data type: Single-Line Text</para>
         /// </summary>
-		[IndexField("title_t")]
+		[IndexField("title")]
 		ITextFieldWrapper Title { get; }
 
     	/// <summary>
@@ -3910,7 +3910,7 @@ namespace Rocketcore.Model.Templates.UserDefined
     	/// <summary>
 		/// <para>Template: Categories</para><para>Field: PrimaryCategory</para><para>Data type: Droptree</para>
         /// </summary>
-		[IndexField("primary_category_s")]
+		[IndexField("primary_category")]
 		ILinkFieldWrapper PrimaryCategory { get; }
 
     	/// <summary>
@@ -3921,7 +3921,7 @@ namespace Rocketcore.Model.Templates.UserDefined
     	/// <summary>
 		/// <para>Template: Categories</para><para>Field: RelatedCategories</para><para>Data type: TreelistEx</para>
         /// </summary>
-		[IndexField("related_categories_sm")]
+		[IndexField("related_categories")]
 		IListFieldWrapper RelatedCategories { get; }
 
     	/// <summary>
@@ -4054,7 +4054,7 @@ namespace Rocketcore.Model.Templates.UserDefined
     	/// <summary>
 		/// <para>Template: Content Body</para><para>Field: Body</para><para>Data type: Rich Text</para>
         /// </summary>
-		[IndexField("body_t")]
+		[IndexField("body")]
 		IRichTextFieldWrapper Body { get; }
 
     	/// <summary>
