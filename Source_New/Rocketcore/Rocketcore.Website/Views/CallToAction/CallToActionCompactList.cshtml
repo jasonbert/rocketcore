@@ -1,0 +1,18 @@
+﻿@model Rocketcore.Content.CallToAction.Models.ICallToActionListModel<ICallToActionListOptions>
+<div>
+	@if (Model.Heading != null)
+	{
+	<h3>@Model.Heading.RenderPhrase()</h3>
+	}
+	@foreach (var callToAction in Model.CallToActions)
+	{
+		<div class="callToAction">
+			<div class="inner">
+				<h3 class="title">@callToAction.Title</h3>
+			</div>
+			<div class="link">
+				<a href="@callToAction.GenerateUrl()">@callToAction.DisplayName</a>
+			</div>
+		</div>
+	}
+</div>

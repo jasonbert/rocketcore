@@ -1,0 +1,118 @@
+<#@ template language="C#" debug="true" #>
+<#@ assembly name="System.Core.dll" #>
+<#@ import namespace="System" #>
+<#@ import namespace="System.Globalization" #>
+<#@ import namespace="System.Linq" #>
+<#@ import namespace="System.Text" #>
+<#@ import namespace="System.Text.RegularExpressions" #>
+<#@ import namespace="System.Collections.Generic" #>
+<#@ import namespace="HedgehogDevelopment.SitecoreProject.VSIP.CodeGeneration.Models" #>
+<#@ parameter name="Model" type="HedgehogDevelopment.SitecoreProject.VSIP.CodeGeneration.Models.SitecoreItem" #>
+<#@ parameter name="DefaultNamespace" type="System.String" #>
+<#
+var tab = "	"; // "\t"
+
+// Build ancestor list
+SitecoreItem item = Model.Parent;
+List<SitecoreItem> ancestors = new List<SitecoreItem>();
+while (item != null)
+{
+    ancestors.Add(item);
+    item = item.Parent;
+}
+// reverse the order
+ancestors.Reverse();
+#>
+#region <#= Model.Name #> (<#= Model.Path #>)
+namespace Rocketcore.Model.Static {
+	using System;
+<#
+foreach (SitecoreItem ancestor in ancestors) {#>
+	<#= BuildClassDefinition(ancestor) #>
+<#
+	PushIndent(tab);
+}
+PushIndent(tab);
+#>
+/// <summary><para>Sitecore Path: <#= Model.Path #></para><para>Template: <#= Model.TemplateName #></para></summary>
+<#= BuildClassDefinition(Model) #>
+	public static Guid Id = new Guid("{<#= Model.ID.ToString().ToUpper() #>}");
+	public static string Name { get { return "<#= Model.Name #>"; } }
+	public static string Path { get { return "<#= Model.Path #>"; } }
+	public static string TemplateName { get { return "<#= Model.TemplateName #>"; } }
+}
+<#
+PopIndent();
+for(int i = 0; i< ancestors.Count; i++){
+        PopIndent();
+        #>
+	}
+<#}
+PopIndent();
+#>
+}
+#endregion
+
+<#+
+private string BuildClassDefinition(SitecoreItem item){
+        return BuildClassDefinition(TitleCase(item.Name));
+}
+
+private string BuildClassDefinition(string className){
+        return "public static partial class " + className + " {";
+}
+
+public string TitleCase(string name)
+{
+	name = Regex.Replace(name, "([a-z](?=[A-Z])|[A-Z](?=[A-Z][a-z]))", "$1 ");
+	name = CultureInfo.InvariantCulture.TextInfo.ToTitleCase(name);
+	name = Regex.Replace(name, @"[^a-zA-Z0-9]", String.Empty);
+
+	var firstChar = 0;
+
+	if (int.TryParse(name.Substring(0, 1), out firstChar))
+	{
+		var numberToWord = string.Empty;
+
+		switch(firstChar)
+		{
+			case 0:
+				numberToWord = "Zero";
+				break;
+			case 1:
+				numberToWord = "One";
+				break;
+			case 2:
+				numberToWord = "Two";
+				break;
+			case 3:
+				numberToWord = "Three";
+				break;
+			case 4:
+				numberToWord = "Four";
+				break;
+			case 5:
+				numberToWord = "Five";
+				break;
+			case 6:
+				numberToWord = "Six";
+				break;
+			case 7:
+				numberToWord = "Seven";
+				break;
+			case 8:
+				numberToWord = "Eight";
+				break;
+			case 9:
+				numberToWord = "Nine";
+				break;
+		}
+
+		name = numberToWord + name.Remove(0, 1);
+	}
+	
+	name = string.Equals(name, "System") ? "ScSystem" : name;
+
+	return name;
+}
+#>

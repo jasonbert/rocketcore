@@ -1,0 +1,26 @@
+﻿@using Rocketcore.Search
+@using Fortis.Search
+@{
+	var results = new List<IItemWrapper>();
+	var searchManager = DependencyResolver.Current.GetService<ISearchManager>();
+	var itemSearchFactory = DependencyResolver.Current.GetService<IItemSearchFactory>();
+
+	using (var searchContext = searchManager.SearchContext)
+	{
+		var queryable = itemSearchFactory.Search<IItemWrapper>(searchContext);
+		var queryableResults = queryable.Where(item => item.Name == "Home").ToList();
+		//var queryableResults = queryable.GetResults();
+	}
+}
+<hr />
+<h1>Search Test</h1>
+<h2>Results</h2>
+<ul>
+	@{
+		foreach (var result in results)
+		{
+			<li>@result.Name | @result.ItemLocation</li>
+		}
+	}
+</ul>
+<hr />

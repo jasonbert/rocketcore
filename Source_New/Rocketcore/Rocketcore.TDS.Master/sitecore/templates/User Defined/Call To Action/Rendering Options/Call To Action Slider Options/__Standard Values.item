@@ -1,0 +1,65 @@
+----item----
+version: 1
+id: {3269EE12-B7E5-4454-AC9F-69B3EB92702B}
+database: master
+path: /sitecore/templates/User Defined/Call To Action/Rendering Options/Call To Action Slider Options/__Standard Values
+parent: {02E4436F-437E-4297-B819-6334F1F560AF}
+name: __Standard Values
+master: {00000000-0000-0000-0000-000000000000}
+template: {02E4436F-437E-4297-B819-6334F1F560AF}
+templatekey: Call To Action Slider Options
+
+----version----
+language: en
+version: 1
+revision: 6c106d56-1c66-4887-9438-a53c3b80c3ae
+
+----field----
+field: {C8F93AFE-BFD4-4E8F-9C61-152559854661}
+name: __Valid from
+key: __valid from
+content-length: 0
+
+
+----field----
+field: {4C346442-E859-4EFD-89B2-44AEDF467D21}
+name: __Valid to
+key: __valid to
+content-length: 0
+
+
+----field----
+field: {25BED78C-4957-4165-998A-CA1B52F67497}
+name: __Created
+key: __created
+content-length: 15
+
+20140702T183759
+----field----
+field: {5DD74568-4D4B-44C1-B513-0AF5F4CDA34F}
+name: __Created by
+key: __created by
+content-length: 14
+
+sitecore\admin
+----field----
+field: {8CDC337E-A112-42FB-BBB4-4143751E123F}
+name: __Revision
+key: __revision
+content-length: 36
+
+6c106d56-1c66-4887-9438-a53c3b80c3ae
+----field----
+field: {D9CF14B1-FA16-4BA6-9288-E8A174D4D522}
+name: __Updated
+key: __updated
+content-length: 34
+
+20140702T183759:635399230793694743
+----field----
+field: {BADD9CF9-53E0-4D0C-BCC0-2D784C282F6A}
+name: __Updated by
+key: __updated by
+content-length: 14
+
+sitecore\admin
