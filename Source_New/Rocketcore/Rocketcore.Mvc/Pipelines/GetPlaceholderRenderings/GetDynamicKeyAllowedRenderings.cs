@@ -34,7 +34,7 @@ namespace Rocketcore.Mvc.Pipelines.GetPlaceholderRenderings
 			}
 			else
 			{
-				BaseProcess(args);
+				return;
 			}
 
 			// Same as Sitecore.Pipelines.GetPlaceholderRenderings.GetAllowedRenderings but with fake placeholderKey
@@ -71,6 +71,8 @@ namespace Rocketcore.Mvc.Pipelines.GetPlaceholderRenderings
 				args.PlaceholderRenderings.AddRange(collection);
 			}
 		}
+
+		#region GetAllowedRenderings
 
 		protected virtual List<Item> GetRenderings(Item placeholderItem, out bool allowedControlsSpecified)
 		{
@@ -144,5 +146,7 @@ namespace Rocketcore.Mvc.Pipelines.GetPlaceholderRenderings
 				args.PlaceholderRenderings.AddRange(renderings);
 			}
 		}
+
+		#endregion
 	}
 }

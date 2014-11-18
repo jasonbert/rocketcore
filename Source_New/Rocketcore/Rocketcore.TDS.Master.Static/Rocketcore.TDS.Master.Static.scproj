@@ -123,6 +123,7 @@
     <SitecoreItem Include="sitecore\content\Shared\Tags\2014.item">
       <ItemDeployment>AlwaysUpdate</ItemDeployment>
       <ChildItemSynchronization>KeepAllChildrenSynchronized</ChildItemSynchronization>
+      <CodeGenTemplate>&lt;None&gt;</CodeGenTemplate>
     </SitecoreItem>
     <SitecoreItem Include="sitecore\content\Shared\Tags\2014\11.item">
       <ChildItemSynchronization>KeepAllChildrenSynchronized</ChildItemSynchronization>
