@@ -20,9 +20,14 @@ namespace Rocketcore.Content.CallToAction.Controllers
 {
 	public class CallToActionController : RocketcoreController
 	{
-		private readonly ISearchManager _searchManager = DependencyResolver.Current.GetService<ISearchManager>();
+		private readonly ISearchManager _searchManager;
+	    private readonly IAggregateManager _aggregateManager;
 
-	    private readonly IAggregateManager _aggregateManager = DependencyResolver.Current.GetService<IAggregateManager>();
+		public CallToActionController(ISearchManager searchManager, IAggregateManager aggregateManager)
+		{
+			_searchManager = searchManager;
+			_aggregateManager = aggregateManager;
+		}
 
 		public ActionResult CallToActionList()
 		{
