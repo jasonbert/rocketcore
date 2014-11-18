@@ -62,6 +62,7 @@
     </SitecoreItem>
     <SitecoreItem Include="sitecore\content\Home\Goblin Rocket Engineering.item">
       <ItemDeployment>AlwaysUpdate</ItemDeployment>
+      <ChildItemSynchronization>NoChildSynchronization</ChildItemSynchronization>
     </SitecoreItem>
     <SitecoreItem Include="sitecore\content\Shared.item">
       <ItemDeployment>AlwaysUpdate</ItemDeployment>
