@@ -46,6 +46,7 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="ComputedFields\CopyFields.cs" />
+    <Compile Include="ComputedFields\CopyIdFields.cs" />
     <Compile Include="ISearchIndex.cs" />
     <Compile Include="ISearchManager.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />

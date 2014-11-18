@@ -22,25 +22,27 @@ namespace Rocketcore.Search.ComputedFields
 
 		public CopyFields(XmlNode configurationNode)
 		{
-			CopyFromFields = new List<string>();
-
-			Initialise(configurationNode);
+			CopyFromFields = ParseCopyFromFields(configurationNode);
 		}
 
 		public override object ComputeFieldValue(IIndexable indexable)
 		{
-			var item = (Item)(indexable as SitecoreIndexableItem);
 			var computedField = new List<string>();
 
-			if (item != null)
+			if (CopyFromFields.Any())
 			{
-				foreach(var copyFromField in CopyFromFields)
-				{
-					var value = item[copyFromField];
+				var item = (Item)(indexable as SitecoreIndexableItem);
 
-					if (!string.IsNullOrEmpty(value))
+				if (item != null)
+				{
+					foreach (var copyFromField in CopyFromFields)
 					{
-						computedField.Add(value);
+						var value = item[copyFromField];
+
+						if (!string.IsNullOrEmpty(value))
+						{
+							computedField.Add(value);
+						}
 					}
 				}
 			}
@@ -48,8 +50,10 @@ namespace Rocketcore.Search.ComputedFields
 			return computedField;
 		}
 
-		protected virtual void Initialise(XmlNode configurationNode)
+		protected virtual List<string> ParseCopyFromFields(XmlNode configurationNode)
 		{
+			var copyFromFields = new List<string>();
+
 			if (configurationNode != null)
 			{
 				var configNode = configurationNode.SelectSingleNode("copyFields");
@@ -60,11 +64,13 @@ namespace Rocketcore.Search.ComputedFields
 					{
 						if (!string.IsNullOrEmpty(childConfigNode.InnerText))
 						{
-							CopyFromFields.Add(childConfigNode.InnerText);
+							copyFromFields.Add(childConfigNode.InnerText);
 						}
 					}
 				}
 			}
+
+			return copyFromFields;
 		}
 	}
 }

@@ -18,7 +18,8 @@
 
 		var queryable = itemSearchFactory.Search<IContentPage>(searchContext);
 
-		queryableResults = queryable.Where(item => item.AggregatedTags.Contains(new Guid("{AB1B5DC2-B122-48AE-9D42-C3B924FCB8EF}"))).ToList();
+		var ids = new List<Guid> { new Guid("{AB1B5DC2-B122-48AE-9D42-C3B924FCB8EF}"), new Guid("{0C414818-0EE0-4826-B398-9112876DE7CD}") };
+		queryableResults = queryable.ContainsOr(item => item.AggregatedTags, ids).ToList();
 		//queryableResults = queryable.ToList();
 
 		var templatesQueryable = itemSearchFactory.Search<ITag>(searchContext);
