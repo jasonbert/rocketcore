@@ -23,7 +23,8 @@ namespace Rocketcore.Content.CallToAction.Controllers
 		private readonly ISearchManager _searchManager;
 	    private readonly IAggregateManager _aggregateManager;
 
-		public CallToActionController(ISearchManager searchManager, IAggregateManager aggregateManager)
+		public CallToActionController(IItemFactory itemFactory, ISearchManager searchManager, IAggregateManager aggregateManager)
+			: base(itemFactory)
 		{
 			_searchManager = searchManager;
 			_aggregateManager = aggregateManager;

@@ -10,11 +10,16 @@ namespace Rocketcore.Mvc.Controllers
 {
 	public abstract class RocketcoreController : Controller
 	{
-		private IItemFactory _factory;
+		private readonly IItemFactory _itemFactory;
+
+		public RocketcoreController(IItemFactory itemFactory)
+		{
+			_itemFactory = itemFactory;
+		}
 
 		protected IItemFactory ItemFactory
 		{
-			get { return _factory ?? (_factory = DependencyResolver.Current.GetService<IItemFactory>()); }
+			get { return _itemFactory; }
 		}
 	}
 }
