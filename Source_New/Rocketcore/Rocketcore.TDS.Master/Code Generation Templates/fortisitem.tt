@@ -159,6 +159,7 @@ namespace <#= FullNamespace(template) #>
 	/// <para>ID: <#= template.ID.ToString("b").ToUpper() #></para>
 	/// <para><#= template.Path #></para>
 	/// </summary>
+	//[Rocketcore.Search.PredefinedQuery("TemplateId", ComparisonType.Equal, "<#= template.ID.ToString("b").ToUpper() #>", typeof(Guid))]
 	[TemplateMapping("<#= template.ID.ToString("b").ToUpper() #>", "<#= GetTemplateMappingType(isRenderingParametersTemplate, true) #>")]
 	public partial interface <#= InterfaceName(template.Name) #> : <#= GetBaseTemplateInterface(isRenderingParametersTemplate) #> <#
 	foreach (var baseTemplate in baseTemplates)

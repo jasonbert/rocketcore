@@ -30,8 +30,9 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <ItemGroup>
-    <Reference Include="Fortis">
-      <HintPath>..\..\..\_Libraries\7.5\Fortis\Fortis.dll</HintPath>
+    <Reference Include="Fortis, Version=3.5.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\packages\Fortis.3.5.0.0\lib\net45\Fortis.dll</HintPath>
     </Reference>
     <Reference Include="Sitecore.ContentSearch">
       <HintPath>..\..\..\_Libraries\7.5\Sitecore.ContentSearch.dll</HintPath>
@@ -63,6 +64,9 @@
       <Project>{5b7a3e71-eb93-45c6-a13b-edec2e86fb93}</Project>
       <Name>Rocketcore.Search</Name>
     </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="packages.config" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 

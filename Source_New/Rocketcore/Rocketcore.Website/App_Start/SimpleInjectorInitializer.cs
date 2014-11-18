@@ -14,7 +14,6 @@ namespace Rocketcore.Website.App_Start
 	using Fortis.Mvc.Providers;
 	using Rocketcore.Model;
 	using Fortis.Search;
-	using Fortis.Search.Lucene;
 	using Rocketcore.Search;
 	using Rocketcore.Content.Global;
     
@@ -49,7 +48,6 @@ namespace Rocketcore.Website.App_Start
 			container.Register<ISpawnProvider, SpawnProvider>();
 			container.Register<ITemplateMapProvider, TemplateMapProvider>();
 			container.Register<IModelAssemblyProvider, ModelAssemblyProvider>();
-			container.Register<ISearchProvider, SearchProvider>();
 			container.Register<IItemSearchFactory, ItemSearchFactory>();
 
 			// Initialise fortis for pipelines and events

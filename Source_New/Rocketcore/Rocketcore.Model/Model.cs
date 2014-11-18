@@ -18,6 +18,7 @@ namespace Rocketcore.Model.Templates.UserDefined
 	/// <para>ID: {02E4436F-437E-4297-B819-6334F1F560AF}</para>
 	/// <para>/sitecore/templates/User Defined/Call To Action/Rendering Options/Call To Action Slider Options</para>
 	/// </summary>
+	//[Rocketcore.Search.PredefinedQuery("TemplateId", ComparisonType.Equal, "{02E4436F-437E-4297-B819-6334F1F560AF}", typeof(Guid))]
 	[TemplateMapping("{02E4436F-437E-4297-B819-6334F1F560AF}", "InterfaceRenderingParameter")]
 	public partial interface ICallToActionSliderOptions : IRenderingParameterWrapper , Rocketcore.Model.Templates.UserDefined.ICallToActionLinksOptions
 	{		
@@ -156,6 +157,7 @@ namespace Rocketcore.Model.Templates.UserDefined
 	/// <para>ID: {12BBD87B-1EE2-4E02-86F5-5AB1DA50307C}</para>
 	/// <para>/sitecore/templates/User Defined/Call To Action/Call To Action Override</para>
 	/// </summary>
+	//[Rocketcore.Search.PredefinedQuery("TemplateId", ComparisonType.Equal, "{12BBD87B-1EE2-4E02-86F5-5AB1DA50307C}", typeof(Guid))]
 	[TemplateMapping("{12BBD87B-1EE2-4E02-86F5-5AB1DA50307C}", "InterfaceMap")]
 	public partial interface ICallToActionOverride : ICustomItemWrapper , Rocketcore.Model.Templates.UserDefined.IRocketcoreStandardTemplate, Rocketcore.Model.Templates.UserDefined.ICallToAction
 	{		
@@ -305,6 +307,7 @@ namespace Rocketcore.Model.Templates.UserDefined
 	/// <para>ID: {165CD2BE-7EE4-4D06-ABBA-4BBAC6EFEE7D}</para>
 	/// <para>/sitecore/templates/User Defined/Global/Presentation/Rendering Options/Size Options</para>
 	/// </summary>
+	//[Rocketcore.Search.PredefinedQuery("TemplateId", ComparisonType.Equal, "{165CD2BE-7EE4-4D06-ABBA-4BBAC6EFEE7D}", typeof(Guid))]
 	[TemplateMapping("{165CD2BE-7EE4-4D06-ABBA-4BBAC6EFEE7D}", "InterfaceRenderingParameter")]
 	public partial interface ISizeOptions : IRenderingParameterWrapper , Rocketcore.Model.Templates.UserDefined.IRocketcoreRenderingParameters
 	{		
@@ -376,6 +379,7 @@ namespace Rocketcore.Model.Templates.UserDefined
 	/// <para>ID: {1ADCF820-3A3E-45BA-A66B-9470B1FD9E6F}</para>
 	/// <para>/sitecore/templates/User Defined/Call To Action/Call To Action Folder</para>
 	/// </summary>
+	//[Rocketcore.Search.PredefinedQuery("TemplateId", ComparisonType.Equal, "{1ADCF820-3A3E-45BA-A66B-9470B1FD9E6F}", typeof(Guid))]
 	[TemplateMapping("{1ADCF820-3A3E-45BA-A66B-9470B1FD9E6F}", "InterfaceMap")]
 	public partial interface ICallToActionFolder : ICustomItemWrapper , Rocketcore.Model.Templates.UserDefined.IRocketcoreFolder
 	{		
@@ -424,6 +428,7 @@ namespace Rocketcore.Model.Templates.UserDefined
 	/// <para>ID: {23D17BB0-08BC-43D7-8589-7724407E1422}</para>
 	/// <para>/sitecore/templates/User Defined/Generic/Content Page</para>
 	/// </summary>
+	//[Rocketcore.Search.PredefinedQuery("TemplateId", ComparisonType.Equal, "{23D17BB0-08BC-43D7-8589-7724407E1422}", typeof(Guid))]
 	[TemplateMapping("{23D17BB0-08BC-43D7-8589-7724407E1422}", "InterfaceMap")]
 	public partial interface IContentPage : ICustomItemWrapper , Rocketcore.Model.Templates.UserDefined.IPage, Rocketcore.Model.Templates.UserDefined.IContentHeadings, Rocketcore.Model.Templates.UserDefined.IContentDateTime, Rocketcore.Model.Templates.UserDefined.IContentBody, Rocketcore.Model.Templates.UserDefined.IContentImage, Rocketcore.Model.Templates.UserDefined.ICallToActionOverride
 	{		
@@ -653,6 +658,7 @@ namespace Rocketcore.Model.Templates.UserDefined
 	/// <para>ID: {265AA3E1-31EF-4CAC-AC52-FF7061EBD714}</para>
 	/// <para>/sitecore/templates/User Defined/Global/Presentation/Rendering Options/Ordering Options</para>
 	/// </summary>
+	//[Rocketcore.Search.PredefinedQuery("TemplateId", ComparisonType.Equal, "{265AA3E1-31EF-4CAC-AC52-FF7061EBD714}", typeof(Guid))]
 	[TemplateMapping("{265AA3E1-31EF-4CAC-AC52-FF7061EBD714}", "InterfaceRenderingParameter")]
 	public partial interface IOrderingOptions : IRenderingParameterWrapper , Rocketcore.Model.Templates.UserDefined.IRocketcoreRenderingParameters
 	{		
@@ -724,6 +730,7 @@ namespace Rocketcore.Model.Templates.UserDefined
 	/// <para>ID: {2FCB8A5D-40D4-4E11-B904-8D4A1A08612D}</para>
 	/// <para>/sitecore/templates/User Defined/Navigation/Navigation Link</para>
 	/// </summary>
+	//[Rocketcore.Search.PredefinedQuery("TemplateId", ComparisonType.Equal, "{2FCB8A5D-40D4-4E11-B904-8D4A1A08612D}", typeof(Guid))]
 	[TemplateMapping("{2FCB8A5D-40D4-4E11-B904-8D4A1A08612D}", "InterfaceMap")]
 	public partial interface INavigationLink : ICustomItemWrapper , Rocketcore.Model.Templates.UserDefined.INavigation
 	{		
@@ -822,6 +829,7 @@ namespace Rocketcore.Model.Templates.UserDefined
 	/// <para>ID: {306135B9-51D1-476B-8429-A717EC6DA037}</para>
 	/// <para>/sitecore/templates/User Defined/Rocketcore/Rocketcore Folder</para>
 	/// </summary>
+	//[Rocketcore.Search.PredefinedQuery("TemplateId", ComparisonType.Equal, "{306135B9-51D1-476B-8429-A717EC6DA037}", typeof(Guid))]
 	[TemplateMapping("{306135B9-51D1-476B-8429-A717EC6DA037}", "InterfaceMap")]
 	public partial interface IRocketcoreFolder : ICustomItemWrapper , Rocketcore.Model.Templates.UserDefined.IRocketcorePermissions
 	{		
@@ -870,6 +878,7 @@ namespace Rocketcore.Model.Templates.UserDefined
 	/// <para>ID: {30683BF7-4B2E-443F-9C4C-1DAABB2962C2}</para>
 	/// <para>/sitecore/templates/User Defined/Call To Action/Call To Action Target</para>
 	/// </summary>
+	//[Rocketcore.Search.PredefinedQuery("TemplateId", ComparisonType.Equal, "{30683BF7-4B2E-443F-9C4C-1DAABB2962C2}", typeof(Guid))]
 	[TemplateMapping("{30683BF7-4B2E-443F-9C4C-1DAABB2962C2}", "InterfaceMap")]
 	public partial interface ICallToActionTarget : ICustomItemWrapper , Rocketcore.Model.Templates.UserDefined.IRocketcoreStandardTemplate, Rocketcore.Model.Templates.UserDefined.ICallToAction, Rocketcore.Model.Templates.UserDefined.INavigationLink
 	{		
@@ -1034,6 +1043,7 @@ namespace Rocketcore.Model.Templates.UserDefined
 	/// <para>ID: {3ACEEB4D-7AF0-4907-B33D-ED7762C53A8E}</para>
 	/// <para>/sitecore/templates/User Defined/Call To Action/Rendering Options/Call To Action Options</para>
 	/// </summary>
+	//[Rocketcore.Search.PredefinedQuery("TemplateId", ComparisonType.Equal, "{3ACEEB4D-7AF0-4907-B33D-ED7762C53A8E}", typeof(Guid))]
 	[TemplateMapping("{3ACEEB4D-7AF0-4907-B33D-ED7762C53A8E}", "InterfaceRenderingParameter")]
 	public partial interface ICallToActionOptions : IRenderingParameterWrapper , Rocketcore.Model.Templates.UserDefined.IRocketcoreRenderingParameters, Rocketcore.Model.Templates.UserDefined.ISizeOptions, Rocketcore.Model.Templates.UserDefined.ICallToActionLinksOptions
 	{		
@@ -1194,6 +1204,7 @@ namespace Rocketcore.Model.Templates.UserDefined
 	/// <para>ID: {44D657D3-6758-4C9C-B4C5-9200B424F186}</para>
 	/// <para>/sitecore/templates/User Defined/Home/HomePage</para>
 	/// </summary>
+	//[Rocketcore.Search.PredefinedQuery("TemplateId", ComparisonType.Equal, "{44D657D3-6758-4C9C-B4C5-9200B424F186}", typeof(Guid))]
 	[TemplateMapping("{44D657D3-6758-4C9C-B4C5-9200B424F186}", "InterfaceMap")]
 	public partial interface IHomePage : ICustomItemWrapper , Rocketcore.Model.Templates.UserDefined.IRocketcoreStandardTemplate, Rocketcore.Model.Templates.UserDefined.IContentPage
 	{		
@@ -1422,6 +1433,7 @@ namespace Rocketcore.Model.Templates.UserDefined
 	/// <para>ID: {567B998F-F8DF-4DB6-88E1-1797035C4B6C}</para>
 	/// <para>/sitecore/templates/User Defined/Phrases/Phrase Folder</para>
 	/// </summary>
+	//[Rocketcore.Search.PredefinedQuery("TemplateId", ComparisonType.Equal, "{567B998F-F8DF-4DB6-88E1-1797035C4B6C}", typeof(Guid))]
 	[TemplateMapping("{567B998F-F8DF-4DB6-88E1-1797035C4B6C}", "InterfaceMap")]
 	public partial interface IPhraseFolder : ICustomItemWrapper , Rocketcore.Model.Templates.UserDefined.IRocketcoreFolder
 	{		
@@ -1470,6 +1482,7 @@ namespace Rocketcore.Model.Templates.UserDefined
 	/// <para>ID: {5A593C05-0C1A-43DC-91F8-5909EB086BEF}</para>
 	/// <para>/sitecore/templates/User Defined/Tagging/Tagging</para>
 	/// </summary>
+	//[Rocketcore.Search.PredefinedQuery("TemplateId", ComparisonType.Equal, "{5A593C05-0C1A-43DC-91F8-5909EB086BEF}", typeof(Guid))]
 	[TemplateMapping("{5A593C05-0C1A-43DC-91F8-5909EB086BEF}", "InterfaceMap")]
 	public partial interface ITagging : ICustomItemWrapper , Rocketcore.Model.Templates.UserDefined.IRocketcoreStandardTemplate
 	{		
@@ -1543,6 +1556,7 @@ namespace Rocketcore.Model.Templates.UserDefined
 	/// <para>ID: {6237330F-ECFC-4391-A2AA-E7C1757C89EF}</para>
 	/// <para>/sitecore/templates/User Defined/Global/Presentation/Rendering Options/Pagination Options</para>
 	/// </summary>
+	//[Rocketcore.Search.PredefinedQuery("TemplateId", ComparisonType.Equal, "{6237330F-ECFC-4391-A2AA-E7C1757C89EF}", typeof(Guid))]
 	[TemplateMapping("{6237330F-ECFC-4391-A2AA-E7C1757C89EF}", "InterfaceRenderingParameter")]
 	public partial interface IPaginationOptions : IRenderingParameterWrapper , Rocketcore.Model.Templates.UserDefined.IRocketcoreRenderingParameters
 	{		
@@ -1598,6 +1612,7 @@ namespace Rocketcore.Model.Templates.UserDefined
 	/// <para>ID: {67AB829E-C65E-4421-83A3-E6A6995695B8}</para>
 	/// <para>/sitecore/templates/User Defined/Tagging/Tag Folder</para>
 	/// </summary>
+	//[Rocketcore.Search.PredefinedQuery("TemplateId", ComparisonType.Equal, "{67AB829E-C65E-4421-83A3-E6A6995695B8}", typeof(Guid))]
 	[TemplateMapping("{67AB829E-C65E-4421-83A3-E6A6995695B8}", "InterfaceMap")]
 	public partial interface ITagFolder : ICustomItemWrapper , Rocketcore.Model.Templates.UserDefined.IRocketcoreFolder
 	{		
@@ -1647,6 +1662,7 @@ namespace Rocketcore.Model.Templates.UserDefined
 	/// <para>ID: {6D70D019-3250-4D7F-9E56-96A5B8934467}</para>
 	/// <para>/sitecore/templates/User Defined/Call To Action/Rendering Options/Call To Action Links Options</para>
 	/// </summary>
+	//[Rocketcore.Search.PredefinedQuery("TemplateId", ComparisonType.Equal, "{6D70D019-3250-4D7F-9E56-96A5B8934467}", typeof(Guid))]
 	[TemplateMapping("{6D70D019-3250-4D7F-9E56-96A5B8934467}", "InterfaceRenderingParameter")]
 	public partial interface ICallToActionLinksOptions : IRenderingParameterWrapper , Rocketcore.Model.Templates.UserDefined.ICallToActionListOptions
 	{		
@@ -1791,6 +1807,7 @@ namespace Rocketcore.Model.Templates.UserDefined
 	/// <para>ID: {72096AC2-E80D-46E9-B77E-9B8A858FA414}</para>
 	/// <para>/sitecore/templates/User Defined/Phrases/Rendering Options/Phrase Heading</para>
 	/// </summary>
+	//[Rocketcore.Search.PredefinedQuery("TemplateId", ComparisonType.Equal, "{72096AC2-E80D-46E9-B77E-9B8A858FA414}", typeof(Guid))]
 	[TemplateMapping("{72096AC2-E80D-46E9-B77E-9B8A858FA414}", "InterfaceRenderingParameter")]
 	public partial interface IPhraseHeading : IRenderingParameterWrapper , Rocketcore.Model.Templates.UserDefined.IRocketcoreRenderingParameters
 	{		
@@ -1846,6 +1863,7 @@ namespace Rocketcore.Model.Templates.UserDefined
 	/// <para>ID: {740F688C-5BC7-4705-8047-C017A06E4F87}</para>
 	/// <para>/sitecore/templates/User Defined/Generic/Content Category</para>
 	/// </summary>
+	//[Rocketcore.Search.PredefinedQuery("TemplateId", ComparisonType.Equal, "{740F688C-5BC7-4705-8047-C017A06E4F87}", typeof(Guid))]
 	[TemplateMapping("{740F688C-5BC7-4705-8047-C017A06E4F87}", "InterfaceMap")]
 	public partial interface IContentCategory : ICustomItemWrapper , Rocketcore.Model.Templates.UserDefined.IRocketcoreStandardTemplate
 	{		
@@ -1918,6 +1936,7 @@ namespace Rocketcore.Model.Templates.UserDefined
 	/// <para>ID: {7418FF44-684F-43D6-8DF7-A0741E84C028}</para>
 	/// <para>/sitecore/templates/User Defined/Global/Page</para>
 	/// </summary>
+	//[Rocketcore.Search.PredefinedQuery("TemplateId", ComparisonType.Equal, "{7418FF44-684F-43D6-8DF7-A0741E84C028}", typeof(Guid))]
 	[TemplateMapping("{7418FF44-684F-43D6-8DF7-A0741E84C028}", "InterfaceMap")]
 	public partial interface IPage : ICustomItemWrapper , Rocketcore.Model.Templates.UserDefined.IRocketcoreStandardTemplate, Rocketcore.Model.Templates.UserDefined.IMetaData, Rocketcore.Model.Templates.UserDefined.IBreadcrumb, Rocketcore.Model.Templates.UserDefined.INavigation, Rocketcore.Model.Templates.UserDefined.ITagging
 	{		
@@ -2071,6 +2090,7 @@ namespace Rocketcore.Model.Templates.UserDefined
 	/// <para>ID: {76D9D059-77E5-48F7-8BDA-65E78BC61A9B}</para>
 	/// <para>/sitecore/templates/User Defined/Rocketcore/Rocketcore Rendering Parameters</para>
 	/// </summary>
+	//[Rocketcore.Search.PredefinedQuery("TemplateId", ComparisonType.Equal, "{76D9D059-77E5-48F7-8BDA-65E78BC61A9B}", typeof(Guid))]
 	[TemplateMapping("{76D9D059-77E5-48F7-8BDA-65E78BC61A9B}", "InterfaceRenderingParameter")]
 	public partial interface IRocketcoreRenderingParameters : IRenderingParameterWrapper 
 	{		
@@ -2110,6 +2130,7 @@ namespace Rocketcore.Model.Templates.UserDefined
 	/// <para>ID: {77586D39-6101-42C0-9C2C-3115AC7E5C8A}</para>
 	/// <para>/sitecore/templates/User Defined/Generic/Meta Data</para>
 	/// </summary>
+	//[Rocketcore.Search.PredefinedQuery("TemplateId", ComparisonType.Equal, "{77586D39-6101-42C0-9C2C-3115AC7E5C8A}", typeof(Guid))]
 	[TemplateMapping("{77586D39-6101-42C0-9C2C-3115AC7E5C8A}", "InterfaceMap")]
 	public partial interface IMetaData : ICustomItemWrapper , Rocketcore.Model.Templates.UserDefined.IRocketcoreStandardTemplate
 	{		
@@ -2230,6 +2251,7 @@ namespace Rocketcore.Model.Templates.UserDefined
 	/// <para>ID: {860BC23B-03E7-4F97-A478-0704C18FD389}</para>
 	/// <para>/sitecore/templates/User Defined/Phrases/Phrase</para>
 	/// </summary>
+	//[Rocketcore.Search.PredefinedQuery("TemplateId", ComparisonType.Equal, "{860BC23B-03E7-4F97-A478-0704C18FD389}", typeof(Guid))]
 	[TemplateMapping("{860BC23B-03E7-4F97-A478-0704C18FD389}", "InterfaceMap")]
 	public partial interface IPhrase : ICustomItemWrapper , Rocketcore.Model.Templates.UserDefined.IRocketcoreStandardTemplate
 	{		
@@ -2279,6 +2301,7 @@ namespace Rocketcore.Model.Templates.UserDefined
 	/// <para>ID: {872FB55A-8617-48D9-9F92-A9D0EAB51A23}</para>
 	/// <para>/sitecore/templates/User Defined/Global/Presentation/Rendering Options/Selection Options</para>
 	/// </summary>
+	//[Rocketcore.Search.PredefinedQuery("TemplateId", ComparisonType.Equal, "{872FB55A-8617-48D9-9F92-A9D0EAB51A23}", typeof(Guid))]
 	[TemplateMapping("{872FB55A-8617-48D9-9F92-A9D0EAB51A23}", "InterfaceRenderingParameter")]
 	public partial interface ISelectionOptions : IRenderingParameterWrapper , Rocketcore.Model.Templates.UserDefined.IRocketcoreRenderingParameters
 	{		
@@ -2334,6 +2357,7 @@ namespace Rocketcore.Model.Templates.UserDefined
 	/// <para>ID: {883473D9-60A4-4BEB-BE11-27A48458FD13}</para>
 	/// <para>/sitecore/templates/User Defined/Generic/Content Gallery</para>
 	/// </summary>
+	//[Rocketcore.Search.PredefinedQuery("TemplateId", ComparisonType.Equal, "{883473D9-60A4-4BEB-BE11-27A48458FD13}", typeof(Guid))]
 	[TemplateMapping("{883473D9-60A4-4BEB-BE11-27A48458FD13}", "InterfaceMap")]
 	public partial interface IContentGallery : ICustomItemWrapper , Rocketcore.Model.Templates.UserDefined.IRocketcoreStandardTemplate
 	{		
@@ -2406,6 +2430,7 @@ namespace Rocketcore.Model.Templates.UserDefined
 	/// <para>ID: {93DE3003-93CC-40E8-86F3-43D80B216238}</para>
 	/// <para>/sitecore/templates/User Defined/Phrases/Html Phrase</para>
 	/// </summary>
+	//[Rocketcore.Search.PredefinedQuery("TemplateId", ComparisonType.Equal, "{93DE3003-93CC-40E8-86F3-43D80B216238}", typeof(Guid))]
 	[TemplateMapping("{93DE3003-93CC-40E8-86F3-43D80B216238}", "InterfaceMap")]
 	public partial interface IHtmlPhrase : ICustomItemWrapper , Rocketcore.Model.Templates.UserDefined.IPhrase
 	{		
@@ -2478,6 +2503,7 @@ namespace Rocketcore.Model.Templates.UserDefined
 	/// <para>ID: {960E231F-E632-46EF-9367-F954AE965B99}</para>
 	/// <para>/sitecore/templates/User Defined/Categorisation/Category Folder</para>
 	/// </summary>
+	//[Rocketcore.Search.PredefinedQuery("TemplateId", ComparisonType.Equal, "{960E231F-E632-46EF-9367-F954AE965B99}", typeof(Guid))]
 	[TemplateMapping("{960E231F-E632-46EF-9367-F954AE965B99}", "InterfaceMap")]
 	public partial interface ICategoryFolder : ICustomItemWrapper , Rocketcore.Model.Templates.UserDefined.IRocketcoreFolder
 	{		
@@ -2526,6 +2552,7 @@ namespace Rocketcore.Model.Templates.UserDefined
 	/// <para>ID: {9ACC757B-89EC-4E29-BAB5-1EB0D5E1EBD6}</para>
 	/// <para>/sitecore/templates/User Defined/Phrases/Text Phrase</para>
 	/// </summary>
+	//[Rocketcore.Search.PredefinedQuery("TemplateId", ComparisonType.Equal, "{9ACC757B-89EC-4E29-BAB5-1EB0D5E1EBD6}", typeof(Guid))]
 	[TemplateMapping("{9ACC757B-89EC-4E29-BAB5-1EB0D5E1EBD6}", "InterfaceMap")]
 	public partial interface ITextPhrase : ICustomItemWrapper , Rocketcore.Model.Templates.UserDefined.IPhrase
 	{		
@@ -2599,6 +2626,7 @@ namespace Rocketcore.Model.Templates.UserDefined
 	/// <para>ID: {9D978F80-78D4-489A-832B-CFD2358EC804}</para>
 	/// <para>/sitecore/templates/User Defined/Tagging/Rendering Options/Tagging Options</para>
 	/// </summary>
+	//[Rocketcore.Search.PredefinedQuery("TemplateId", ComparisonType.Equal, "{9D978F80-78D4-489A-832B-CFD2358EC804}", typeof(Guid))]
 	[TemplateMapping("{9D978F80-78D4-489A-832B-CFD2358EC804}", "InterfaceRenderingParameter")]
 	public partial interface ITaggingOptions : IRenderingParameterWrapper , Rocketcore.Model.Templates.UserDefined.IRocketcoreRenderingParameters
 	{		
@@ -2654,6 +2682,7 @@ namespace Rocketcore.Model.Templates.UserDefined
 	/// <para>ID: {9F94F923-2D44-4EB3-AC1A-927366290303}</para>
 	/// <para>/sitecore/templates/User Defined/Global/Lookup/Lookup Folder</para>
 	/// </summary>
+	//[Rocketcore.Search.PredefinedQuery("TemplateId", ComparisonType.Equal, "{9F94F923-2D44-4EB3-AC1A-927366290303}", typeof(Guid))]
 	[TemplateMapping("{9F94F923-2D44-4EB3-AC1A-927366290303}", "InterfaceMap")]
 	public partial interface ILookupFolder : ICustomItemWrapper , Rocketcore.Model.Templates.UserDefined.IRocketcoreFolder
 	{		
@@ -2702,6 +2731,7 @@ namespace Rocketcore.Model.Templates.UserDefined
 	/// <para>ID: {A3296576-C797-4ABC-8FAD-2B3BC3DD6DA0}</para>
 	/// <para>/sitecore/templates/User Defined/Navigation/Navigation</para>
 	/// </summary>
+	//[Rocketcore.Search.PredefinedQuery("TemplateId", ComparisonType.Equal, "{A3296576-C797-4ABC-8FAD-2B3BC3DD6DA0}", typeof(Guid))]
 	[TemplateMapping("{A3296576-C797-4ABC-8FAD-2B3BC3DD6DA0}", "InterfaceMap")]
 	public partial interface INavigation : ICustomItemWrapper , Rocketcore.Model.Templates.UserDefined.IRocketcoreStandardTemplate
 	{		
@@ -2799,6 +2829,7 @@ namespace Rocketcore.Model.Templates.UserDefined
 	/// <para>ID: {A86728CE-890F-45A1-B5B5-EDCAD18F4516}</para>
 	/// <para>/sitecore/templates/User Defined/Tagging/Rendering Options/Tagging Prototype</para>
 	/// </summary>
+	//[Rocketcore.Search.PredefinedQuery("TemplateId", ComparisonType.Equal, "{A86728CE-890F-45A1-B5B5-EDCAD18F4516}", typeof(Guid))]
 	[TemplateMapping("{A86728CE-890F-45A1-B5B5-EDCAD18F4516}", "InterfaceRenderingParameter")]
 	public partial interface ITaggingPrototype : IRenderingParameterWrapper , Rocketcore.Model.Templates.UserDefined.IRocketcoreRenderingParameters, Rocketcore.Model.Templates.UserDefined.ITaggingOptions
 	{		
@@ -2849,6 +2880,7 @@ namespace Rocketcore.Model.Templates.UserDefined
 	/// <para>ID: {A8D9CC6F-03F3-41C0-BD4B-3187A72FA148}</para>
 	/// <para>/sitecore/templates/User Defined/Call To Action/Call To Action Slide</para>
 	/// </summary>
+	//[Rocketcore.Search.PredefinedQuery("TemplateId", ComparisonType.Equal, "{A8D9CC6F-03F3-41C0-BD4B-3187A72FA148}", typeof(Guid))]
 	[TemplateMapping("{A8D9CC6F-03F3-41C0-BD4B-3187A72FA148}", "InterfaceMap")]
 	public partial interface ICallToActionSlide : ICustomItemWrapper , Rocketcore.Model.Templates.UserDefined.IRocketcoreStandardTemplate, Rocketcore.Model.Templates.UserDefined.ICallToActionTarget
 	{		
@@ -3037,6 +3069,7 @@ namespace Rocketcore.Model.Templates.UserDefined
 	/// <para>ID: {AAA421D9-53C1-443B-AB8C-0499110138D8}</para>
 	/// <para>/sitecore/templates/User Defined/Global/Presentation/Rendering Options/Aggregate Options</para>
 	/// </summary>
+	//[Rocketcore.Search.PredefinedQuery("TemplateId", ComparisonType.Equal, "{AAA421D9-53C1-443B-AB8C-0499110138D8}", typeof(Guid))]
 	[TemplateMapping("{AAA421D9-53C1-443B-AB8C-0499110138D8}", "InterfaceRenderingParameter")]
 	public partial interface IAggregateOptions : IRenderingParameterWrapper , Rocketcore.Model.Templates.UserDefined.IRocketcoreRenderingParameters
 	{		
@@ -3092,6 +3125,7 @@ namespace Rocketcore.Model.Templates.UserDefined
 	/// <para>ID: {AF27068F-E9F3-491E-84B8-91A55F86D110}</para>
 	/// <para>/sitecore/templates/User Defined/Generic/Content Image</para>
 	/// </summary>
+	//[Rocketcore.Search.PredefinedQuery("TemplateId", ComparisonType.Equal, "{AF27068F-E9F3-491E-84B8-91A55F86D110}", typeof(Guid))]
 	[TemplateMapping("{AF27068F-E9F3-491E-84B8-91A55F86D110}", "InterfaceMap")]
 	public partial interface IContentImage : ICustomItemWrapper , Rocketcore.Model.Templates.UserDefined.IRocketcoreStandardTemplate
 	{		
@@ -3156,6 +3190,7 @@ namespace Rocketcore.Model.Templates.UserDefined
 	/// <para>ID: {B40FA2F9-6328-4DC6-A7DA-6F447DFB2BE1}</para>
 	/// <para>/sitecore/templates/User Defined/Call To Action/Call To Action Group</para>
 	/// </summary>
+	//[Rocketcore.Search.PredefinedQuery("TemplateId", ComparisonType.Equal, "{B40FA2F9-6328-4DC6-A7DA-6F447DFB2BE1}", typeof(Guid))]
 	[TemplateMapping("{B40FA2F9-6328-4DC6-A7DA-6F447DFB2BE1}", "InterfaceMap")]
 	public partial interface ICallToActionGroup : ICustomItemWrapper , Rocketcore.Model.Templates.UserDefined.IRocketcoreStandardTemplate
 	{		
@@ -3228,6 +3263,7 @@ namespace Rocketcore.Model.Templates.UserDefined
 	/// <para>ID: {BB60121D-D8BD-4D1A-9B44-5ABCC2AAFE5D}</para>
 	/// <para>/sitecore/templates/User Defined/Navigation/Breadcrumb</para>
 	/// </summary>
+	//[Rocketcore.Search.PredefinedQuery("TemplateId", ComparisonType.Equal, "{BB60121D-D8BD-4D1A-9B44-5ABCC2AAFE5D}", typeof(Guid))]
 	[TemplateMapping("{BB60121D-D8BD-4D1A-9B44-5ABCC2AAFE5D}", "InterfaceMap")]
 	public partial interface IBreadcrumb : ICustomItemWrapper , Rocketcore.Model.Templates.UserDefined.IRocketcoreStandardTemplate
 	{		
@@ -3325,6 +3361,7 @@ namespace Rocketcore.Model.Templates.UserDefined
 	/// <para>ID: {C489105D-4469-4B37-B247-72785F48165D}</para>
 	/// <para>/sitecore/templates/User Defined/Global/Presentation/Rendering Options/Tagging Filter Options</para>
 	/// </summary>
+	//[Rocketcore.Search.PredefinedQuery("TemplateId", ComparisonType.Equal, "{C489105D-4469-4B37-B247-72785F48165D}", typeof(Guid))]
 	[TemplateMapping("{C489105D-4469-4B37-B247-72785F48165D}", "InterfaceRenderingParameter")]
 	public partial interface ITaggingFilterOptions : IRenderingParameterWrapper , Rocketcore.Model.Templates.UserDefined.IRocketcoreRenderingParameters
 	{		
@@ -3396,6 +3433,7 @@ namespace Rocketcore.Model.Templates.UserDefined
 	/// <para>ID: {D16227ED-173B-4E26-85A5-A71B6D20B866}</para>
 	/// <para>/sitecore/templates/User Defined/Rocketcore/Presentation Settings</para>
 	/// </summary>
+	//[Rocketcore.Search.PredefinedQuery("TemplateId", ComparisonType.Equal, "{D16227ED-173B-4E26-85A5-A71B6D20B866}", typeof(Guid))]
 	[TemplateMapping("{D16227ED-173B-4E26-85A5-A71B6D20B866}", "InterfaceMap")]
 	public partial interface IPresentationSettings : ICustomItemWrapper , Rocketcore.Model.Templates.UserDefined.IRocketcoreStandardTemplate
 	{		
@@ -3444,6 +3482,7 @@ namespace Rocketcore.Model.Templates.UserDefined
 	/// <para>ID: {D354D790-34CF-4972-97B4-0E601E2F64FA}</para>
 	/// <para>/sitecore/templates/User Defined/Generic/Content Date Time</para>
 	/// </summary>
+	//[Rocketcore.Search.PredefinedQuery("TemplateId", ComparisonType.Equal, "{D354D790-34CF-4972-97B4-0E601E2F64FA}", typeof(Guid))]
 	[TemplateMapping("{D354D790-34CF-4972-97B4-0E601E2F64FA}", "InterfaceMap")]
 	public partial interface IContentDateTime : ICustomItemWrapper , Rocketcore.Model.Templates.UserDefined.IRocketcoreStandardTemplate
 	{		
@@ -3516,6 +3555,7 @@ namespace Rocketcore.Model.Templates.UserDefined
 	/// <para>ID: {D3CA7D61-14F5-4467-A9CC-4AAF50885C29}</para>
 	/// <para>/sitecore/templates/User Defined/Tagging/Tag</para>
 	/// </summary>
+	//[Rocketcore.Search.PredefinedQuery("TemplateId", ComparisonType.Equal, "{D3CA7D61-14F5-4467-A9CC-4AAF50885C29}", typeof(Guid))]
 	[TemplateMapping("{D3CA7D61-14F5-4467-A9CC-4AAF50885C29}", "InterfaceMap")]
 	public partial interface ITag : ICustomItemWrapper , Rocketcore.Model.Templates.UserDefined.IRocketcoreStandardTemplate
 	{		
@@ -3564,6 +3604,7 @@ namespace Rocketcore.Model.Templates.UserDefined
 	/// <para>ID: {D902D3A4-630C-4E8D-9261-4EAF6E14B8EA}</para>
 	/// <para>/sitecore/templates/User Defined/Rocketcore/Rocketcore Standard Template</para>
 	/// </summary>
+	//[Rocketcore.Search.PredefinedQuery("TemplateId", ComparisonType.Equal, "{D902D3A4-630C-4E8D-9261-4EAF6E14B8EA}", typeof(Guid))]
 	[TemplateMapping("{D902D3A4-630C-4E8D-9261-4EAF6E14B8EA}", "InterfaceMap")]
 	public partial interface IRocketcoreStandardTemplate : ICustomItemWrapper , Rocketcore.Model.Templates.UserDefined.IRocketcorePermissions
 	{		
@@ -3612,6 +3653,7 @@ namespace Rocketcore.Model.Templates.UserDefined
 	/// <para>ID: {E83B1FB1-1261-4D1E-BE25-ABAE7FDD8DFF}</para>
 	/// <para>/sitecore/templates/User Defined/Call To Action/Call To Action</para>
 	/// </summary>
+	//[Rocketcore.Search.PredefinedQuery("TemplateId", ComparisonType.Equal, "{E83B1FB1-1261-4D1E-BE25-ABAE7FDD8DFF}", typeof(Guid))]
 	[TemplateMapping("{E83B1FB1-1261-4D1E-BE25-ABAE7FDD8DFF}", "InterfaceMap")]
 	public partial interface ICallToAction : ICustomItemWrapper , Rocketcore.Model.Templates.UserDefined.IRocketcoreStandardTemplate, Rocketcore.Model.Templates.UserDefined.ITagging, Rocketcore.Model.Templates.UserDefined.IContentHeadings, Rocketcore.Model.Templates.UserDefined.IContentBody, Rocketcore.Model.Templates.UserDefined.IContentImage, Rocketcore.Model.Templates.UserDefined.IContentDateTime
 	{		
@@ -3736,6 +3778,7 @@ namespace Rocketcore.Model.Templates.UserDefined
 	/// <para>ID: {E9A38444-4157-4BF9-A525-C2DBCBBDFEBA}</para>
 	/// <para>/sitecore/templates/User Defined/Generic/Content Headings</para>
 	/// </summary>
+	//[Rocketcore.Search.PredefinedQuery("TemplateId", ComparisonType.Equal, "{E9A38444-4157-4BF9-A525-C2DBCBBDFEBA}", typeof(Guid))]
 	[TemplateMapping("{E9A38444-4157-4BF9-A525-C2DBCBBDFEBA}", "InterfaceMap")]
 	public partial interface IContentHeadings : ICustomItemWrapper 
 	{		
@@ -3833,6 +3876,7 @@ namespace Rocketcore.Model.Templates.UserDefined
 	/// <para>ID: {F2CAC251-A899-4F34-ADCB-7D6BA305B419}</para>
 	/// <para>/sitecore/templates/User Defined/Global/Presentation/Rendering Options/Category Filter Options</para>
 	/// </summary>
+	//[Rocketcore.Search.PredefinedQuery("TemplateId", ComparisonType.Equal, "{F2CAC251-A899-4F34-ADCB-7D6BA305B419}", typeof(Guid))]
 	[TemplateMapping("{F2CAC251-A899-4F34-ADCB-7D6BA305B419}", "InterfaceRenderingParameter")]
 	public partial interface ICategoryFilterOptions : IRenderingParameterWrapper , Rocketcore.Model.Templates.UserDefined.IRocketcoreRenderingParameters
 	{		
@@ -3904,6 +3948,7 @@ namespace Rocketcore.Model.Templates.UserDefined
 	/// <para>ID: {F30ACA03-1829-4944-BB74-E8124759045E}</para>
 	/// <para>/sitecore/templates/User Defined/Categorisation/Categories</para>
 	/// </summary>
+	//[Rocketcore.Search.PredefinedQuery("TemplateId", ComparisonType.Equal, "{F30ACA03-1829-4944-BB74-E8124759045E}", typeof(Guid))]
 	[TemplateMapping("{F30ACA03-1829-4944-BB74-E8124759045E}", "InterfaceMap")]
 	public partial interface ICategories : ICustomItemWrapper , Rocketcore.Model.Templates.UserDefined.IRocketcoreStandardTemplate
 	{		
@@ -4000,6 +4045,7 @@ namespace Rocketcore.Model.Templates.UserDefined
 	/// <para>ID: {F40D98A0-19D9-407A-8541-0FC885BB452A}</para>
 	/// <para>/sitecore/templates/User Defined/Rocketcore/Rocketcore Permissions</para>
 	/// </summary>
+	//[Rocketcore.Search.PredefinedQuery("TemplateId", ComparisonType.Equal, "{F40D98A0-19D9-407A-8541-0FC885BB452A}", typeof(Guid))]
 	[TemplateMapping("{F40D98A0-19D9-407A-8541-0FC885BB452A}", "InterfaceMap")]
 	public partial interface IRocketcorePermissions : ICustomItemWrapper 
 	{		
@@ -4048,6 +4094,7 @@ namespace Rocketcore.Model.Templates.UserDefined
 	/// <para>ID: {F884BA23-8688-4808-95C3-52E554F8A8FC}</para>
 	/// <para>/sitecore/templates/User Defined/Generic/Content Body</para>
 	/// </summary>
+	//[Rocketcore.Search.PredefinedQuery("TemplateId", ComparisonType.Equal, "{F884BA23-8688-4808-95C3-52E554F8A8FC}", typeof(Guid))]
 	[TemplateMapping("{F884BA23-8688-4808-95C3-52E554F8A8FC}", "InterfaceMap")]
 	public partial interface IContentBody : ICustomItemWrapper , Rocketcore.Model.Templates.UserDefined.IRocketcoreStandardTemplate
 	{		
@@ -4120,6 +4167,7 @@ namespace Rocketcore.Model.Templates.UserDefined
 	/// <para>ID: {F93E0257-281B-4B9B-B6E1-8FDF5B6A8829}</para>
 	/// <para>/sitecore/templates/User Defined/Categorisation/Category</para>
 	/// </summary>
+	//[Rocketcore.Search.PredefinedQuery("TemplateId", ComparisonType.Equal, "{F93E0257-281B-4B9B-B6E1-8FDF5B6A8829}", typeof(Guid))]
 	[TemplateMapping("{F93E0257-281B-4B9B-B6E1-8FDF5B6A8829}", "InterfaceMap")]
 	public partial interface ICategory : ICustomItemWrapper , Rocketcore.Model.Templates.UserDefined.IRocketcoreStandardTemplate, Rocketcore.Model.Templates.UserDefined.IContentHeadings
 	{		
@@ -4194,6 +4242,7 @@ namespace Rocketcore.Model.Templates.UserDefined
 	/// <para>ID: {FAAF2F41-C07C-4146-8C4D-1C7DC29EE12D}</para>
 	/// <para>/sitecore/templates/User Defined/Global/Lookup/Lookup</para>
 	/// </summary>
+	//[Rocketcore.Search.PredefinedQuery("TemplateId", ComparisonType.Equal, "{FAAF2F41-C07C-4146-8C4D-1C7DC29EE12D}", typeof(Guid))]
 	[TemplateMapping("{FAAF2F41-C07C-4146-8C4D-1C7DC29EE12D}", "InterfaceMap")]
 	public partial interface ILookup : ICustomItemWrapper , Rocketcore.Model.Templates.UserDefined.IRocketcoreStandardTemplate
 	{		
@@ -4243,6 +4292,7 @@ namespace Rocketcore.Model.Templates.UserDefined
 	/// <para>ID: {FB56AAF5-CFA4-4D50-91D0-E1121E4AB0D1}</para>
 	/// <para>/sitecore/templates/User Defined/Call To Action/Rendering Options/Call To Action List Options</para>
 	/// </summary>
+	//[Rocketcore.Search.PredefinedQuery("TemplateId", ComparisonType.Equal, "{FB56AAF5-CFA4-4D50-91D0-E1121E4AB0D1}", typeof(Guid))]
 	[TemplateMapping("{FB56AAF5-CFA4-4D50-91D0-E1121E4AB0D1}", "InterfaceRenderingParameter")]
 	public partial interface ICallToActionListOptions : IRenderingParameterWrapper , Rocketcore.Model.Templates.UserDefined.IRocketcoreRenderingParameters, Rocketcore.Model.Templates.UserDefined.ISelectionOptions, Rocketcore.Model.Templates.UserDefined.IAggregateOptions, Rocketcore.Model.Templates.UserDefined.ITaggingFilterOptions, Rocketcore.Model.Templates.UserDefined.IOrderingOptions, Rocketcore.Model.Templates.UserDefined.IPaginationOptions, Rocketcore.Model.Templates.UserDefined.IPhraseHeading
 	{		
@@ -4371,6 +4421,7 @@ namespace Rocketcore.Model.Templates.UserDefined
 	/// <para>ID: {FE222C7A-3E9C-4D05-808C-972968FC5E81}</para>
 	/// <para>/sitecore/templates/User Defined/Global/Presentation/Rendering Options/Filter Options</para>
 	/// </summary>
+	//[Rocketcore.Search.PredefinedQuery("TemplateId", ComparisonType.Equal, "{FE222C7A-3E9C-4D05-808C-972968FC5E81}", typeof(Guid))]
 	[TemplateMapping("{FE222C7A-3E9C-4D05-808C-972968FC5E81}", "InterfaceRenderingParameter")]
 	public partial interface IFilterOptions : IRenderingParameterWrapper , Rocketcore.Model.Templates.UserDefined.IRocketcoreRenderingParameters, Rocketcore.Model.Templates.UserDefined.ITaggingFilterOptions, Rocketcore.Model.Templates.UserDefined.ICategoryFilterOptions
 	{		

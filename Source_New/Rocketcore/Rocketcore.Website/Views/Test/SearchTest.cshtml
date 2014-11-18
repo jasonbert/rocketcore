@@ -7,29 +7,37 @@
 	var itemSearchFactory = DependencyResolver.Current.GetService<IItemSearchFactory>();
 	SearchResults<SearchResultItem> scQueryableResults = null;
 	IEnumerable<IContentPage> queryableResults = null;
-	SearchResults<IItemWrapper> searchResults = null;
+	SearchResults<IContentPage> searchResults = null;
 	IEnumerable<ITag> templateResults = null;
+	SearchResults<Rocketcore.Model.MyHome> pocoQueryableResults = null;
 
-	using (var searchContext = searchManager.SearchContext)
-	{
+using (var searchContext = searchManager.SearchContext)
+{
 		var scQueryable = searchContext.GetQueryable<SearchResultItem>();
 
-		scQueryableResults = scQueryable.Where(item => item.Name == "Home").GetResults();
+		//scQueryableResults = scQueryable.Where(item => item.Name == "Home").GetResults();
 
 		var queryable = itemSearchFactory.Search<IContentPage>(searchContext);
 
 		var ids = new List<Guid> { new Guid("{AB1B5DC2-B122-48AE-9D42-C3B924FCB8EF}"), new Guid("{0C414818-0EE0-4826-B398-9112876DE7CD}") };
-		queryableResults = queryable.ContainsOr(item => item.AggregatedTags, ids).ToList();
-		//queryableResults = queryable.ToList();
+		//queryableResults = queryable.ContainsOr(item => item.AggregatedTags, ids).ToList();
 
 		var templatesQueryable = itemSearchFactory.Search<ITag>(searchContext);
 
-		//homePageResults = homePageQueryable.Where(item => item.Name == "Home").ToList();
+		//templateResults = homePageQueryable.Where(item => item.Name == "Home").ToList();
 		templateResults = templatesQueryable.ToList();
 
-		//var searchResultsQueryable = itemSearchFactory.Search<IItemWrapper>(searchContext);
+		var searchResultsQueryable = itemSearchFactory.FilteredSearch<IContentPage>(searchContext.GetQueryable<IContentPage>());
 
-		//searchResults = searchResultsQueryable.Where(item => item.Name == "Home").GetResults();
+		searchResults = searchResultsQueryable.GetResults();
+
+		var pocoQueryable = searchContext.GetQueryable<Rocketcore.Model.MyHome>();
+
+		//pocoQueryableResults = pocoQueryable.Where(item => item.Name == "Home").GetResults();
+
+		var contentPageResultsQueryable = itemSearchFactory.FilteredSearch<IContentPage>(searchContext.GetQueryable<IContentPage>());
+
+		var contentPageResults = contentPageResultsQueryable.ToList();
 
 <h1>Search Test</h1>
 <hr />
@@ -84,7 +92,7 @@
 		}
 	</ul>
 	<hr />
-	<h2>searchResults Results</h2>
+	<h2>searchResults Results (@searchResults.TotalSearchResults)</h2>
 	<ul>
 		@{
 		if (searchResults != null)
@@ -92,6 +100,38 @@
 			foreach (var result in searchResults)
 			{
 				<li>@result.Document.Name | @result.Document.ItemLocation</li>
+			}
+		}
+		else
+		{
+			<li>Object is null</li>
+		}
+		}
+	</ul>
+	<h2>pocoQueryableResults Results</h2>
+	<ul>
+		@{
+		if (pocoQueryableResults != null)
+		{
+			foreach (var result in pocoQueryableResults)
+			{
+				<li>@result.Document.Name</li>
+			}
+		}
+		else
+		{
+			<li>Object is null</li>
+		}
+		}
+	</ul>
+	<h2>contentPageResults Results</h2>
+	<ul>
+		@{
+		if (contentPageResults != null)
+		{
+			foreach (var result in contentPageResults)
+			{
+				<li>@result.Name | @result.ItemLocation</li>
 			}
 		}
 		else

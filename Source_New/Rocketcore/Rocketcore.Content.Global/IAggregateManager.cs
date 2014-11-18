@@ -12,6 +12,6 @@ namespace Rocketcore.Content.Global
 {
 	public interface IAggregateManager
 	{
-		IQueryable<T> GetQueryable<T>(IProviderSearchContext searchContext, IItemWrapper context, IAggregateOptions options) where T : IItemWrapper;
+		IQueryable<T> ApplyFilters<T>(IProviderSearchContext searchContext, IItemWrapper context, IAggregateOptions options) where T : IItemWrapper;
 	}
 }

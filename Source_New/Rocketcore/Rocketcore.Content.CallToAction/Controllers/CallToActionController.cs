@@ -115,7 +115,7 @@ namespace Rocketcore.Content.CallToAction.Controllers
 			{
 				using (var searchContext = _searchManager.SearchContext)
 				{
-					queryable = _aggregateManager.GetQueryable<ICallToAction>(searchContext, context, options)
+					queryable = _aggregateManager.ApplyFilters<ICallToAction>(searchContext, context, options)
 												 .AggregateByTags(cta => cta.AggregatedTags, options)
 												 .OrderBy(cta => cta.Title)
 												 .Take(options)

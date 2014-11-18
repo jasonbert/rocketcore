@@ -10,6 +10,7 @@ using System.Threading.Tasks;
 using Rocketcore.Content.Global.Extensions;
 using System.Collections;
 using Sitecore.ContentSearch;
+using Sitecore.ContentSearch.Linq;
 using Fortis.Search;
 
 namespace Rocketcore.Content.Global
@@ -23,13 +24,15 @@ namespace Rocketcore.Content.Global
 			_itemSearchFactory = itemSearchFactory;
 		}
 
-		public IQueryable<T> GetQueryable<T>(IProviderSearchContext searchContext, IItemWrapper context, IAggregateOptions options)
+		public IQueryable<T> ApplyFilters<T>(IProviderSearchContext searchContext, IItemWrapper context, IAggregateOptions options)
 			where T : IItemWrapper
 		{
-		    if(options == null)
-				return _itemSearchFactory.Search<T>(searchContext);
+			if (options == null)
+			{
+				return _itemSearchFactory.FilteredSearch<T>(searchContext.GetQueryable<T>());
+			}
 
-		    IQueryable<T> queryable = null;
+			IQueryable<T> queryable = null;
 
 		    var aggregateBy = options.AggregateBy.ItemId;
 
@@ -49,7 +52,7 @@ namespace Rocketcore.Content.Global
 			}
 			else
 			{
-				queryable = _itemSearchFactory.Search<T>(searchContext);
+				queryable = _itemSearchFactory.FilteredSearch<T>(searchContext.GetQueryable<T>());
 			}
 
 			return queryable;
