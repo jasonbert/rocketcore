@@ -163,7 +163,6 @@
     <Content Include="App_Config\Include\Rocketcore\Rocketcore.Mvc.config" />
     <Content Include="App_Config\Include\Rocketcore\Rocketcore.Search.Lucene.config" />
     <Content Include="App_Config\Include\Rocketcore\Rocketcore.Tagging.config" />
-    <Content Include="App_Config\Include\Rocketcore\Sitecore.ContentSearch.Lucene.DefaultIndexConfiguration.config" />
     <Content Include="Views\CallToAction\CallToAction.cshtml" />
     <Content Include="Views\CallToAction\CallToActionCompactList.cshtml" />
     <Content Include="Views\CallToAction\CallToActionHeroSlider.cshtml" />

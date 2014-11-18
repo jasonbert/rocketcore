@@ -1,0 +1,86 @@
+----item----
+version: 1
+id: {9F40FBAA-555B-4187-9E52-99EBA0E778F1}
+database: master
+path: /sitecore/content/Shared/Call To Actions/Promos/Fortis Collection
+parent: {5A48D0E1-6F16-4D0D-A39B-9341E736B1D6}
+name: Fortis Collection
+master: {00000000-0000-0000-0000-000000000000}
+template: {30683BF7-4B2E-443F-9C4C-1DAABB2962C2}
+templatekey: Call To Action Target
+
+----field----
+field: {1A794E52-7BAC-4EC5-B957-EB46D497870C}
+name: Tags
+key: tags
+content-length: 77
+
+{0A8A5F92-345E-4FEF-9EC1-7FC5B9B8BB21}|{57986668-8809-494F-98A0-71F41D8EE12F}
+----version----
+language: en
+version: 1
+revision: b024f1bd-08fb-465e-a6ca-02719ecf7d82
+
+----field----
+field: {97700C71-0241-4F1C-9352-BB9F081DD9D7}
+name: Link
+key: link
+content-length: 102
+
+<link text="Fortis Collection" linktype="external" url="http://fortis.ws" anchor="" target="_blank" />
+----field----
+field: {65C5E195-AF15-41C2-BA57-439745FD2DEC}
+name: Navigation Title
+key: navigation title
+content-length: 17
+
+Fortis Collection
+----field----
+field: {31532885-F743-4EB6-BB50-291B75C12A66}
+name: Title
+key: title
+content-length: 17
+
+Fortis Collection
+----field----
+field: {C46BD2A4-1FA0-4214-B5B0-22C518AEABB0}
+name: Sub Title
+key: sub title
+content-length: 63
+
+A collection of Frameworks for the Sitecore Experience Platform
+----field----
+field: {4742E404-C88A-46F6-9573-358D016E7DA1}
+name: Image
+key: image
+content-length: 58
+
+<image mediaid="{3C45B6EC-425B-4D1A-BF7F-5505B36F0B42}" />
+----field----
+field: {25BED78C-4957-4165-998A-CA1B52F67497}
+name: __Created
+key: __created
+content-length: 15
+
+20141118T181233
+----field----
+field: {8CDC337E-A112-42FB-BBB4-4143751E123F}
+name: __Revision
+key: __revision
+content-length: 36
+
+b024f1bd-08fb-465e-a6ca-02719ecf7d82
+----field----
+field: {D9CF14B1-FA16-4BA6-9288-E8A174D4D522}
+name: __Updated
+key: __updated
+content-length: 34
+
+20141118T182633:635519319930618062
+----field----
+field: {BADD9CF9-53E0-4D0C-BCC0-2D784C282F6A}
+name: __Updated by
+key: __updated by
+content-length: 14
+
+sitecore\admin

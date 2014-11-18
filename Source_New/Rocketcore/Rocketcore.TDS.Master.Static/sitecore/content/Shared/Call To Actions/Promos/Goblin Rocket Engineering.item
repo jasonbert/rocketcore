@@ -1,0 +1,86 @@
+----item----
+version: 1
+id: {E7510CED-5735-4440-802E-F30A19575EBB}
+database: master
+path: /sitecore/content/Shared/Call To Actions/Promos/Goblin Rocket Engineering
+parent: {5A48D0E1-6F16-4D0D-A39B-9341E736B1D6}
+name: Goblin Rocket Engineering
+master: {00000000-0000-0000-0000-000000000000}
+template: {30683BF7-4B2E-443F-9C4C-1DAABB2962C2}
+templatekey: Call To Action Target
+
+----field----
+field: {1A794E52-7BAC-4EC5-B957-EB46D497870C}
+name: Tags
+key: tags
+content-length: 155
+
+{CEB2DA3C-AFA0-4F69-A20F-8EF788D3E678}|{0A8A5F92-345E-4FEF-9EC1-7FC5B9B8BB21}|{8B6A87C6-7A26-4E9F-8920-E9EF7226CE81}|{AB1B5DC2-B122-48AE-9D42-C3B924FCB8EF}
+----version----
+language: en
+version: 1
+revision: a4ea34b2-5be2-43ed-956e-63b07db0c02b
+
+----field----
+field: {97700C71-0241-4F1C-9352-BB9F081DD9D7}
+name: Link
+key: link
+content-length: 122
+
+<link text="Goblin Rocket Engineering" linktype="external" url="http://www.goblinrockets.com" anchor="" target="_blank" />
+----field----
+field: {65C5E195-AF15-41C2-BA57-439745FD2DEC}
+name: Navigation Title
+key: navigation title
+content-length: 25
+
+Goblin Rocket Engineering
+----field----
+field: {31532885-F743-4EB6-BB50-291B75C12A66}
+name: Title
+key: title
+content-length: 25
+
+Goblin Rocket Engineering
+----field----
+field: {C46BD2A4-1FA0-4214-B5B0-22C518AEABB0}
+name: Sub Title
+key: sub title
+content-length: 29
+
+Awesome Sitecore Consultancy!
+----field----
+field: {4742E404-C88A-46F6-9573-358D016E7DA1}
+name: Image
+key: image
+content-length: 58
+
+<image mediaid="{F2E7AEB4-814A-4561-B44E-553DCD90583C}" />
+----field----
+field: {25BED78C-4957-4165-998A-CA1B52F67497}
+name: __Created
+key: __created
+content-length: 15
+
+20141118T181355
+----field----
+field: {8CDC337E-A112-42FB-BBB4-4143751E123F}
+name: __Revision
+key: __revision
+content-length: 36
+
+a4ea34b2-5be2-43ed-956e-63b07db0c02b
+----field----
+field: {D9CF14B1-FA16-4BA6-9288-E8A174D4D522}
+name: __Updated
+key: __updated
+content-length: 34
+
+20141118T182658:635519320183013081
+----field----
+field: {BADD9CF9-53E0-4D0C-BCC0-2D784C282F6A}
+name: __Updated by
+key: __updated by
+content-length: 14
+
+sitecore\admin

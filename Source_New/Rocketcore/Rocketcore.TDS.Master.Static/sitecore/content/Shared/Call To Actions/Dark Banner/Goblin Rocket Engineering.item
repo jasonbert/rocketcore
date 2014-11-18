@@ -1,0 +1,79 @@
+----item----
+version: 1
+id: {B2FE9506-5BA6-44A0-905E-EBBB04943333}
+database: master
+path: /sitecore/content/Shared/Call To Actions/Dark Banner/Goblin Rocket Engineering
+parent: {A6015C1F-A2DD-4242-91BA-A9A3C49C1126}
+name: Goblin Rocket Engineering
+master: {00000000-0000-0000-0000-000000000000}
+template: {30683BF7-4B2E-443F-9C4C-1DAABB2962C2}
+templatekey: Call To Action Target
+
+----field----
+field: {1A794E52-7BAC-4EC5-B957-EB46D497870C}
+name: Tags
+key: tags
+content-length: 38
+
+{17B1A761-F725-4DE9-B514-512A54B4AE28}
+----version----
+language: en
+version: 1
+revision: 9dcc6790-ab76-4cbc-9540-61a00b2e1ab2
+
+----field----
+field: {65C5E195-AF15-41C2-BA57-439745FD2DEC}
+name: Navigation Title
+key: navigation title
+content-length: 25
+
+Goblin Rocket Engineering
+----field----
+field: {31532885-F743-4EB6-BB50-291B75C12A66}
+name: Title
+key: title
+content-length: 25
+
+Goblin Rocket Engineering
+----field----
+field: {4742E404-C88A-46F6-9573-358D016E7DA1}
+name: Image
+key: image
+content-length: 65
+
+<image mediaid="{F7EA6216-5463-436C-B873-A3290A125300}" ></image>
+----field----
+field: {25BED78C-4957-4165-998A-CA1B52F67497}
+name: __Created
+key: __created
+content-length: 15
+
+20141118T175510
+----field----
+field: {8CDC337E-A112-42FB-BBB4-4143751E123F}
+name: __Revision
+key: __revision
+content-length: 36
+
+9dcc6790-ab76-4cbc-9540-61a00b2e1ab2
+----field----
+field: {D9CF14B1-FA16-4BA6-9288-E8A174D4D522}
+name: __Updated
+key: __updated
+content-length: 34
+
+20141118T181201:635519311214260147
+----field----
+field: {BADD9CF9-53E0-4D0C-BCC0-2D784C282F6A}
+name: __Updated by
+key: __updated by
+content-length: 14
+
+sitecore\admin
+----field----
+field: {001DD393-96C5-490B-924A-B0F25CD9EFD8}
+name: __Lock
+key: __lock
+content-length: 5
+
+<r />

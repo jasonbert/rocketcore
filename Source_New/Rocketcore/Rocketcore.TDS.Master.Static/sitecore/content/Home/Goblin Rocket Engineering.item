@@ -1,0 +1,79 @@
+----item----
+version: 1
+id: {FF9828D7-8F72-494D-980E-44D3A366D3C1}
+database: master
+path: /sitecore/content/Home/Goblin Rocket Engineering
+parent: {110D559F-DEA5-42EA-9C1C-8A5DF7E70EF9}
+name: Goblin Rocket Engineering
+master: {00000000-0000-0000-0000-000000000000}
+template: {23D17BB0-08BC-43D7-8589-7724407E1422}
+templatekey: Content Page
+
+----field----
+field: {1A794E52-7BAC-4EC5-B957-EB46D497870C}
+name: Tags
+key: tags
+content-length: 38
+
+{0C414818-0EE0-4826-B398-9112876DE7CD}
+----version----
+language: en
+version: 1
+revision: 003fe86b-a91c-4631-ab1c-509fba9179ac
+
+----field----
+field: {31532885-F743-4EB6-BB50-291B75C12A66}
+name: Title
+key: title
+content-length: 25
+
+Goblin Rocket Engineering
+----field----
+field: {C46BD2A4-1FA0-4214-B5B0-22C518AEABB0}
+name: Sub Title
+key: sub title
+content-length: 20
+
+Sitecore Consultancy
+----field----
+field: {4742E404-C88A-46F6-9573-358D016E7DA1}
+name: Image
+key: image
+content-length: 58
+
+<image mediaid="{D8663187-8F05-463D-B531-CDF574867239}" />
+----field----
+field: {03156C19-7B48-48A0-8F47-0A67272F1251}
+name: Body
+key: body
+content-length: 844
+
+At vero eos et accusamus et iusto odio dignissimos ducimus qui blanditiis praesentium voluptatum deleniti atque corrupti quos dolores et quas molestias excepturi sint occaecati cupiditate non provident, similique sunt in culpa qui officia deserunt mollitia animi, id est laborum et dolorum fuga. Et harum quidem rerum facilis est et expedita distinctio. Nam libero tempore, cum soluta nobis est eligendi optio cumque nihil impedit quo minus id quod maxime placeat facere possimus, omnis voluptas assumenda est, omnis dolor repellendus. Temporibus autem quibusdam et aut officiis debitis aut rerum necessitatibus saepe eveniet ut et voluptates repudiandae sint et molestiae non recusandae. Itaque earum rerum hic tenetur a sapiente delectus, ut aut reiciendis voluptatibus maiores alias consequatur aut perferendis doloribus asperiores repellat.
+----field----
+field: {25BED78C-4957-4165-998A-CA1B52F67497}
+name: __Created
+key: __created
+content-length: 15
+
+20141118T083657
+----field----
+field: {8CDC337E-A112-42FB-BBB4-4143751E123F}
+name: __Revision
+key: __revision
+content-length: 36
+
+003fe86b-a91c-4631-ab1c-509fba9179ac
+----field----
+field: {D9CF14B1-FA16-4BA6-9288-E8A174D4D522}
+name: __Updated
+key: __updated
+content-length: 34
+
+20141118T181015:635519310150942099
+----field----
+field: {BADD9CF9-53E0-4D0C-BCC0-2D784C282F6A}
+name: __Updated by
+key: __updated by
+content-length: 14
+
+sitecore\admin
